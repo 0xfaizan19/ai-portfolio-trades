@@ -1,16 +1,24 @@
 <style>
-.aft{display:flex;flex-direction:column;gap:var(--cds-gap-xl);font-family:var(--font-anthropic-sans);font-variant-numeric:tabular-nums}
+.aft{display:flex;flex-direction:column;gap:var(--cds-gap-xl);font-family:var(--font-anthropic-sans);font-variant-numeric:tabular-nums;--aft-blue:#2563eb}
+@media (prefers-color-scheme:dark){.aft{--aft-blue:#60a5fa}}
 .aft-head h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
 .aft-take{color:var(--color-fg-muted);font-size:var(--cds-font-size-body);margin:var(--cds-gap-xs) 0 0;max-width:70ch}
 .aft-take b{font-weight:600;color:var(--color-fg)}
-.aft-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:var(--cds-gap-md)}
-.aft-tile{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-xs);min-width:0}
+.aft-tiles{display:grid;grid-template-columns:repeat(var(--aft-cols,7),minmax(0,1fr));gap:var(--cds-gap-sm)}
+@media (max-width:900px){.aft-tiles{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(9.5rem,1fr);overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:var(--cds-gap-xs)}.aft-tiles>.aft-tile{scroll-snap-align:start}}
+.aft-tile{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md);display:flex;flex-direction:column;gap:var(--cds-gap-xs);min-width:0}
 .aft-name{display:flex;align-items:center;gap:var(--cds-gap-sm);font-weight:var(--cds-font-weight-medium);font-size:var(--cds-font-size-body)}
 .aft-dot{width:.6rem;height:.6rem;border-radius:50%;flex:none}
-.aft-big{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);line-height:1.15;min-height:1.2em}
+.aft-big{font-family:var(--font-anthropic-serif);font-weight:400;font-size:1.55rem;line-height:1.15;min-height:1.2em}
 .aft-cap{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
 .aft-moves{font-size:var(--cds-font-size-caption);display:flex;gap:var(--cds-gap-sm);margin-top:var(--cds-gap-xs)}
 .aft-note{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:var(--cds-gap-xs);line-height:1.45}
+.aft-head{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--cds-gap-md);flex-wrap:wrap}
+.aft-updated{flex:none;display:inline-flex;align-items:center;gap:.45rem;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:999px;padding:.4rem .9rem;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);white-space:nowrap}
+.aft-updated b{font-weight:600;color:var(--color-fg)}
+.aft-updot{width:.5rem;height:.5rem;border-radius:50%;background:var(--color-ok);flex:none}
+.aft-bench{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:var(--cds-gap-xs);line-height:1.5;display:flex;flex-direction:column}
+.aft-edge{font-weight:600}
 .aft-card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);min-width:0}
 .aft-card h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
 .aft-card .aft-sub{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 var(--cds-gap-md)}
@@ -43,7 +51,7 @@
 .aft-up{color:var(--color-ok)}
 .aft-down{color:var(--color-bad)}
 .aft-nowrow{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md) var(--cds-gap-xl)}
-.aft-nowv{font-family:var(--font-anthropic-serif);font-size:var(--cds-font-size-title);font-weight:400;line-height:1.2;margin-top:var(--cds-gap-xs)}
+.aft-nowv{font-family:var(--font-anthropic-sans);font-size:1.6rem;font-weight:600;letter-spacing:-.015em;line-height:1.2;margin-top:var(--cds-gap-xs);font-variant-numeric:tabular-nums}
 .aft-psrc{color:var(--color-fg-muted);white-space:nowrap}
 .aft-estp{color:var(--color-fg-muted)}
 .aft-co{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-md);min-width:0}
@@ -57,8 +65,9 @@
 .aft-pnote{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:calc(-1 * var(--cds-gap-sm)) 0 0;line-height:1.5;max-width:68ch}
 .aft-fact .s{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:2px}
 .aft-table tbody tr[data-key] td.tk::after{content:" ›";color:var(--color-fg-muted);font-weight:400}
-.aft-back{font:inherit;font-size:var(--cds-font-size-caption);background:transparent;border:1px solid var(--color-border-line);color:var(--color-fg);border-radius:999px;padding:.35rem .8rem;cursor:pointer;align-self:flex-start}
-.aft-back:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.aft-back{font:inherit;font-size:1.02rem;font-weight:500;background:transparent;border:1.5px solid var(--aft-blue);color:var(--aft-blue);border-radius:999px;padding:.5rem 1.15rem;cursor:pointer;align-self:flex-start;transition:background .15s,color .15s}
+.aft-back:hover{background:var(--aft-blue);color:#fff}
+.aft-back:focus-visible{outline:2px solid var(--aft-blue);outline-offset:2px}
 .aft-detail{display:flex;flex-direction:column;gap:var(--cds-gap-lg);max-width:60rem;width:100%;margin-inline:auto;align-self:center}
 .aft-dtitle{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--cds-gap-sm) var(--cds-gap-md)}
 .aft-dtitle h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
@@ -89,7 +98,7 @@
  <div id="list-view" class="aft">
   <header class="aft-head" id="top">
     <h1>AI Portfolio Trades</h1>
-    <p class="aft-take" id="takeaway"><span class="dash-skeleton">—</span></p>
+    <div class="aft-updated"><span class="aft-updot"></span><span>Last updated <b id="updated-val" data-source="meta" data-field="updated" data-row="0">—</b></span></div>
   </header>
 
   <section class="aft-tiles" id="portfolios" aria-label="Portfolios"></section>
@@ -97,8 +106,6 @@
 
   <section class="aft-card" id="log">
     <h2>Trade log</h2>
-    <p class="aft-sub">Every buy and sell @aifinancelabs has posted, through Oct 19, 2026. Size is the share of that portfolio. Prices marked “Day’s open (estimate)” are that day’s opening price because the post didn’t give one. Click a row for the full story.</p>
-    <div class="aft-legend" id="gain-legend"><span>Gain / loss vs. buy price:</span><span><span class="aft-final aft-up">In a bubble</span> final: the position was sold</span><span><span class="aft-gain aft-up">Green</span> / <span class="aft-gain aft-down">red</span> text: still open, measured against the <span id="quote-asof" data-source="quotes" data-field="as_of" data-row="0">latest</span> close</span><span>Not public: the AI never posted its buy price</span></div>
     <div class="aft-tools">
       <div id="chips" style="display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm)"></div>
       <input class="aft-search" id="q" type="search" placeholder="Search ticker or company" aria-label="Search trades">
@@ -195,19 +202,11 @@ const gainRow = (id) => { const s = dash.data('gains'); return s.status === 'ok'
 const gainOf = (id) => { const r = gainRow(id); return r ? r.gain : null; };
 const fmtLong = (s) => d3.utcFormat('%b %-d, %Y')(new Date(s + 'T00:00:00Z'));
 
-function drawTakeaway() {
-  const el = document.getElementById('takeaway');
-  const s = dash.data('summary');
-  el.replaceChildren();
-  if (s.status !== 'ok' || !s.data.length) {
-    if (s.status === 'error') { const f = document.createElement('span'); f.className = 'aft-fail'; f.textContent = 'Failed to load'; el.append(f); }
-    else { const k = document.createElement('span'); k.className = 'dash-skeleton'; k.textContent = '—'; el.append(k); }
-    return;
-  }
-  const r = s.data[0];
-  const b = (field, text) => { const x = document.createElement('b'); x.dataset.source = 'summary'; x.dataset.field = field; x.textContent = text; return x; };
-  el.append(b('trades', String(r.trades)), ' trades posted by @aifinancelabs (', b('buys', String(r.buys)), ' buys, ', b('sells', String(r.sells)), ' sells). Latest on ', b('latest', fmtDate(r.latest)),
-    ', when Claude, the AI World War III book, Grok and DeepSeek all rebalanced at the open and three of them bought into the AI build-out.');
+function drawUpdated() {
+  const el = document.getElementById('updated-val');
+  if (!el) return;
+  const m = dash.data('meta');
+  el.textContent = m.status === 'ok' && m.data.length ? fmtLong(m.data[0].updated) : '—';
 }
 
 function drawTiles() {
@@ -237,7 +236,8 @@ function drawTiles() {
     big.dataset.source = 'portfolios'; big.dataset.field = 'stat'; big.dataset.where = 'portfolio=' + enc;
     big.textContent = row.stat == null ? '—' : fmtPct(Number(row.stat));
     const lab = document.createElement('div'); lab.className = 'aft-cap';
-    lab.dataset.source = 'portfolios'; lab.dataset.field = 'stat_label'; lab.dataset.where = 'portfolio=' + enc; lab.textContent = row.stat_label;
+    lab.dataset.source = 'portfolios'; lab.dataset.field = 'stat_label'; lab.dataset.where = 'portfolio=' + enc;
+    lab.textContent = row.stat == null ? row.stat_label : row.stat_label + ' · as of ' + fmtDate(row.as_of);
     const moves = document.createElement('div'); moves.className = 'aft-moves';
     const cr = counts.find(x => x.portfolio === row.portfolio);
     if (cr) {
@@ -245,15 +245,25 @@ function drawTiles() {
       const se = document.createElement('span'); se.className = 'aft-sell'; se.dataset.source = 'counts'; se.dataset.field = 'sells'; se.dataset.where = 'portfolio=' + enc; se.textContent = cr.sells + ' sells';
       moves.append(by, se);
     }
-    const note = document.createElement('div'); note.className = 'aft-note';
-    note.dataset.source = 'portfolios'; note.dataset.field = 'note'; note.dataset.where = 'portfolio=' + enc; note.textContent = row.note;
-    t.append(n, big, lab, moves, note);
+    const bench = document.createElement('div'); bench.className = 'aft-bench';
+    if (row.stat != null && row.benchmark != null) {
+      const vs = document.createElement('span');
+      vs.dataset.source = 'portfolios'; vs.dataset.field = 'benchmark'; vs.dataset.where = 'portfolio=' + enc;
+      vs.textContent = 'S&P 500 ' + fmtPct(Number(row.benchmark));
+      const gap = Number(row.stat) - Number(row.benchmark);
+      const edge = document.createElement('span'); edge.className = 'aft-edge ' + (gap >= 0 ? 'aft-up' : 'aft-down');
+      edge.textContent = (gap >= 0 ? '+' : '−') + d3.format('.1f')(Math.abs(gap) * 100) + ' pts ' + (gap >= 0 ? 'ahead' : 'behind');
+      bench.append(vs, edge);
+    } else {
+      bench.textContent = 'No S&P comparison posted';
+    }
+    t.append(n, big, lab, moves, bench);
     box.append(t);
   }
 }
 
 
-window.aftFilter = window.aftFilter || { p: 'All', q: '' };
+window.aftFilter = window.aftFilter || { sel: new Set(), q: '' };
 function drawTable() {
   const body = document.getElementById('trade-body');
   const empty = document.getElementById('trade-empty');
@@ -268,16 +278,24 @@ function drawTable() {
   const qa = dash.data('quotes'); const qe = document.getElementById('quote-asof');
   if (qe) qe.textContent = qa.status === 'ok' && qa.data.length ? fmtLong(qa.data[0].as_of) : 'latest';
   const f = window.aftFilter;
-  const names = ['All', ...window.aftOrder.filter(n => d.data.some(t => t.portfolio === n))];
-  chips.replaceChildren(...names.map(n => {
-    const b = document.createElement('button'); b.type = 'button'; b.className = 'aft-chip'; b.textContent = n;
-    b.setAttribute('aria-pressed', String(f.p === n));
-    b.addEventListener('click', () => { f.p = n; drawTable(); });
+  if (!f.sel) f.sel = new Set();
+  const names = window.aftOrder.filter(n => d.data.some(t => t.portfolio === n));
+  const chip = (label, pressed, onClick) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'aft-chip'; b.textContent = label;
+    b.setAttribute('aria-pressed', String(pressed));
+    b.addEventListener('click', onClick);
     return b;
-  }));
+  };
+  chips.replaceChildren(
+    chip('All', f.sel.size === 0, () => { f.sel.clear(); drawTable(); }),
+    ...names.map(n => chip(n, f.sel.has(n), () => {
+      if (f.sel.has(n)) f.sel.delete(n); else f.sel.add(n);
+      drawTable();
+    }))
+  );
   const q = f.q.trim().toLowerCase();
   const rows = d.data
-    .filter(t => f.p === 'All' || t.portfolio === f.p)
+    .filter(t => f.sel.size === 0 || f.sel.has(t.portfolio))
     .filter(t => !q || (t.ticker + ' ' + t.company + ' ' + t.reason).toLowerCase().includes(q))
     .slice().sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
   for (const t of rows) {
@@ -486,7 +504,7 @@ function render() {
   document.getElementById('list-view').hidden = inDetail;
   document.getElementById('trade-view').hidden = !inDetail;
   if (inDetail) drawDetail();
-  else { drawTakeaway(); drawTiles(); drawTable(); }
+  else { drawUpdated(); drawTiles(); drawTable(); }
 }
 
 (function route() {

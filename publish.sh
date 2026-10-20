@@ -1,11 +1,11 @@
 #!/bin/bash
-# Rebuilds index.html from the dashboard, commits everything and pushes to GitHub.
+# Rebuild the dashboard, commit and push. The live link updates in about a minute.
 # Usage: ./publish.sh "what changed"
 set -e
 cd "$(dirname "$0")"
-cp dashboard/standalone.html index.html
+python3 sync.py
 git add -A
 if git diff --cached --quiet; then echo "Nothing to publish."; exit 0; fi
 git commit -m "${1:-Update dashboard data}"
 git push
-echo "Pushed. The live dashboard updates in about a minute."
+echo "Pushed. https://0xfaizan19.github.io/ai-portfolio-trades/ updates in about a minute."

@@ -5,39 +5,44 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-19",
-  "note": "Manages about $50M on Autopilot. Pharvaris ~7% of the book, down 14.5% on the position. Sold Intercontinental Exchange and Restaurant Brands for Dycom and DraftKings on Oct 14."
+  "note": "Manages about $50M on Autopilot. Pharvaris ~7% of the book, down 14.5% on the position. Sold Intercontinental Exchange and Restaurant Brands for Dycom and DraftKings on Oct 14.",
+  "benchmark": null
  },
  {
   "portfolio": "Claude WW3",
   "model": "Claude",
   "stat": 2.0242,
-  "stat_label": "Return since Oct 2023 (S&P 500: +85.5%)",
+  "stat_label": "Since Oct 2023",
   "as_of": "2026-10-16",
-  "note": "$82.3M tracking it. Down 7.9% over the past month. Defense-focused book; swapped TransDigm for TTM Technologies on Oct 14."
+  "note": "$82.3M tracking it. Down 7.9% over the past month. Defense-focused book; swapped TransDigm for TTM Technologies on Oct 14.",
+  "benchmark": 0.8545
  },
  {
   "portfolio": "GPT",
   "model": "GPT",
   "stat": 0.118,
-  "stat_label": "3-month return (S&P 500: +1.7%)",
+  "stat_label": "Past 3 months",
   "as_of": "2026-10-19",
-  "note": "+2.8% last week vs S&P −2.0%. Stryker and Intuit ~10% each."
+  "note": "+2.8% last week vs S&P −2.0%. Stryker and Intuit ~10% each.",
+  "benchmark": 0.017
  },
  {
   "portfolio": "Grok",
   "model": "Grok",
-  "stat": 0.653,
-  "stat_label": "Return since Feb 2025",
-  "as_of": "2026-10-19",
-  "note": "Up 24.1% over three months. A $300,000 deposit landed on Oct 19, the day's top on Autopilot. Rentokil target $23.65."
+  "stat": 0.6635,
+  "stat_label": "Since Feb 2025",
+  "as_of": "2026-10-13",
+  "note": "Up 24.1% over three months. A $300,000 deposit landed on Oct 19, the day's top on Autopilot. Rentokil target $23.65.",
+  "benchmark": 0.2913
  },
  {
   "portfolio": "DeepSeek",
   "model": "DeepSeek",
-  "stat": 0.757,
-  "stat_label": "Return since Feb 2025",
-  "as_of": "2026-10-16",
-  "note": "$45.4M tracking it. Up 47.6% over the past year. Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14."
+  "stat": 0.777,
+  "stat_label": "Since Feb 2025",
+  "as_of": "2026-10-07",
+  "note": "$45.4M tracking it. Up 47.6% over the past year. Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14.",
+  "benchmark": 0.3114
  },
  {
   "portfolio": "Muse",
@@ -45,7 +50,8 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-09",
-  "note": "Launched the week of Sep 29, 2026. Nubank was among its first buys, at $13.32. A $50,000 deposit landed on Oct 9."
+  "note": "Launched the week of Sep 29, 2026. Nubank was among its first buys, at $13.32. A $50,000 deposit landed on Oct 9.",
+  "benchmark": null
  },
  {
   "portfolio": "Gemini",
@@ -53,6 +59,7 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-15",
-  "note": "Seeded with $10,000 on Oct 15, 2026 when Google released Gemini 4 Argon. No trades posted yet."
+  "note": "Seeded with $10,000 on Oct 15, 2026 when Google released Gemini 4 Argon. No trades posted yet.",
+  "benchmark": null
  }
 ]
