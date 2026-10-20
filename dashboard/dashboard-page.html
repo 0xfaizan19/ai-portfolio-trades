@@ -1,0 +1,499 @@
+<style>
+.aft{display:flex;flex-direction:column;gap:var(--cds-gap-xl);font-family:var(--font-anthropic-sans);font-variant-numeric:tabular-nums}
+.aft-head h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.aft-take{color:var(--color-fg-muted);font-size:var(--cds-font-size-body);margin:var(--cds-gap-xs) 0 0;max-width:70ch}
+.aft-take b{font-weight:600;color:var(--color-fg)}
+.aft-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:var(--cds-gap-md)}
+.aft-tile{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-xs);min-width:0}
+.aft-name{display:flex;align-items:center;gap:var(--cds-gap-sm);font-weight:var(--cds-font-weight-medium);font-size:var(--cds-font-size-body)}
+.aft-dot{width:.6rem;height:.6rem;border-radius:50%;flex:none}
+.aft-big{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);line-height:1.15;min-height:1.2em}
+.aft-cap{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.aft-moves{font-size:var(--cds-font-size-caption);display:flex;gap:var(--cds-gap-sm);margin-top:var(--cds-gap-xs)}
+.aft-note{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:var(--cds-gap-xs);line-height:1.45}
+.aft-card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);min-width:0}
+.aft-card h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.aft-card .aft-sub{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 var(--cds-gap-md)}
+.aft-tools{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm);align-items:center;margin-bottom:var(--cds-gap-md)}
+.aft-chip{font:inherit;font-size:var(--cds-font-size-caption);border:1px solid var(--color-border-line);background:transparent;color:var(--color-fg);border-radius:999px;padding:.3rem .75rem;cursor:pointer}
+.aft-chip[aria-pressed="true"]{background:var(--color-fg);color:var(--color-bg);border-color:var(--color-fg)}
+.aft-chip:focus-visible,.aft-search:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.aft-search{font:inherit;font-size:var(--cds-font-size-caption);margin-left:auto;padding:.35rem .6rem;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-bg);color:var(--color-fg);min-width:0;width:14rem;max-width:100%}
+.aft-tablebox{overflow:auto;max-height:36rem}
+.aft-table{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption)}
+.aft-table th{position:sticky;top:0;background:var(--color-panel);text-align:left;font-weight:var(--cds-font-weight-medium);color:var(--color-fg-muted);padding:var(--cds-pad-xs) var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.aft-table td{padding:var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);vertical-align:top}
+.aft-table td.r,.aft-table th.r{text-align:right;white-space:nowrap}
+.aft-table .tk{font-weight:600}
+.aft-pill{display:inline-block;font-weight:600;font-size:.72rem;padding:.12rem .5rem;border-radius:999px;border:1px solid currentColor}
+.aft-buy{color:var(--color-ok)}
+.aft-sell{color:var(--color-bad)}
+.aft-reason{color:var(--color-fg-muted);min-width:16rem}
+.aft-table a{color:inherit}
+.aft-empty{color:var(--color-fg-muted);padding:var(--cds-pad-md) 0}
+@media (max-width:720px){.aft-hide{display:none}}
+.aft-table tbody tr[data-key]{cursor:pointer}
+.aft-table tbody tr[data-key]:hover td{background:color-mix(in srgb,var(--color-fg) 5%,transparent)}
+.aft-table tbody tr[data-key]:focus-visible{outline:2px solid var(--color-fg);outline-offset:-2px}
+.aft-more{color:var(--color-fg-muted);white-space:nowrap}
+.aft-gain{font-weight:600;white-space:nowrap}
+.aft-final{display:inline-block;font-weight:600;white-space:nowrap;padding:.12rem .55rem;border-radius:999px;border:1.5px solid currentColor;background:color-mix(in srgb,currentColor 12%,transparent)}
+.aft-legend{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs) var(--cds-gap-md);align-items:center;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:calc(-1 * var(--cds-gap-sm)) 0 var(--cds-gap-md)}
+.aft-legend .aft-final,.aft-legend .aft-gain{font-size:.72rem}
+.aft-up{color:var(--color-ok)}
+.aft-down{color:var(--color-bad)}
+.aft-nowrow{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md) var(--cds-gap-xl)}
+.aft-nowv{font-family:var(--font-anthropic-serif);font-size:var(--cds-font-size-title);font-weight:400;line-height:1.2;margin-top:var(--cds-gap-xs)}
+.aft-psrc{color:var(--color-fg-muted);white-space:nowrap}
+.aft-estp{color:var(--color-fg-muted)}
+.aft-co{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-md);min-width:0}
+.aft-co h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.aft-co .meta{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs) var(--cds-gap-md)}
+.aft-co h3{font-size:var(--cds-font-size-caption);text-transform:uppercase;letter-spacing:.06em;color:var(--color-fg-muted);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-xs)}
+.aft-co p{margin:0;line-height:1.55;font-size:var(--cds-font-size-body);max-width:72ch}
+.aft-segs{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs)}
+.aft-seg{font-size:var(--cds-font-size-caption);border:1px solid var(--color-border-line);border-radius:999px;padding:.2rem .6rem}
+.aft-co .foot{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.aft-pnote{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:calc(-1 * var(--cds-gap-sm)) 0 0;line-height:1.5;max-width:68ch}
+.aft-fact .s{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:2px}
+.aft-table tbody tr[data-key] td.tk::after{content:" ›";color:var(--color-fg-muted);font-weight:400}
+.aft-back{font:inherit;font-size:var(--cds-font-size-caption);background:transparent;border:1px solid var(--color-border-line);color:var(--color-fg);border-radius:999px;padding:.35rem .8rem;cursor:pointer;align-self:flex-start}
+.aft-back:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.aft-detail{display:flex;flex-direction:column;gap:var(--cds-gap-lg);max-width:60rem;width:100%;margin-inline:auto;align-self:center}
+.aft-dtitle{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--cds-gap-sm) var(--cds-gap-md)}
+.aft-dtitle h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.aft-dco{color:var(--color-fg-muted);font-size:var(--cds-font-size-body)}
+.aft-dsum{font-size:var(--cds-font-size-body);line-height:1.55;margin:0;max-width:68ch}
+.aft-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));gap:var(--cds-gap-md)}
+.aft-fact{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md) var(--cds-pad-lg);min-width:0}
+.aft-fact .v{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin-top:var(--cds-gap-xs);overflow-wrap:anywhere}
+.aft-secs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--cds-gap-md)}
+.aft-sec{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);min-width:0}
+.aft-sec h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-sm)}
+.aft-sec p{margin:0;line-height:1.55;font-size:var(--cds-font-size-body)}
+.aft-sec.wide{grid-column:1/-1}
+.aft-sec .none{color:var(--color-fg-muted)}
+.aft-pairbtn{font:inherit;text-align:left;width:100%;background:transparent;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md);color:var(--color-fg);cursor:pointer;display:flex;gap:var(--cds-gap-sm);align-items:center;flex-wrap:wrap}
+.aft-pairbtn:hover{border-color:var(--color-fg-muted)}
+.aft-pairbtn:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.aft-src{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.aft-src a{color:inherit}
+.aft [hidden],.aft[hidden]{display:none !important}
+[data-dash-source-state=empty]{color:transparent}
+[data-dash-source-state=refreshing]{opacity:.5;transition:opacity var(--cds-dur-slow)}
+.aft-fail{display:flex;align-items:center;justify-content:center;gap:.4rem;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);min-height:inherit}
+.aft-fail::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
+</style>
+
+<div class="aft">
+ <div id="list-view" class="aft">
+  <header class="aft-head" id="top">
+    <h1>AI Portfolio Trades</h1>
+    <p class="aft-take" id="takeaway"><span class="dash-skeleton">—</span></p>
+  </header>
+
+  <section class="aft-tiles" id="portfolios" aria-label="Portfolios"></section>
+
+
+  <section class="aft-card" id="log">
+    <h2>Trade log</h2>
+    <p class="aft-sub">Every buy and sell @aifinancelabs has posted, through Oct 19, 2026. Size is the share of that portfolio. Prices marked “Day’s open (estimate)” are that day’s opening price because the post didn’t give one. Click a row for the full story.</p>
+    <div class="aft-legend" id="gain-legend"><span>Gain / loss vs. buy price:</span><span><span class="aft-final aft-up">In a bubble</span> final: the position was sold</span><span><span class="aft-gain aft-up">Green</span> / <span class="aft-gain aft-down">red</span> text: still open, measured against the <span id="quote-asof" data-source="quotes" data-field="as_of" data-row="0">latest</span> close</span><span>Not public: the AI never posted its buy price</span></div>
+    <div class="aft-tools">
+      <div id="chips" style="display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm)"></div>
+      <input class="aft-search" id="q" type="search" placeholder="Search ticker or company" aria-label="Search trades">
+    </div>
+    <div class="aft-tablebox">
+      <table class="aft-table" id="trade-table" data-source="trades" data-row-key="id">
+        <thead><tr>
+          <th data-field="date">Date</th>
+          <th data-field="portfolio">Portfolio</th>
+          <th data-field="action">Action</th>
+          <th data-field="ticker">Ticker</th>
+          <th data-field="company" class="aft-hide">Company</th>
+          <th data-field="size">Size</th>
+          <th data-field="price" class="r">Price</th>
+          <th data-field="price_source">Price from</th>
+          <th data-source="gains" data-field="gain" class="r">Gain / loss</th>
+          <th data-field="reason" class="aft-hide">Why</th>
+        </tr></thead>
+        <tbody id="trade-body"></tbody>
+      </table>
+      <p class="aft-empty" id="trade-empty" hidden>No trades match.</p>
+    </div>
+  </section>
+ </div>
+ <section id="trade-view" class="aft-detail" hidden aria-live="polite"></section>
+</div>
+
+<script>
+const ORDER = ['Claude', 'Claude WW3', 'GPT', 'Grok', 'DeepSeek', 'Muse', 'Gemini'];
+window.aftOrder = ORDER;
+window.aftColor = (p) => dash.colors[Math.max(0, ORDER.indexOf(p))];
+
+dash.calc('counts', {
+  inputs: ['trades', 'portfolios'],
+  title: 'Trades per portfolio',
+  description: 'Counts each portfolio\'s buys and sells in the trade log.',
+  fn: (trades, portfolios) => portfolios.map(p => {
+    const mine = trades.filter(t => t.portfolio === p.portfolio);
+    return {
+      portfolio: p.portfolio,
+      buys: mine.filter(t => t.action === 'Buy').length,
+      sells: mine.filter(t => t.action === 'Sell').length,
+      trades: mine.length
+    };
+  })
+});
+
+dash.calc('gains', {
+  inputs: ['trades', 'quotes'],
+  title: 'Gain or loss vs. buy price',
+  description: 'Open buys: latest close ÷ buy price − 1 (still moving). A buy later sold in the same portfolio, or a sell with a public buy price: sale price ÷ buy price − 1 (final).',
+  fn: (trades, quotes) => trades.map(t => {
+    if (t.action === 'Sell') {
+      return { id: t.id, gain: t.entry_price ? t.price / t.entry_price - 1 : null, final: !!t.entry_price, status: t.entry_price ? 'Final' : 'Not public' };
+    }
+    const exit = trades.find(x => x.action === 'Sell' && x.ticker === t.ticker && x.portfolio === t.portfolio && x.date > t.date);
+    if (exit) return { id: t.id, gain: t.price ? exit.price / t.price - 1 : null, final: true, status: 'Final' };
+    const q = quotes.find(x => x.ticker === t.ticker);
+    return { id: t.id, gain: q && t.price ? q.price / t.price - 1 : null, final: false, status: 'Open' };
+  })
+});
+
+dash.calc('trade_pnl', {
+  inputs: ['trades', 'quotes'],
+  title: 'P&L since each trade',
+  description: 'Buys: latest close ÷ buy price − 1. Sells: (sale price − latest close) ÷ sale price, so it is positive when the stock fell after the sale.',
+  fn: (trades, quotes) => trades.map(t => {
+    const q = quotes.find(x => x.ticker === t.ticker);
+    const now = q ? q.price : null;
+    let pnl = null;
+    if (now != null && t.price) pnl = t.action === 'Buy' ? now / t.price - 1 : (t.price - now) / t.price;
+    return { id: t.id, current: now, pnl };
+  })
+});
+
+dash.calc('summary', {
+  inputs: ['trades'],
+  title: 'Trade log totals',
+  description: 'Total trades, buys and sells, and the latest trade date.',
+  fn: (trades) => [{
+    trades: trades.length,
+    buys: trades.filter(t => t.action === 'Buy').length,
+    sells: trades.filter(t => t.action === 'Sell').length,
+    latest: trades.map(t => t.date).sort().slice(-1)[0] || ''
+  }]
+});
+</script>
+
+<script>
+const fmtPct = (v) => (v > 0 ? '+' : '') + d3.format('.1%')(v);
+const fmtDate = (s) => d3.utcFormat('%b %-d')(new Date(s + 'T00:00:00Z'));
+const fmtGain = (g) => (g > 0 ? '+' : g < 0 ? '−' : '') + d3.format('.1%')(Math.abs(g));
+const gainRow = (id) => { const s = dash.data('gains'); return s.status === 'ok' ? s.data.find(x => x.id === id) || null : null; };
+const gainOf = (id) => { const r = gainRow(id); return r ? r.gain : null; };
+const fmtLong = (s) => d3.utcFormat('%b %-d, %Y')(new Date(s + 'T00:00:00Z'));
+
+function drawTakeaway() {
+  const el = document.getElementById('takeaway');
+  const s = dash.data('summary');
+  el.replaceChildren();
+  if (s.status !== 'ok' || !s.data.length) {
+    if (s.status === 'error') { const f = document.createElement('span'); f.className = 'aft-fail'; f.textContent = 'Failed to load'; el.append(f); }
+    else { const k = document.createElement('span'); k.className = 'dash-skeleton'; k.textContent = '—'; el.append(k); }
+    return;
+  }
+  const r = s.data[0];
+  const b = (field, text) => { const x = document.createElement('b'); x.dataset.source = 'summary'; x.dataset.field = field; x.textContent = text; return x; };
+  el.append(b('trades', String(r.trades)), ' trades posted by @aifinancelabs (', b('buys', String(r.buys)), ' buys, ', b('sells', String(r.sells)), ' sells). Latest on ', b('latest', fmtDate(r.latest)),
+    ', when Claude, the AI World War III book, Grok and DeepSeek all rebalanced at the open and three of them bought into the AI build-out.');
+}
+
+function drawTiles() {
+  const box = document.getElementById('portfolios');
+  const p = dash.data('portfolios');
+  const c = dash.data('counts');
+  box.replaceChildren();
+  if (p.status !== 'ok') {
+    for (const name of window.aftOrder) {
+      const t = document.createElement('div'); t.className = 'aft-tile';
+      const n = document.createElement('div'); n.className = 'aft-name'; n.textContent = name;
+      const big = document.createElement('div'); big.className = 'aft-big' + (p.status === 'error' ? '' : ' dash-skeleton');
+      if (p.status === 'error') { big.className = 'aft-fail'; big.textContent = 'Failed to load'; } else big.textContent = '—';
+      t.append(n, big); box.append(t);
+    }
+    return;
+  }
+  const counts = c.status === 'ok' ? c.data : [];
+  for (const row of p.data) {
+    const enc = encodeURIComponent(row.portfolio);
+    const t = document.createElement('div'); t.className = 'aft-tile'; t.id = 'tile-' + row.portfolio.replace(/\W+/g, '-').toLowerCase();
+    const n = document.createElement('div'); n.className = 'aft-name';
+    const dot = document.createElement('span'); dot.className = 'aft-dot'; dot.style.background = window.aftColor(row.portfolio);
+    const nm = document.createElement('span'); nm.dataset.source = 'portfolios'; nm.dataset.field = 'portfolio'; nm.dataset.where = 'portfolio=' + enc; nm.textContent = row.portfolio;
+    n.append(dot, nm);
+    const big = document.createElement('div'); big.className = 'aft-big';
+    big.dataset.source = 'portfolios'; big.dataset.field = 'stat'; big.dataset.where = 'portfolio=' + enc;
+    big.textContent = row.stat == null ? '—' : fmtPct(Number(row.stat));
+    const lab = document.createElement('div'); lab.className = 'aft-cap';
+    lab.dataset.source = 'portfolios'; lab.dataset.field = 'stat_label'; lab.dataset.where = 'portfolio=' + enc; lab.textContent = row.stat_label;
+    const moves = document.createElement('div'); moves.className = 'aft-moves';
+    const cr = counts.find(x => x.portfolio === row.portfolio);
+    if (cr) {
+      const by = document.createElement('span'); by.className = 'aft-buy'; by.dataset.source = 'counts'; by.dataset.field = 'buys'; by.dataset.where = 'portfolio=' + enc; by.textContent = cr.buys + ' buys';
+      const se = document.createElement('span'); se.className = 'aft-sell'; se.dataset.source = 'counts'; se.dataset.field = 'sells'; se.dataset.where = 'portfolio=' + enc; se.textContent = cr.sells + ' sells';
+      moves.append(by, se);
+    }
+    const note = document.createElement('div'); note.className = 'aft-note';
+    note.dataset.source = 'portfolios'; note.dataset.field = 'note'; note.dataset.where = 'portfolio=' + enc; note.textContent = row.note;
+    t.append(n, big, lab, moves, note);
+    box.append(t);
+  }
+}
+
+
+window.aftFilter = window.aftFilter || { p: 'All', q: '' };
+function drawTable() {
+  const body = document.getElementById('trade-body');
+  const empty = document.getElementById('trade-empty');
+  const chips = document.getElementById('chips');
+  const d = dash.data('trades');
+  body.replaceChildren();
+  if (d.status !== 'ok') {
+    const tr = document.createElement('tr'); const td = document.createElement('td'); td.colSpan = 10;
+    if (d.status === 'error') { td.className = 'aft-fail'; td.textContent = 'Failed to load'; } else { td.className = 'dash-skeleton'; td.textContent = '—'; }
+    tr.append(td); body.append(tr); empty.hidden = true; return;
+  }
+  const qa = dash.data('quotes'); const qe = document.getElementById('quote-asof');
+  if (qe) qe.textContent = qa.status === 'ok' && qa.data.length ? fmtLong(qa.data[0].as_of) : 'latest';
+  const f = window.aftFilter;
+  const names = ['All', ...window.aftOrder.filter(n => d.data.some(t => t.portfolio === n))];
+  chips.replaceChildren(...names.map(n => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'aft-chip'; b.textContent = n;
+    b.setAttribute('aria-pressed', String(f.p === n));
+    b.addEventListener('click', () => { f.p = n; drawTable(); });
+    return b;
+  }));
+  const q = f.q.trim().toLowerCase();
+  const rows = d.data
+    .filter(t => f.p === 'All' || t.portfolio === f.p)
+    .filter(t => !q || (t.ticker + ' ' + t.company + ' ' + t.reason).toLowerCase().includes(q))
+    .slice().sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
+  for (const t of rows) {
+    const tr = document.createElement('tr'); tr.dataset.key = t.id;
+    const cell = (text, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = text; tr.append(td); return td; };
+    cell(fmtDate(t.date));
+    cell(t.portfolio);
+    const a = cell(''); const pill = document.createElement('span'); pill.className = 'aft-pill ' + (t.action === 'Buy' ? 'aft-buy' : 'aft-sell'); pill.textContent = t.action; a.append(pill);
+    cell(t.ticker, 'tk');
+    cell(t.company, 'aft-hide');
+    cell(t.size);
+    cell(t.price == null ? '—' : d3.format('$,.2f')(Number(t.price)), 'r' + (/estimate/i.test(t.price_source || '') ? ' aft-estp' : ''));
+    cell(t.price_source || '—', 'aft-psrc');
+    const gr = gainRow(t.id);
+    const g = gr ? gr.gain : null;
+    if (g == null) cell(t.action === 'Sell' ? 'Not public' : '—', 'r aft-psrc');
+    else if (gr.final) {
+      const td = cell('', 'r');
+      const b = document.createElement('span'); b.className = 'aft-final ' + (g >= 0 ? 'aft-up' : 'aft-down'); b.textContent = fmtGain(g);
+      b.title = 'Final: the position was sold'; td.append(b);
+    } else {
+      const td = cell(fmtGain(g), 'r aft-gain ' + (g >= 0 ? 'aft-up' : 'aft-down'));
+      td.title = 'Open: latest close vs. buy price';
+    }
+    cell(t.reason, 'aft-reason aft-hide');
+    tr.tabIndex = 0; tr.setAttribute('aria-label', `${t.action} ${t.ticker}, ${t.portfolio}, open details`);
+    body.append(tr);
+  }
+  empty.hidden = rows.length > 0;
+}
+
+const qInput = document.getElementById('q');
+qInput.addEventListener('input', () => { window.aftFilter.q = qInput.value; drawTable(); });
+
+document.getElementById('trade-body').addEventListener('click', (e) => {
+  const tr = e.target.closest('tr[data-key]'); if (tr) openTrade(tr.dataset.key);
+});
+document.getElementById('trade-body').addEventListener('keydown', (e) => {
+  const tr = e.target.closest('tr[data-key]');
+  if (tr && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openTrade(tr.dataset.key); }
+});
+
+window.aftView = window.aftView || { trade: null, focusRow: null };
+function openTrade(id) {
+  window.aftView.trade = id; window.aftView.focusRow = id;
+  dash.setLink('trade-' + id);
+  render();
+  window.scrollTo(0, 0);
+  const b = document.querySelector('#trade-view .aft-back'); if (b) b.focus();
+}
+function closeTrade() {
+  const id = window.aftView.trade;
+  window.aftView.trade = null;
+  dash.setLink('log');
+  render();
+  const row = document.querySelector(`#trade-body tr[data-key="${CSS.escape(id || '')}"]`);
+  if (row) { row.scrollIntoView({ block: 'center' }); row.focus(); }
+}
+
+function drawDetail() {
+  const box = document.getElementById('trade-view');
+  box.replaceChildren();
+  const d = dash.data('trades');
+  const id = window.aftView.trade;
+  const back = document.createElement('button'); back.type = 'button'; back.className = 'aft-back'; back.textContent = '← All trades';
+  back.addEventListener('click', closeTrade);
+  box.append(back);
+  if (d.status !== 'ok') {
+    const ph = document.createElement('div');
+    if (d.status === 'error') { ph.className = 'aft-fail'; ph.textContent = 'Failed to load'; } else { ph.className = 'dash-skeleton'; ph.textContent = '—'; }
+    box.append(ph); return;
+  }
+  const t = d.data.find(r => r.id === id);
+  if (!t) { const p = document.createElement('p'); p.className = 'aft-empty'; p.textContent = 'That trade is no longer in the log.'; box.append(p); return; }
+  const where = 'id=' + encodeURIComponent(t.id);
+  const mk = (tag, field, text, cls) => { const el = document.createElement(tag); if (cls) el.className = cls; el.dataset.source = 'trades'; el.dataset.field = field; el.dataset.where = where; el.textContent = text; return el; };
+
+  // Title
+  const head = document.createElement('div'); head.className = 'aft-dtitle';
+  const pill = mk('span', 'action', t.action, 'aft-pill ' + (t.action === 'Buy' ? 'aft-buy' : 'aft-sell'));
+  const h = mk('h1', 'ticker', t.ticker); h.id = 'trade-title';
+  head.append(pill, h, mk('span', 'company', t.company, 'aft-dco'));
+  box.append(head);
+  box.append(mk('p', 'summary', t.summary || '', 'aft-dsum'));
+
+  // Facts
+  const facts = document.createElement('div'); facts.className = 'aft-facts'; facts.id = 'trade-facts';
+  const fact = (label, field, text, subField, subText) => {
+    const f = document.createElement('div'); f.className = 'aft-fact';
+    const l = document.createElement('div'); l.className = 'aft-cap'; l.textContent = label;
+    f.append(l, mk('div', field, text, 'v'));
+    if (subField && subText) f.append(mk('div', subField, subText, 's'));
+    facts.append(f);
+  };
+  fact('Portfolio', 'portfolio', t.portfolio);
+  fact('Model', 'model', t.model);
+  fact('Traded', 'date', fmtLong(t.date));
+  fact('Posted', 'posted', t.posted ? fmtLong(t.posted) : '—');
+  fact('Size', 'size', t.size);
+  if (t.action === 'Sell') {
+    const f = document.createElement('div'); f.className = 'aft-fact'; f.id = 'trade-bought';
+    const l = document.createElement('div'); l.className = 'aft-cap'; l.textContent = 'Bought at';
+    f.append(l, mk('div', 'entry_price', t.entry_price == null ? 'Not public' : d3.format('$,.2f')(Number(t.entry_price)), 'v'));
+    if (t.entry_when) f.append(mk('div', 'entry_when', t.entry_when, 's'));
+    facts.append(f);
+  }
+  fact(t.action === 'Buy' ? 'Bought at' : 'Sold at', 'price', t.price == null ? 'Not stated' : d3.format('$,.2f')(Number(t.price)), 'price_source', t.price_source);
+  if (t.action === 'Sell') {
+    const f = document.createElement('div'); f.className = 'aft-fact'; f.id = 'trade-gain';
+    const l = document.createElement('div'); l.className = 'aft-cap'; l.textContent = 'Gain / loss';
+    const g = gainOf(t.id);
+    const v = document.createElement('div'); v.className = 'v' + (g == null ? '' : ' ' + (g >= 0 ? 'aft-up' : 'aft-down'));
+    v.dataset.source = 'gains'; v.dataset.field = 'gain'; v.dataset.where = where;
+    v.textContent = g == null ? 'Not public' : fmtGain(g);
+    f.append(l, v);
+    facts.append(f);
+  }
+  box.append(facts);
+  if (t.price_note) box.append(mk('p', 'price_note', t.price_note, 'aft-pnote'));
+  if (t.gain_basis) box.append(mk('p', 'gain_basis', t.gain_basis, 'aft-pnote'));
+
+  // About the company
+  const co = document.createElement('section'); co.className = 'aft-co'; co.id = 'trade-company';
+  const ch = document.createElement('h2'); ch.textContent = 'About ' + t.company; co.append(ch);
+  const cd = dash.data('companies');
+  const c = cd.status === 'ok' ? cd.data.find(r => r.ticker === t.ticker) : null;
+  if (cd.status === 'loading') { const k = document.createElement('p'); k.className = 'dash-skeleton'; k.textContent = '—'; co.append(k); }
+  else if (cd.status !== 'ok') { const f = document.createElement('div'); f.className = 'aft-fail'; f.textContent = 'Failed to load'; co.append(f); }
+  else if (!c) { const n = document.createElement('p'); n.className = 'none'; n.textContent = 'No company profile yet for ' + t.ticker + '.'; co.append(n); }
+  else {
+    const cw = 'ticker=' + encodeURIComponent(c.ticker);
+    const cm = (tag, field, text, cls) => { const el = document.createElement(tag); if (cls) el.className = cls; el.dataset.source = 'companies'; el.dataset.field = field; el.dataset.where = cw; el.textContent = text; return el; };
+    const meta = document.createElement('div'); meta.className = 'meta';
+    meta.append(cm('span', 'sector', c.sector), cm('span', 'hq', c.hq));
+    co.append(meta);
+    const blk = (title, field, text) => { const b = document.createElement('div'); const h3 = document.createElement('h3'); h3.textContent = title; b.append(h3, cm('p', field, text)); co.append(b); };
+    blk('What it is', 'about', c.about);
+    blk('How it makes money', 'revenue', c.revenue);
+    const sb = document.createElement('div'); const sh = document.createElement('h3'); sh.textContent = 'Main businesses'; sb.append(sh);
+    const segs = cm('div', 'segments', '', 'aft-segs');
+    for (const part of String(c.segments || '').split(' · ').filter(Boolean)) { const chip = document.createElement('span'); chip.className = 'aft-seg'; chip.textContent = part; segs.append(chip); }
+    sb.append(segs); co.append(sb);
+    const ft = document.createElement('p'); ft.className = 'foot'; ft.textContent = 'General company background, not from the @aifinancelabs post.'; co.append(ft);
+  }
+  // Sections
+  const secs = document.createElement('div'); secs.className = 'aft-secs';
+  const sec = (id, title, field, text, wide, fallback) => {
+    const s = document.createElement('section'); s.className = 'aft-sec' + (wide ? ' wide' : ''); s.id = id;
+    const hh = document.createElement('h2'); hh.textContent = title; s.append(hh);
+    if (text) s.append(mk('p', field, text));
+    else { const p = document.createElement('p'); p.className = 'none'; p.textContent = fallback; s.append(p); }
+    secs.append(s);
+  };
+  sec('trade-why', `Why ${t.model} made this trade`, 'thesis', t.thesis, true, 'The post gave no reasoning for this leg.');
+  sec('trade-risk', 'What could go wrong', 'risk', t.risk, false, 'The post didn\'t name a risk for this trade.');
+  sec('trade-watch', 'What to watch next', 'watch', t.watch, false, 'No upcoming date was mentioned.');
+  {
+    const s2 = document.createElement('section'); s2.className = 'aft-sec wide aft-now'; s2.id = 'trade-outcome';
+    const hh = document.createElement('h2'); hh.textContent = 'How it has gone so far'; s2.append(hh);
+    const pd = dash.data('trade_pnl');
+    const r = pd.status === 'ok' ? pd.data.find(x => x.id === t.id) : null;
+    if (pd.status === 'loading') { const k = document.createElement('p'); k.className = 'dash-skeleton'; k.textContent = '—'; s2.append(k); }
+    else if (pd.status !== 'ok') { const f = document.createElement('div'); f.className = 'aft-fail'; f.textContent = 'Failed to load'; s2.append(f); }
+    else {
+      const row = document.createElement('div'); row.className = 'aft-nowrow';
+      const pm = (field, text, cls) => { const el = document.createElement('div'); el.className = cls; el.dataset.source = 'trade_pnl'; el.dataset.field = field; el.dataset.where = where; el.textContent = text; return el; };
+      const qd = dash.data('quotes');
+      const q = qd.status === 'ok' ? qd.data.find(x => x.ticker === t.ticker) : null;
+      const c1 = document.createElement('div'); const l1 = document.createElement('div'); l1.className = 'aft-cap'; l1.textContent = 'Current price' + (q ? ' (' + fmtLong(q.as_of) + ' close)' : '');
+      c1.append(l1, pm('current', r && r.current != null ? d3.format('$,.2f')(r.current) : '—', 'aft-nowv'));
+      const c2 = document.createElement('div'); const l2 = document.createElement('div'); l2.className = 'aft-cap'; l2.textContent = t.action === 'Buy' ? 'P&L since buy' : 'P&L since sale';
+      const g = r ? r.pnl : null;
+      c2.append(l2, pm('pnl', g == null ? '—' : fmtGain(g), 'aft-nowv' + (g == null ? '' : g >= 0 ? ' aft-up' : ' aft-down')));
+      row.append(c1, c2); s2.append(row);
+    }
+    secs.append(s2);
+  }
+  box.append(secs);
+  box.append(co);
+
+  // Paired leg
+  const pair = t.pair ? d.data.find(r => r.id === t.pair) : null;
+  if (pair) {
+    const s = document.createElement('section'); s.className = 'aft-sec'; s.id = 'trade-pair';
+    const hh = document.createElement('h2'); hh.textContent = t.action === 'Sell' ? 'Where the money went' : 'Where the money came from'; s.append(hh);
+    const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'aft-pairbtn';
+    const pp = document.createElement('span'); pp.className = 'aft-pill ' + (pair.action === 'Buy' ? 'aft-buy' : 'aft-sell'); pp.textContent = pair.action;
+    const tk = document.createElement('b'); tk.textContent = pair.ticker;
+    const co = document.createElement('span'); co.className = 'aft-dco'; co.textContent = pair.company + ' · ' + pair.size;
+    const go = document.createElement('span'); go.className = 'aft-more'; go.style.marginLeft = 'auto'; go.textContent = 'Open →';
+    btn.append(pp, tk, co, go);
+    btn.addEventListener('click', () => openTrade(pair.id));
+    s.append(btn);
+    box.append(s);
+  }
+
+  // Source
+  const src = document.createElement('p'); src.className = 'aft-src';
+  const a = document.createElement('a'); a.href = t.post; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Read the original post on X';
+  src.append('Source: ', a, '. Reasoning is summarized from the post. It isn\'t investment advice.');
+  box.append(src);
+}
+
+function render() {
+  const inDetail = !!window.aftView.trade;
+  document.getElementById('list-view').hidden = inDetail;
+  document.getElementById('trade-view').hidden = !inDetail;
+  if (inDetail) drawDetail();
+  else { drawTakeaway(); drawTiles(); drawTable(); }
+}
+
+(function route() {
+  const h = location.hash.slice(1);
+  if (h.startsWith('trade-')) window.aftView.trade = h.slice(6);
+  else if (h) { const el = document.getElementById(h); if (el) setTimeout(() => el.scrollIntoView(), 0); }
+})();
+
+dash.onData(render);
+</script>

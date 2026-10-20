@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Portfolio Trades</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+/* Theme tokens that stand in for the Claude Dashboard type's variables */
+:root{--color-bg:#fafaf8;--color-fg:#1f1e1c;--color-fg-muted:#6b6862;--color-panel:#ffffff;--color-border-line:#e4e1da;
+--color-ok:#2f7a3d;--color-warn:#a8650b;--color-bad:#b3412e;
+--cds-surface-popover:#ffffff;--cds-border:#e4e1da;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.12);--cds-text-secondary:#6b6862;
+--cds-chart-axis:#c9c5bc;--cds-chart-grid:#eeebe5;
+--font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif;
+--cds-font-size-caption:.8rem;--cds-font-size-body:.95rem;--cds-font-size-heading:1.05rem;--cds-font-size-title:1.9rem;--cds-font-weight-medium:500;
+--cds-gap-xs:.25rem;--cds-gap-sm:.5rem;--cds-gap-md:1rem;--cds-gap-lg:1.5rem;--cds-gap-xl:2rem;
+--cds-pad-xs:.25rem;--cds-pad-sm:.5rem;--cds-pad-md:.75rem;--cds-pad-lg:1.25rem;--cds-radius:10px;--cds-dur-slow:.3s}
+@media (prefers-color-scheme:dark){:root{--color-bg:#171716;--color-fg:#ecebe7;--color-fg-muted:#9d9a93;--color-panel:#1f1f1d;--color-border-line:#33322f;
+--color-ok:#6cc27a;--color-bad:#e57a66;--cds-surface-popover:#262624;--cds-border:#3a3936;--cds-text-secondary:#9d9a93;color-scheme:dark}}
+body{margin:0;background:var(--color-bg);color:var(--color-fg)}
+#dash-root{max-width:1280px;margin:0 auto;padding:2rem max(16px,3vw)}
+.dash-skeleton{color:transparent;background:var(--color-border-line);border-radius:4px}
+</style>
+<script>
+/* Minimal stand-in for the dashboard type's `dash` API, fed from inline data. */
+window.__DATA = { trades: [
+ {"id": "t01", "date": "2026-10-08", "model": "Claude", "portfolio": "Claude", "action": "Sell", "ticker": "VST", "company": "Vistra", "size": "Trim 13% → 4%", "size_pct": 9, "price": 165.81, "reason": "Too concentrated after a 20.5% five-day run; closed at $156.14 (−5.8%)", "post": "https://x.com/aifinancelabs/status/2108319918189867293", "posted": "2026-10-08", "pair": "t02", "summary": "Claude sold most of its Vistra at Thursday's open at $165.81, cutting it from 13% to 4% of the portfolio. The proceeds went into two new positions, AppLovin and StandardAero.", "thesis": "A 20.5% run in five trading days had made Vistra the largest position at 13% of the book, which was too much riding on one power producer. Claude took most of the gain but kept a 4% stake, because the reason it owns Vistra hasn't changed: AI data centers need around-the-clock power, and Vistra owns that kind of generation. Most of its 2027 power is already sold at set prices, and 20-year deals with Meta and Amazon cover about 3,800 MW of nuclear output.", "risk": "Not stated for the trim. The remaining 4% stake still depends on Vistra's 2027 outlook holding up.", "watch": "Vistra reports results and gives its 2027 outlook on Nov 6.", "outcome": "Vistra closed the same day at $156.14, 5.8% below the sale price.", "price_source": "From the post", "price_note": null, "entry_price": 149.0, "gain_basis": "Compared with Claude's Aug 12 add at $149, which the Oct 7 post states. Claude owned some Vistra before that, so this isn't its full average cost.", "entry_when": "Aug 12, 2026"},
+ {"id": "t02", "date": "2026-10-08", "model": "Claude", "portfolio": "Claude", "action": "Buy", "ticker": "APP", "company": "AppLovin", "size": "New 5%", "size_pct": 5, "price": 276.08, "reason": "Down 62% from high, ~14× next year's earnings, 4.8% FCF yield", "post": "https://x.com/aifinancelabs/status/2108319918189867293", "posted": "2026-10-08", "pair": "t01", "summary": "Claude opened a new 5% position in AppLovin, paid for with part of the Vistra sale.", "thesis": "AppLovin is down 62% from its high and trades at about 14 times next year's earnings. It produces roughly $4.5B of free cash flow, a 4.8% yield.", "risk": "It's a volatile stock with earnings coming on Nov 4, so Claude kept the position near 5%.", "watch": "AppLovin earnings on Nov 4.", "outcome": null, "price_source": "Day's open", "price_note": "The post says the trade happened at the open. This is that day's opening price from Yahoo Finance. It closed at $280.12.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t03", "date": "2026-10-08", "model": "Claude", "portfolio": "Claude", "action": "Buy", "ticker": "SARO", "company": "StandardAero", "size": "New 4%", "size_pct": 4, "price": 20.03, "reason": "Largest independent jet-engine maintenance company, ~13× earnings", "post": "https://x.com/aifinancelabs/status/2108319918189867293", "posted": "2026-10-08", "pair": "t01", "summary": "Claude opened a new 4% position in StandardAero, paid for with the rest of the Vistra sale.", "thesis": "StandardAero is the largest independent jet-engine maintenance company. It trades at about 13 times earnings and has raised its guidance twice without ever cutting it.", "risk": "Claude held it to 4% because of a reported weakness in the company's internal controls, and because large holders may keep selling stock.", "watch": null, "outcome": null, "price_source": "Day's open", "price_note": "The post says the trade happened at the open. This is that day's opening price from Yahoo Finance. It closed at $20.33.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t04", "date": "2026-10-08", "model": "GPT", "portfolio": "GPT", "action": "Sell", "ticker": "AVGO", "company": "Broadcom", "size": "All 7.59%", "size_pct": 7.59, "price": 370.73, "reason": "Avoid AI-spending update risk in late October; closed 2.9% below the sale", "post": "https://x.com/aifinancelabs/status/2108324528988233970", "posted": "2026-10-08", "pair": "t05", "summary": "GPT sold its entire Broadcom position (7.59% of the portfolio) at Thursday's open and put all of it into Chewy.", "thesis": "GPT says Broadcom's business is intact; the setup is what changed. After the rally, the stock depends on its biggest customers raising AI spending again in their late-October updates, and on how they pay for it. GPT didn't want that risk going into those updates, so it sold the whole position instead of trimming. The trade also moves the book away from AI.", "risk": "If AI spending updates in late October come in strong, Broadcom could rally without GPT in it.", "watch": "Late-October spending updates from Broadcom's largest AI customers.", "outcome": "Broadcom closed 2.9% below the sale price. GPT's portfolio finished the day up 1.3% while the S&P 500 fell 0.4%.", "price_source": "From the post", "price_note": "GPT gave this price in a reply on Oct 8. The day's opening price was $370.62.", "entry_price": 327.0, "gain_basis": "GPT said in a reply that it bought Broadcom in April near $327 and called it about a 13.5% gain. The April date is approximate.", "entry_when": "April 2026"},
+ {"id": "t05", "date": "2026-10-08", "model": "GPT", "portfolio": "GPT", "action": "Buy", "ticker": "CHWY", "company": "Chewy", "size": "7.59%", "size_pct": 7.59, "price": 18.07, "reason": "Near annual low, recurring demand; EPS expected $1.54 → $1.87", "post": "https://x.com/aifinancelabs/status/2108324528988233970", "posted": "2026-10-08", "pair": "t04", "summary": "GPT bought Chewy with the full 7.59% it got from selling Broadcom.", "thesis": "Chewy trades near its annual low, and its customers buy pet food and supplies every month, so revenue doesn't need a strong economy. Analysts expect earnings per share to rise from $1.54 to $1.87 next year.", "risk": "Whether cutting the Chewy+ membership price from $79 to $59 keeps customers without hurting profit.", "watch": "Chewy's Dec 9 earnings report.", "outcome": "Chewy rose 10.7% in the week to Oct 19, GPT's best performer that week.", "price_source": "Day's open", "price_note": "The post says the trade happened at the open. This is that day's opening price from Yahoo Finance. It closed at $18.91.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t06", "date": "2026-10-08", "model": "Grok", "portfolio": "Grok", "action": "Sell", "ticker": "AVGO", "company": "Broadcom", "size": "All 7.5%", "size_pct": 7.5, "price": 370.62, "reason": "Small expected return after the rally; already heavy in tech", "post": "https://x.com/aifinancelabs/status/2108627190329831933", "posted": "2026-10-09", "pair": "t07", "summary": "Grok sold all of its Broadcom (7.5% of the portfolio) at Thursday's open at $370.62 and moved the money into Rentokil.", "thesis": "Grok says the price was the issue, not the company. After the run it expected only about 6% over three months and 13% over twelve, one of the smallest expected returns in its book. It already has plenty of AI-spending exposure through Nvidia and NRG, and tech was already a heavy share of the portfolio.", "risk": "Broadcom keeps climbing on AI demand.", "watch": null, "outcome": "Broadcom closed the day 2.8% lower.", "price_source": "From the post", "price_note": null, "entry_price": null, "gain_basis": "Not public. The AI held this stock before the posts we have, and its purchase price wasn't posted.", "entry_when": null},
+ {"id": "t07", "date": "2026-10-08", "model": "Grok", "portfolio": "Grok", "action": "Buy", "ticker": "RTO", "company": "Rentokil", "size": "7.5%", "size_pct": 7.5, "price": 19.98, "reason": "Defensive pest control at 13× next year's earnings; target $23.65", "post": "https://x.com/aifinancelabs/status/2108627190329831933", "posted": "2026-10-09", "pair": "t06", "summary": "Grok bought Rentokil (owner of Terminix) at $19.98 with the full 7.5% from the Broadcom sale.", "thesis": "Restaurants, warehouses, hospitals and homeowners keep paying for pest control in a slowdown, and most of the work is repeat service. The stock fell hard after its North American business slowed, and now trades at 13 times next year's expected earnings. It moves about half as much as the market, which Grok wanted with October inflation data and the Iran standoff still open. Its debt came back inside the company's own target range this summer for the first time since the Terminix deal. Grok's math says about 10% over three months and 19% over twelve, a $23.65 target.", "risk": "North America. One analyst expects organic growth there of 0–2% in Q3, down from 2.6% in the first half.", "watch": "Rentokil's Q3 trading update later in October.", "outcome": "Rentokil closed the day 1.4% higher.", "price_source": "From the post", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t08", "date": "2026-10-08", "model": "Claude", "portfolio": "Claude WW3", "action": "Sell", "ticker": "RTX", "company": "RTX", "size": "Not disclosed", "size_pct": null, "price": 180.25, "reason": "Lowest expected return in the book, barely above cash", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t09", "summary": "In the AI World War III portfolio, Claude sold RTX and bought Boeing on Oct 8.", "thesis": "RTX had the lowest expected return in Claude's book, barely above cash.", "risk": null, "watch": "Next up for the book: Northrop reports Oct 20 and Lockheed Oct 22.", "outcome": null, "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $184.32.", "entry_price": null, "gain_basis": "Not public. The AI held this stock before the posts we have, and its purchase price wasn't posted.", "entry_when": null},
+ {"id": "t09", "date": "2026-10-08", "model": "Claude", "portfolio": "Claude WW3", "action": "Buy", "ticker": "BA", "company": "Boeing", "size": "Not disclosed", "size_pct": null, "price": 185.9, "reason": "Cash flow recovering, defense backlog rebuilding (F-47, PAC-3)", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t08", "summary": "In the AI World War III portfolio, Claude bought Boeing on Oct 8 with the money from RTX.", "thesis": "Boeing's cash flow is recovering and its defense backlog is rebuilding, with the F-47 fighter and the PAC-3 missile seeker.", "risk": null, "watch": "Boeing reports Oct 27.", "outcome": null, "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $187.75.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t10", "date": "2026-10-02", "model": "Claude", "portfolio": "Claude WW3", "action": "Sell", "ticker": "CACI", "company": "CACI", "size": "Full exit", "size_pct": null, "price": 626.49, "reason": "Risky earnings report with little upside priced in", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t12", "summary": "In the AI World War III portfolio, Claude sold all of its CACI on Oct 2.", "thesis": "CACI was heading into a risky earnings report late in October with little upside priced in. Claude moved the money into its two strongest defense ideas, Huntington Ingalls and Kratos.", "risk": null, "watch": "CACI's late-October earnings report.", "outcome": null, "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $615.04.", "entry_price": null, "gain_basis": "Not public. CACI was held in the portfolio for a long time, and the posts don't give a purchase price.", "entry_when": null},
+ {"id": "t11", "date": "2026-10-02", "model": "Claude", "portfolio": "Claude WW3", "action": "Sell", "ticker": "MP", "company": "MP Materials", "size": "Full exit", "size_pct": null, "price": 47.0, "reason": "Earnings estimates falling", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t12", "summary": "In the AI World War III portfolio, Claude sold all of its MP Materials on Oct 2.", "thesis": "MP's earnings estimates are falling. The money went into Huntington Ingalls and Kratos.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $46.97.", "entry_price": 55.8, "gain_basis": "Estimate. Claude raised MP from 3.8% to 8.3% of the book on Aug 12. This uses that day's opening price ($55.80) and the Oct 2 opening price, because neither post gives the exact fill.", "entry_when": "Aug 12, 2026"},
+ {"id": "t12", "date": "2026-10-02", "model": "Claude", "portfolio": "Claude WW3", "action": "Buy", "ticker": "HII", "company": "Huntington Ingalls", "size": "Now ~10%", "size_pct": 10, "price": 274.9, "reason": "Navy shipbuilder at 12.5× 2027 earnings, estimates rising", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t13", "summary": "In the AI World War III portfolio, Claude added to Huntington Ingalls on Oct 2 with money from CACI and MP Materials. It's now close to 10% of the book.", "thesis": "Huntington Ingalls builds Navy ships and trades at 12.5 times 2027 earnings while estimates are rising. Claude calls it one of its two strongest defense ideas.", "risk": null, "watch": "Huntington Ingalls reports Oct 29.", "outcome": null, "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $268.54.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t13", "date": "2026-10-02", "model": "Claude", "portfolio": "Claude WW3", "action": "Buy", "ticker": "KTOS", "company": "Kratos", "size": "Now ~10%", "size_pct": 10, "price": 43.3, "reason": "Combat drones and engines, $1.44B cash, no debt", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t12", "summary": "In the AI World War III portfolio, Claude added to Kratos on Oct 2 with money from CACI and MP Materials. It's now close to 10% of the book.", "thesis": "Kratos makes combat drones and engines and holds $1.44 billion in cash with no debt. Claude calls it one of its two strongest defense ideas.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $43.07.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t14", "date": "2026-09-30", "model": "Claude", "portfolio": "Claude WW3", "action": "Sell", "ticker": "PANW", "company": "Palo Alto Networks", "size": "Not disclosed", "size_pct": null, "price": 391.36, "reason": "Little expected return over the next year after its run", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t15", "summary": "In the AI World War III portfolio, Claude sold Palo Alto Networks on Sep 30 and bought Gen Digital.", "thesis": "After its run, Palo Alto offered almost nothing in expected return over the next year.", "risk": null, "watch": null, "outcome": "Palo Alto is up 6.6% since the swap, against 9.7% for Gen Digital (as of Oct 9).", "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $397.31.", "entry_price": null, "gain_basis": "Not public. Palo Alto was the book's largest position for a long time, and the posts don't give a purchase price.", "entry_when": null},
+ {"id": "t15", "date": "2026-09-30", "model": "Claude", "portfolio": "Claude WW3", "action": "Buy", "ticker": "GEN", "company": "Gen Digital", "size": "Not disclosed", "size_pct": null, "price": 20.94, "reason": "~7× earnings, ~11.5% FCF yield; up 9.7% since the swap", "post": "https://x.com/aifinancelabs/status/2108627635571933257", "posted": "2026-10-09", "pair": "t14", "summary": "In the AI World War III portfolio, Claude bought Gen Digital on Sep 30 with the money from Palo Alto Networks.", "thesis": "Gen Digital, which owns Norton and Avast, trades near 7 times earnings with a free cash flow yield around 11.5%.", "risk": null, "watch": null, "outcome": "Gen Digital is up 9.7% since the swap, against 6.6% for Palo Alto (as of Oct 9).", "price_source": "Day's open (estimate)", "price_note": "The post gives only the date, not the fill price. This is that day's opening price from Yahoo Finance. It closed at $22.02.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t16", "date": "2026-10-14", "model": "Claude", "portfolio": "Claude", "action": "Sell", "ticker": "ICE", "company": "Intercontinental Exchange", "size": "Not disclosed", "size_pct": null, "price": 156.38, "reason": "Exited to fund Dycom and DraftKings", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t18", "summary": "Claude sold its Intercontinental Exchange position at Wednesday's open, using the proceeds along with a Restaurant Brands sale to buy Dycom and DraftKings.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t17", "date": "2026-10-14", "model": "Claude", "portfolio": "Claude", "action": "Sell", "ticker": "QSR", "company": "Restaurant Brands International", "size": "Not disclosed", "size_pct": null, "price": 71.48, "reason": "Exited to fund Dycom and DraftKings", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t18", "summary": "Claude sold its Restaurant Brands position at Wednesday's open, pairing with the Intercontinental Exchange sale to fund two new buys.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t18", "date": "2026-10-14", "model": "Claude", "portfolio": "Claude", "action": "Buy", "ticker": "DY", "company": "Dycom Industries", "size": "Not disclosed", "size_pct": null, "price": 266.74, "reason": "Builds fiber and data-center networks; ~13x forward earnings after halving from its high", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t16", "summary": "Claude bought Dycom at Wednesday's open, funded by the Intercontinental Exchange and Restaurant Brands sales.", "thesis": "Dycom builds the fiber and data centre networks that carriers and AI companies are paying for. Claude put the valuation at roughly 13 times forward earnings after the stock had fallen about half from its high, so it is a way to own the AI build-out without paying a premium multiple.", "risk": null, "watch": "Claude flagged that the new buys all closed below their opening price on the day.", "outcome": "Closed Oct 14 at $259.96, 2.5% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t19", "date": "2026-10-14", "model": "Claude", "portfolio": "Claude", "action": "Buy", "ticker": "DKNG", "company": "DraftKings", "size": "Not disclosed", "size_pct": null, "price": 19.77, "reason": "Near its 52-week low at ~12x forward earnings, free cash flow going to buybacks", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t16", "summary": "Claude bought DraftKings at Wednesday's open as the second half of the ICE and Restaurant Brands swap.", "thesis": "DraftKings was sitting near its 52-week low at about 12 times forward earnings, with free cash flow being directed into share buybacks.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $18.90, 4.4% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t20", "date": "2026-10-14", "model": "Claude", "portfolio": "Claude WW3", "action": "Sell", "ticker": "TDG", "company": "TransDigm Group", "size": "Not disclosed", "size_pct": null, "price": 1112.19, "reason": "Sold to fund TTM Technologies", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t21", "summary": "Claude sold TransDigm out of the AI World War III book at Wednesday's open and put the money into TTM Technologies.", "thesis": "Claude said the thesis for the book has not changed, but it wanted the next leg of defence spending rather than the incumbent supplier.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t21", "date": "2026-10-14", "model": "Claude", "portfolio": "Claude WW3", "action": "Buy", "ticker": "TTMI", "company": "TTM Technologies", "size": "Not disclosed", "size_pct": null, "price": 113.41, "reason": "Largest US maker of trusted defense circuit boards, plus a growing AI data-center business", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t20", "summary": "Claude bought TTM Technologies in the AI World War III portfolio at Wednesday's open, funded by the TransDigm sale.", "thesis": "TTM is the largest US maker of trusted circuit boards for defence, supplying RF components for radar, missiles and electronic warfare, and it also has a growing AI data centre business. Claude said that is where it thinks the next leg of defence spending goes.", "risk": null, "watch": "Claude restated this trade in its Oct 16 post on the WW3 book.", "outcome": "Closed Oct 14 at $103.31, 8.9% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t22", "date": "2026-10-14", "model": "Grok", "portfolio": "Grok", "action": "Sell", "ticker": "SYK", "company": "Stryker", "size": "Not disclosed", "size_pct": null, "price": 285.66, "reason": "Exited; DeepSeek sold the same name the same day", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t25", "summary": "Grok sold its Stryker position at Wednesday's open as part of a four-name rebalance.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t23", "date": "2026-10-14", "model": "Grok", "portfolio": "Grok", "action": "Sell", "ticker": "NBIX", "company": "Neurocrine Biosciences", "size": "Not disclosed", "size_pct": null, "price": 133.94, "reason": "Exited; DeepSeek sold the same name the same day", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t25", "summary": "Grok sold Neurocrine at Wednesday's open. Claude noted it still owns the stock.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t24", "date": "2026-10-14", "model": "Grok", "portfolio": "Grok", "action": "Sell", "ticker": "BSX", "company": "Boston Scientific", "size": "Trim, size not disclosed", "size_pct": null, "price": 43.4, "reason": "Trimmed; size not disclosed", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t25", "summary": "Grok trimmed its Boston Scientific position at Wednesday's open. The post does not say by how much.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t25", "date": "2026-10-14", "model": "Grok", "portfolio": "Grok", "action": "Buy", "ticker": "000660.KS", "company": "SK hynix", "size": "Not disclosed", "size_pct": null, "price": null, "reason": "Leading AI memory supplier, bought about 22% off its high", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t22", "summary": "Grok bought SK hynix at Wednesday's open. SK hynix trades in Seoul, so no US dollar price is recorded.", "thesis": "Grok bought after the shares fell about 22% in five sessions. Claude said it is leaning the same way through Micron, on the same memory shortage.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at KRW 1,419,000, 2.7% below the open.", "price_source": "Day's open (estimate)", "price_note": "SK hynix is listed in Seoul (000660.KS) and trades in Korean won, not US dollars. It opened at KRW 1,458,000 and closed at KRW 1,419,000 on Oct 14. No USD price is recorded, so no gain or loss is shown.", "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t26", "date": "2026-10-14", "model": "Grok", "portfolio": "Grok", "action": "Buy", "ticker": "KKR", "company": "KKR & Co.", "size": "Not disclosed", "size_pct": null, "price": 86.0, "reason": "Part of Grok's four-name buy basket", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t22", "summary": "Grok bought KKR at Wednesday's open, funded by the Stryker, Neurocrine and Boston Scientific sales.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $85.60, 0.5% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t27", "date": "2026-10-14", "model": "Grok", "portfolio": "Grok", "action": "Buy", "ticker": "FTAI", "company": "FTAI Aviation", "size": "Not disclosed", "size_pct": null, "price": 164.37, "reason": "Part of Grok's four-name buy basket", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t22", "summary": "Grok bought FTAI Aviation at Wednesday's open.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $163.25, 0.7% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t28", "date": "2026-10-14", "model": "Grok", "portfolio": "Grok", "action": "Buy", "ticker": "MTZ", "company": "MasTec", "size": "Not disclosed", "size_pct": null, "price": 205.16, "reason": "AI build-out name bought on weakness", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t22", "summary": "Grok bought MasTec at Wednesday's open.", "thesis": "Claude grouped MasTec with Dycom, TTM and SK hynix as the AI build-out names three of the four portfolios bought into on weakness.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $194.46, 5.2% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t29", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Sell", "ticker": "SYK", "company": "Stryker", "size": "Not disclosed", "size_pct": null, "price": 285.66, "reason": "Exited; Grok sold the same name the same day", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t33", "summary": "DeepSeek sold Stryker at Wednesday's open.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t30", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Sell", "ticker": "WAY", "company": "Waystar Holding", "size": "Not disclosed", "size_pct": null, "price": 25.97, "reason": "Exited in the rebalance", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t33", "summary": "DeepSeek sold Waystar at Wednesday's open.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t31", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Sell", "ticker": "NBIX", "company": "Neurocrine Biosciences", "size": "Not disclosed", "size_pct": null, "price": 133.94, "reason": "Exited; Grok sold the same name the same day", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t33", "summary": "DeepSeek sold Neurocrine at Wednesday's open.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t32", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Sell", "ticker": "BSX", "company": "Boston Scientific", "size": "Trim, size not disclosed", "size_pct": null, "price": 43.4, "reason": "Trimmed; size not disclosed", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t33", "summary": "DeepSeek trimmed Boston Scientific at Wednesday's open. The post does not say by how much.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": null, "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": "Not public: the post never gave the buy price.", "entry_when": null},
+ {"id": "t33", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Buy", "ticker": "HAPN", "company": "Happen", "size": "Not disclosed", "size_pct": null, "price": 14.57, "reason": "Part of DeepSeek's value-priced buy basket", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t29", "summary": "DeepSeek bought Happen at Wednesday's open.", "thesis": "Claude described DeepSeek's thread through the day's buys as price: cheap earnings multiples across the basket.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $14.18, 2.7% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t34", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Buy", "ticker": "GIL", "company": "Gildan Activewear", "size": "Not disclosed", "size_pct": null, "price": 41.82, "reason": "7.7x next year's earnings", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t29", "summary": "DeepSeek bought Gildan at Wednesday's open.", "thesis": "Claude cited Gildan at 7.7 times next year's earnings as an example of DeepSeek buying on price.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $41.12, 1.7% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t35", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Buy", "ticker": "CDE", "company": "Coeur Mining", "size": "Not disclosed", "size_pct": null, "price": 15.73, "reason": "About 8x earnings", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t29", "summary": "DeepSeek bought Coeur Mining at Wednesday's open.", "thesis": "Claude put Coeur at about 8 times earnings, part of the same value thread.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $14.98, 4.8% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t36", "date": "2026-10-14", "model": "DeepSeek", "portfolio": "DeepSeek", "action": "Buy", "ticker": "KGS", "company": "Kodiak Gas Services", "size": "Not disclosed", "size_pct": null, "price": 51.84, "reason": "Part of DeepSeek's value-priced buy basket", "post": "https://x.com/aifinancelabs/status/2110477225871175766", "posted": "2026-10-14", "pair": "t29", "summary": "DeepSeek bought Kodiak Gas Services at Wednesday's open.", "thesis": "The post gives no reason for this leg on its own; it was part of the day's rebalance.", "risk": null, "watch": null, "outcome": "Closed Oct 14 at $50.07, 3.4% below the open.", "price_source": "Day's open", "price_note": null, "entry_price": null, "gain_basis": null, "entry_when": null},
+ {"id": "t37", "date": "2026-10-02", "model": "Muse", "portfolio": "Muse", "action": "Buy", "ticker": "NU", "company": "Nu Holdings", "size": "Not disclosed", "size_pct": null, "price": 13.32, "reason": "Brazil's largest digital bank, bought off its highs before the Oct 4 election", "post": "https://x.com/aifinancelabs/status/2108638748896305191", "posted": "2026-10-09", "pair": null, "summary": "One of the Muse portfolio's first buys after it launched. Muse bought Nubank at $13.32 and the post of Oct 9 put it up about 19%.", "thesis": "Nubank is Brazil's largest digital bank, growing fast and already profitable. The stock was well off its highs after talk of a deal for the UK bank Monzo, and Nubank said it was not pursuing that deal, which took a large share issue off the table. Muse also named the Oct 4 election as a reason to own it: Flavio Bolsonaro finished first with 47% to Lula's 45%, the real hit its strongest level in about 17 months, Brazil's main index closed at a record and Nubank jumped 13% that day.", "risk": "Rising loan losses, or a surprise in the runoff.", "watch": "The Oct 25 runoff, Brazil's central bank rate decision on Nov 4 and Nubank's earnings on Nov 12.", "outcome": "The Oct 9 post put Nubank around $15.89, about 19% above the entry.", "price_source": "From the post", "price_note": "Muse launched the week of Sep 29. The Oct 9 post calls Nubank one of its first buys and gives the $13.32 entry, but not the exact trade date; Oct 2 is used as the launch-week date.", "entry_price": null, "gain_basis": null, "entry_when": null}
+], portfolios: [
+ {"portfolio": "Claude", "model": "Claude", "stat": null, "stat_label": "No return figure posted", "as_of": "2026-10-19", "note": "Manages about $50M on Autopilot. Pharvaris ~7% of the book, down 14.5% on the position. Sold Intercontinental Exchange and Restaurant Brands for Dycom and DraftKings on Oct 14."},
+ {"portfolio": "Claude WW3", "model": "Claude", "stat": 2.0242, "stat_label": "Return since Oct 2023 (S&P 500: +85.5%)", "as_of": "2026-10-16", "note": "$82.3M tracking it. Down 7.9% over the past month. Defense-focused book; swapped TransDigm for TTM Technologies on Oct 14."},
+ {"portfolio": "GPT", "model": "GPT", "stat": 0.118, "stat_label": "3-month return (S&P 500: +1.7%)", "as_of": "2026-10-19", "note": "+2.8% last week vs S&P −2.0%. Stryker and Intuit ~10% each."},
+ {"portfolio": "Grok", "model": "Grok", "stat": 0.653, "stat_label": "Return since Feb 2025", "as_of": "2026-10-19", "note": "Up 24.1% over three months. A $300,000 deposit landed on Oct 19, the day's top on Autopilot. Rentokil target $23.65."},
+ {"portfolio": "DeepSeek", "model": "DeepSeek", "stat": 0.757, "stat_label": "Return since Feb 2025", "as_of": "2026-10-16", "note": "$45.4M tracking it. Up 47.6% over the past year. Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14."},
+ {"portfolio": "Muse", "model": "Muse", "stat": null, "stat_label": "No return figure posted", "as_of": "2026-10-09", "note": "Launched the week of Sep 29, 2026. Nubank was among its first buys, at $13.32. A $50,000 deposit landed on Oct 9."},
+ {"portfolio": "Gemini", "model": "Gemini 4 Argon", "stat": null, "stat_label": "No return figure posted", "as_of": "2026-10-15", "note": "Seeded with $10,000 on Oct 15, 2026 when Google released Gemini 4 Argon. No trades posted yet."}
+], companies: [
+ {"ticker": "VST", "company": "Vistra", "sector": "Utilities · Power generation", "hq": "Irving, Texas", "about": "One of the largest power producers in the US. It owns natural gas, nuclear, coal, solar and battery plants, and it also sells electricity directly to homes and businesses.", "revenue": "It makes money two ways. It sells electricity and capacity from its plants into the wholesale power markets, and it sells electricity to millions of retail customers under brands such as TXU Energy. More and more of its output is sold years ahead on long-term contracts, including deals with tech companies that need around-the-clock power for data centers.", "segments": "Retail electricity · Wholesale power generation · Nuclear fleet · Long-term power contracts"},
+ {"ticker": "APP", "company": "AppLovin", "sector": "Technology · Advertising software", "hq": "Palo Alto, California", "about": "An advertising technology company. Its AI-driven ad engine, called AXON, decides which ads to show inside mobile apps and games.", "revenue": "Advertisers, mostly mobile game makers and increasingly online shops, pay to show ads through AppLovin's platform, and AppLovin keeps a share of that spend. It sold its own mobile games business in 2025 to focus on advertising.", "segments": "Mobile app advertising · E-commerce advertising · Ad marketplace for app publishers"},
+ {"ticker": "SARO", "company": "StandardAero", "sector": "Industrials · Aerospace services", "hq": "Scottsdale, Arizona", "about": "The largest independent company that maintains and overhauls aircraft engines. Its customers are airlines, the military and business jet operators.", "revenue": "It charges to take engines apart, repair or replace parts and rebuild them, which every engine needs regularly by rule. Much of the work runs on multi-year agreements with engine makers and operators, so revenue tends to repeat.", "segments": "Engine overhaul services · Component repair · Commercial, military and business aviation"},
+ {"ticker": "AVGO", "company": "Broadcom", "sector": "Technology · Semiconductors and software", "hq": "Palo Alto, California", "about": "A large chip and software company. It designs custom AI chips for the biggest cloud companies, along with networking, broadband and wireless chips. Through acquisitions such as VMware, it also sells software to large businesses.", "revenue": "About half its sales come from chips sold to cloud providers, phone makers and network equipment companies. Custom AI accelerators and data-center networking are the fastest-growing part. The rest comes from software licenses and subscriptions, mainly VMware, sold to large enterprises.", "segments": "Custom AI chips · Networking chips · Broadband and wireless chips · Infrastructure software (VMware)"},
+ {"ticker": "CHWY", "company": "Chewy", "sector": "Consumer · Online retail", "hq": "Florida", "about": "The largest online pet store in the US. It sells pet food, treats, supplies and medications, and it also runs its own vet clinics.", "revenue": "Most of its money comes from selling pet products online. Most sales arrive through Autoship, where customers get repeat deliveries on a schedule. It also earns from its pet pharmacy, vet care, ads that brands pay to place on its site, and the paid Chewy+ membership.", "segments": "Pet food and supplies · Autoship subscriptions · Pet pharmacy · Vet clinics · Sponsored ads"},
+ {"ticker": "RTO", "company": "Rentokil Initial", "sector": "Industrials · Business services", "hq": "United Kingdom", "about": "The world's largest pest control company. In the US it owns Terminix. It also provides washroom and hygiene services to businesses.", "revenue": "It charges homes and businesses (restaurants, warehouses, hospitals, food plants) for regular pest control visits, usually on recurring contracts. Hygiene services such as washroom supplies and cleaning also run on contracts. That makes most of its revenue repeat business.", "segments": "Pest control (incl. Terminix) · Hygiene and wellbeing · Workwear (France)"},
+ {"ticker": "RTX", "company": "RTX", "sector": "Industrials · Aerospace and defense", "hq": "Arlington, Virginia", "about": "One of the largest aerospace and defense companies. It is made up of Collins Aerospace (aircraft systems), Pratt & Whitney (jet engines) and Raytheon (missiles, radars and air defense such as Patriot).", "revenue": "It sells engines and aircraft parts to plane makers and airlines, and earns a lot from spare parts and servicing engines already flying. It also sells missiles, radars and defense systems to the US government and allied countries under long contracts.", "segments": "Commercial aerospace parts and aftermarket · Jet engines · Missiles and air defense"},
+ {"ticker": "BA", "company": "Boeing", "sector": "Industrials · Aerospace and defense", "hq": "Arlington, Virginia", "about": "One of the world's two big passenger-jet makers, with the 737 and 787. It is also a major defense and space contractor.", "revenue": "Most revenue comes from selling commercial airplanes to airlines, paid largely on delivery. It also sells fighter jets, tankers, helicopters, satellites and missile parts to the US and allied governments. A services arm earns from spare parts, maintenance and training for planes already in service.", "segments": "Commercial airplanes · Defense, space and security · Global services"},
+ {"ticker": "CACI", "company": "CACI International", "sector": "Technology · Government services", "hq": "Reston, Virginia", "about": "A government technology contractor. It builds and runs IT, software, cyber and intelligence systems for US defense and intelligence agencies.", "revenue": "Almost all of its revenue comes from US federal government contracts. It is paid to deliver technology, engineering and mission support, often on multi-year contracts that run on a cost-plus or fixed-price basis.", "segments": "Defense and intelligence technology · Cyber and electronic warfare · Federal IT services"},
+ {"ticker": "MP", "company": "MP Materials", "sector": "Materials · Rare earths", "hq": "Las Vegas, Nevada", "about": "The only large-scale rare earth miner in the US. It owns the Mountain Pass mine in California and is building a plant in Texas to make rare earth magnets.", "revenue": "It sells rare earth materials mined and processed at Mountain Pass, especially the NdPr used in magnets for electric motors, wind turbines and defense systems. It is adding sales of finished magnets. A 2025 agreement with the US Defense Department guarantees a minimum price for its NdPr.", "segments": "Rare earth concentrate · Separated NdPr oxide · Rare earth magnets"},
+ {"ticker": "HII", "company": "Huntington Ingalls Industries", "sector": "Industrials · Military shipbuilding", "hq": "Newport News, Virginia", "about": "The largest military shipbuilder in the US. It is the only company that builds the Navy's aircraft carriers, and one of two that build its nuclear submarines.", "revenue": "Nearly all of its revenue comes from US Navy and Coast Guard contracts to design, build, refuel and overhaul ships, which take years each. A smaller technology arm sells unmanned systems, cyber and IT services to the government.", "segments": "Aircraft carriers and submarines (Newport News) · Amphibious ships and destroyers (Ingalls) · Mission technologies"},
+ {"ticker": "KTOS", "company": "Kratos Defense & Security Solutions", "sector": "Industrials · Defense technology", "hq": "San Diego, California", "about": "A defense technology company that makes jet-powered drones, including target drones and the XQ-58 Valkyrie combat drone. It also makes small jet engines, rocket and hypersonic test systems, and satellite communications equipment.", "revenue": "Most of its revenue comes from US military and allied government contracts. It sells drones, engines and systems, and runs test and training services. It often funds new products itself and then sells them at volume, instead of waiting for the government to pay for development.", "segments": "Drones (unmanned systems) · Jet engines · Hypersonics and rockets · Satellite communications"},
+ {"ticker": "PANW", "company": "Palo Alto Networks", "sector": "Technology · Cybersecurity", "hq": "Santa Clara, California", "about": "One of the largest cybersecurity companies. It protects business networks, cloud systems and employee devices from hackers.", "revenue": "It sells firewalls (hardware and software) and, increasingly, subscriptions to its security software for networks (Strata), cloud (Prisma) and security operations (Cortex). Most revenue now repeats through subscriptions and support contracts that businesses renew each year.", "segments": "Network security and firewalls · Cloud security · Security operations · Subscriptions and support"},
+ {"ticker": "GEN", "company": "Gen Digital", "sector": "Technology · Consumer cybersecurity", "hq": "Tempe, Arizona", "about": "A consumer cybersecurity company behind the brands Norton, Avast, AVG, Avira and LifeLock. It protects people's devices, identities and privacy.", "revenue": "Most of its money comes from consumers paying yearly subscriptions for antivirus, VPN, identity-theft protection and privacy tools, most of which renew automatically. In 2025 it bought MoneyLion, which adds income from consumer finance products.", "segments": "Device security (Norton, Avast) · Identity protection (LifeLock) · Privacy and VPN · Consumer finance (MoneyLion)"},
+ {"ticker": "ICE", "company": "Intercontinental Exchange", "sector": "Financials · Exchanges", "hq": "Atlanta, Georgia", "about": "Owns the New York Stock Exchange and a global group of futures and options markets. It also runs big mortgage-technology and bond-data businesses.", "revenue": "It charges fees every time something trades on its venues, and it sells the price data and analytics that come off those venues. A third leg sells software that banks use to originate and service US mortgages, which brings in steady subscription revenue.", "segments": "Exchanges · Fixed income and data services · Mortgage technology"},
+ {"ticker": "QSR", "company": "Restaurant Brands International", "sector": "Consumer · Restaurants", "hq": "Toronto, Canada", "about": "The owner of Burger King, Tim Hortons, Popeyes and Firehouse Subs. Almost all of its roughly 32,000 restaurants are run by franchisees.", "revenue": "It takes a royalty on what each franchised restaurant sells, plus rent on properties it leases to them and fees when a new restaurant opens. Because franchisees carry the operating costs, most of the royalty falls through as profit.", "segments": "Burger King · Tim Hortons · Popeyes · Firehouse Subs"},
+ {"ticker": "DY", "company": "Dycom Industries", "sector": "Industrials · Network construction", "hq": "Palm Beach Gardens, Florida", "about": "A contractor that physically builds telecom networks: burying fibre, installing cable and wiring up data centres across the US.", "revenue": "Telecom carriers and, increasingly, data-centre operators hire it on multi-year master service agreements. It is paid for the engineering and construction work it completes, so revenue tracks how much the carriers and hyperscalers are spending on new network capacity.", "segments": "Fibre construction · Engineering services · Maintenance and locating · Data-centre networks"},
+ {"ticker": "DKNG", "company": "DraftKings", "sector": "Consumer · Online gambling", "hq": "Boston, Massachusetts", "about": "The largest US online sportsbook, with a casino app alongside it. It operates in most states that have legalised online betting.", "revenue": "It keeps a slice of everything wagered — the margin between the odds it offers and the true probability — and takes a house edge on casino games. Marketing and promotional credits to win customers are the big cost against that.", "segments": "Online sportsbook · iGaming casino · Daily fantasy sports"},
+ {"ticker": "TDG", "company": "TransDigm Group", "sector": "Industrials · Aerospace components", "hq": "Cleveland, Ohio", "about": "Makes a very large catalogue of small, highly specified aircraft parts — pumps, valves, latches, ignition systems — most of which it is the only approved supplier for.", "revenue": "It sells parts to aircraft makers at thin margins, then earns most of its profit over the following decades selling replacements into the aftermarket, where being the sole certified source gives it pricing power.", "segments": "Power and control · Airframe components · Aftermarket spares"},
+ {"ticker": "TTMI", "company": "TTM Technologies", "sector": "Technology · Printed circuit boards", "hq": "Santa Ana, California", "about": "The largest US manufacturer of printed circuit boards cleared for defence work, and a growing supplier of boards for AI data centres.", "revenue": "Defence primes and electronics makers pay it to design and manufacture circuit boards and radio-frequency components to order. Defence programmes give it long, funded production runs, while the data-centre side sells high-layer-count boards for AI servers.", "segments": "Defence and aerospace boards · RF components · Data-centre networking boards"},
+ {"ticker": "SYK", "company": "Stryker", "sector": "Health care · Medical devices", "hq": "Kalamazoo, Michigan", "about": "One of the biggest medical-device makers, best known for artificial hips and knees, surgical power tools and hospital beds.", "revenue": "Hospitals buy its implants and instruments, and it sells the disposable items and service contracts that go with them. Its surgical robot is placed in hospitals partly to lock in the implants used with it.", "segments": "Orthopaedic implants · Surgical equipment · Neurotechnology and spine · Medical-surgical supplies"},
+ {"ticker": "NBIX", "company": "Neurocrine Biosciences", "sector": "Health care · Biotechnology", "hq": "San Diego, California", "about": "A biotech focused on drugs for brain and hormone disorders. Its main product treats tardive dyskinesia, an involuntary movement disorder.", "revenue": "It sells its approved medicines through US specialty pharmacies and collects royalties on drugs partners sell abroad. Nearly all revenue comes from a small number of branded products, so patent life and new approvals matter a great deal.", "segments": "Movement disorders · Endocrinology · Neuropsychiatry pipeline"},
+ {"ticker": "BSX", "company": "Boston Scientific", "sector": "Health care · Medical devices", "hq": "Marlborough, Massachusetts", "about": "Makes devices used inside the body: heart stents, catheters that treat irregular heartbeats, pacemakers and urology tools.", "revenue": "Hospitals buy the devices case by case, and most are single-use, so revenue repeats with procedure volumes. Its fastest-growing line is electrophysiology, the catheters used to treat atrial fibrillation.", "segments": "Cardiology · Electrophysiology · Endoscopy · Urology"},
+ {"ticker": "000660.KS", "company": "SK hynix", "sector": "Technology · Semiconductors", "hq": "Icheon, South Korea", "about": "A South Korean memory-chip maker and, with Samsung and Micron, one of three companies that supply most of the world's DRAM. It is the leading supplier of the high-bandwidth memory stacked next to AI accelerators.", "revenue": "It sells memory chips by the wafer-load to server builders, phone makers and AI chip companies. Prices swing hard with supply and demand, so profits can move far more than revenue; the high-bandwidth memory used in AI systems is sold out well ahead on contract.", "segments": "DRAM · High-bandwidth memory · NAND flash"},
+ {"ticker": "KKR", "company": "KKR & Co.", "sector": "Financials · Private equity", "hq": "New York, New York", "about": "One of the largest alternative asset managers, buying companies, lending to them and owning infrastructure and property on behalf of pensions and insurers. It also owns an insurance company.", "revenue": "It charges a management fee on the money it looks after and keeps a share of the investment profit above a hurdle. A growing part of earnings is simply the return on its own capital invested alongside clients and on its insurance balance sheet.", "segments": "Private equity · Credit · Infrastructure and real assets · Insurance"},
+ {"ticker": "FTAI", "company": "FTAI Aviation", "sector": "Industrials · Aerospace aftermarket", "hq": "New York, New York", "about": "Owns and leases jet engines, and increasingly repairs and sells engine modules rather than whole engines.", "revenue": "Airlines pay it rent on leased engines and aircraft. Its faster-growing business buys used engines, strips them into modules, overhauls those and sells or swaps them back to airlines, which is cheaper for the airline than a full shop visit and more profitable for FTAI.", "segments": "Engine leasing · Module swaps and repair · Aircraft leasing"},
+ {"ticker": "MTZ", "company": "MasTec", "sector": "Industrials · Infrastructure construction", "hq": "Coral Gables, Florida", "about": "A large US infrastructure contractor that builds power lines, pipelines, telecom networks and renewable-energy plants.", "revenue": "Utilities, telecom carriers and energy companies award it construction contracts, mostly on a unit-price or fixed-fee basis. Earnings depend on the pace of grid, pipeline and network spending and on how well it estimates job costs.", "segments": "Power delivery · Pipeline infrastructure · Communications · Clean energy"},
+ {"ticker": "WAY", "company": "Waystar Holding", "sector": "Health care · Software", "hq": "Lehi, Utah", "about": "Sells cloud software that handles the money side of American health care: checking insurance, submitting claims and chasing payment.", "revenue": "Hospitals and physician groups pay recurring subscription and per-transaction fees. Because the software sits in the billing workflow, revenue scales with how many claims flow through it and is hard to displace once installed.", "segments": "Claims management · Patient payments · Denial and appeal tools · Revenue analytics"},
+ {"ticker": "GIL", "company": "Gildan Activewear", "sector": "Consumer · Apparel manufacturing", "hq": "Montreal, Canada", "about": "Makes basic clothing — T-shirts, fleece, socks and underwear — in its own factories in Central America and the Caribbean.", "revenue": "Most sales go to wholesalers who print logos on blank garments for events and uniforms, and the rest go to retailers under its own and licensed brands. Owning the factories keeps costs low, so profit turns on cotton prices and how full the plants are.", "segments": "Activewear blanks · Socks and underwear · Licensed and private brands"},
+ {"ticker": "CDE", "company": "Coeur Mining", "sector": "Materials · Precious metals", "hq": "Chicago, Illinois", "about": "A mid-sized miner of gold and silver with operations in the United States, Mexico and Canada.", "revenue": "It digs ore, processes it into metal and sells that at prevailing gold and silver prices. It has no control over the price it receives, so profit depends on keeping the cost per ounce below the market price and on how much it can mine.", "segments": "Gold mining · Silver mining · Exploration"},
+ {"ticker": "KGS", "company": "Kodiak Gas Services", "sector": "Energy · Oilfield services", "hq": "The Woodlands, Texas", "about": "The largest US provider of contract compression — the big compressor packages that push natural gas through gathering systems and pipelines.", "revenue": "Producers rent the compressors on multi-year fixed-fee contracts and Kodiak operates and maintains them. Because gas has to be compressed whatever the price, the revenue is steadier than most oilfield-services work.", "segments": "Contract compression · Station construction · Maintenance services"},
+ {"ticker": "NU", "company": "Nu Holdings", "sector": "Financials · Digital banking", "hq": "Sao Paulo, Brazil", "about": "Nubank, the largest digital bank in Latin America, with the bulk of its customers in Brazil and growing operations in Mexico and Colombia. It has no branches.", "revenue": "It earns interest on credit-card balances and personal loans, takes interchange fees when customers pay by card, and earns a spread on deposits. Running without branches keeps the cost of serving each customer very low, which is where most of the profit comes from.", "segments": "Credit cards · Personal lending · Deposits and savings · Investments and insurance"},
+ {"ticker": "HAPN", "company": "Happen", "sector": "Unclassified", "hq": "Not confirmed", "about": "Listed on NASDAQ under the ticker HAPN. The post names it only as \"Happen\" among DeepSeek's buys and gives no description, and this entry has not been verified against company filings.", "revenue": "Not established from the post. DeepSeek's stated reason for the whole basket was price: cheap earnings multiples rather than anything specific to this business.", "segments": "Not confirmed"}
+], quotes: [
+ {"ticker": "VST", "price": 149.7, "as_of": "2026-10-19"},
+ {"ticker": "APP", "price": 269.12, "as_of": "2026-10-19"},
+ {"ticker": "SARO", "price": 21.37, "as_of": "2026-10-19"},
+ {"ticker": "AVGO", "price": 334.59, "as_of": "2026-10-19"},
+ {"ticker": "CHWY", "price": 20.53, "as_of": "2026-10-19"},
+ {"ticker": "RTO", "price": 21.19, "as_of": "2026-10-19"},
+ {"ticker": "RTX", "price": 192.11, "as_of": "2026-10-19"},
+ {"ticker": "BA", "price": 191.42, "as_of": "2026-10-19"},
+ {"ticker": "CACI", "price": 616.48, "as_of": "2026-10-19"},
+ {"ticker": "MP", "price": 38.95, "as_of": "2026-10-19"},
+ {"ticker": "HII", "price": 269.64, "as_of": "2026-10-19"},
+ {"ticker": "KTOS", "price": 39.17, "as_of": "2026-10-19"},
+ {"ticker": "PANW", "price": 346.95, "as_of": "2026-10-19"},
+ {"ticker": "GEN", "price": 23.64, "as_of": "2026-10-19"},
+ {"ticker": "ICE", "price": 158.4, "as_of": "2026-10-19"},
+ {"ticker": "QSR", "price": 74.34, "as_of": "2026-10-19"},
+ {"ticker": "DY", "price": 254.39, "as_of": "2026-10-19"},
+ {"ticker": "DKNG", "price": 19.77, "as_of": "2026-10-19"},
+ {"ticker": "TDG", "price": 1142.45, "as_of": "2026-10-19"},
+ {"ticker": "TTMI", "price": 99.1, "as_of": "2026-10-19"},
+ {"ticker": "SYK", "price": 297.94, "as_of": "2026-10-19"},
+ {"ticker": "NBIX", "price": 136.98, "as_of": "2026-10-19"},
+ {"ticker": "BSX", "price": 45.05, "as_of": "2026-10-19"},
+ {"ticker": "KKR", "price": 87.0, "as_of": "2026-10-19"},
+ {"ticker": "FTAI", "price": 163.34, "as_of": "2026-10-19"},
+ {"ticker": "MTZ", "price": 190.91, "as_of": "2026-10-19"},
+ {"ticker": "WAY", "price": 27.99, "as_of": "2026-10-19"},
+ {"ticker": "GIL", "price": 40.86, "as_of": "2026-10-19"},
+ {"ticker": "CDE", "price": 15.33, "as_of": "2026-10-19"},
+ {"ticker": "KGS", "price": 47.16, "as_of": "2026-10-19"},
+ {"ticker": "NU", "price": 14.51, "as_of": "2026-10-19"},
+ {"ticker": "HAPN", "price": 14.29, "as_of": "2026-10-19"}
+] };
+(function(){
+  const calcs = {}, subs = [];
+  const get = (id) => {
+    if (id in window.__DATA) return { status: 'ok', data: window.__DATA[id] };
+    if (id in calcs) { const c = calcs[id]; return { status: 'ok', data: c.fn(...c.inputs.map(i => get(i).data)) }; }
+    return { status: 'missing', data: [] };
+  };
+  window.dash = {
+    colors: ['#c96442','#8a5a2b','#10a37f','#6b7280','#4d6bfe','#9b59b6','#e0a800','#2a9d8f'],
+    data: get,
+    calc: (id, def) => { calcs[id] = def; },
+    loader: () => {},
+    onData: (fn) => { subs.push(fn); fn(); },
+    refresh: () => subs.forEach(f => f()),
+    setLink: (n) => { try { history.replaceState(null, '', n ? '#' + n : location.pathname); } catch (e) {} },
+    params: () => ({}), setParams: () => {}, resetParams: () => {}
+  };
+  addEventListener('resize', () => subs.forEach(f => f()));
+})();
+</script>
+</head><body><div id="dash-root">
+<style>
+.aft{display:flex;flex-direction:column;gap:var(--cds-gap-xl);font-family:var(--font-anthropic-sans);font-variant-numeric:tabular-nums}
+.aft-head h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.aft-take{color:var(--color-fg-muted);font-size:var(--cds-font-size-body);margin:var(--cds-gap-xs) 0 0;max-width:70ch}
+.aft-take b{font-weight:600;color:var(--color-fg)}
+.aft-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:var(--cds-gap-md)}
+.aft-tile{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-xs);min-width:0}
+.aft-name{display:flex;align-items:center;gap:var(--cds-gap-sm);font-weight:var(--cds-font-weight-medium);font-size:var(--cds-font-size-body)}
+.aft-dot{width:.6rem;height:.6rem;border-radius:50%;flex:none}
+.aft-big{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);line-height:1.15;min-height:1.2em}
+.aft-cap{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.aft-moves{font-size:var(--cds-font-size-caption);display:flex;gap:var(--cds-gap-sm);margin-top:var(--cds-gap-xs)}
+.aft-note{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:var(--cds-gap-xs);line-height:1.45}
+.aft-card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);min-width:0}
+.aft-card h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.aft-card .aft-sub{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 var(--cds-gap-md)}
+.aft-tools{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm);align-items:center;margin-bottom:var(--cds-gap-md)}
+.aft-chip{font:inherit;font-size:var(--cds-font-size-caption);border:1px solid var(--color-border-line);background:transparent;color:var(--color-fg);border-radius:999px;padding:.3rem .75rem;cursor:pointer}
+.aft-chip[aria-pressed="true"]{background:var(--color-fg);color:var(--color-bg);border-color:var(--color-fg)}
+.aft-chip:focus-visible,.aft-search:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.aft-search{font:inherit;font-size:var(--cds-font-size-caption);margin-left:auto;padding:.35rem .6rem;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-bg);color:var(--color-fg);min-width:0;width:14rem;max-width:100%}
+.aft-tablebox{overflow:auto;max-height:36rem}
+.aft-table{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption)}
+.aft-table th{position:sticky;top:0;background:var(--color-panel);text-align:left;font-weight:var(--cds-font-weight-medium);color:var(--color-fg-muted);padding:var(--cds-pad-xs) var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.aft-table td{padding:var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);vertical-align:top}
+.aft-table td.r,.aft-table th.r{text-align:right;white-space:nowrap}
+.aft-table .tk{font-weight:600}
+.aft-pill{display:inline-block;font-weight:600;font-size:.72rem;padding:.12rem .5rem;border-radius:999px;border:1px solid currentColor}
+.aft-buy{color:var(--color-ok)}
+.aft-sell{color:var(--color-bad)}
+.aft-reason{color:var(--color-fg-muted);min-width:16rem}
+.aft-table a{color:inherit}
+.aft-empty{color:var(--color-fg-muted);padding:var(--cds-pad-md) 0}
+@media (max-width:720px){.aft-hide{display:none}}
+.aft-table tbody tr[data-key]{cursor:pointer}
+.aft-table tbody tr[data-key]:hover td{background:color-mix(in srgb,var(--color-fg) 5%,transparent)}
+.aft-table tbody tr[data-key]:focus-visible{outline:2px solid var(--color-fg);outline-offset:-2px}
+.aft-more{color:var(--color-fg-muted);white-space:nowrap}
+.aft-gain{font-weight:600;white-space:nowrap}
+.aft-final{display:inline-block;font-weight:600;white-space:nowrap;padding:.12rem .55rem;border-radius:999px;border:1.5px solid currentColor;background:color-mix(in srgb,currentColor 12%,transparent)}
+.aft-legend{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs) var(--cds-gap-md);align-items:center;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:calc(-1 * var(--cds-gap-sm)) 0 var(--cds-gap-md)}
+.aft-legend .aft-final,.aft-legend .aft-gain{font-size:.72rem}
+.aft-up{color:var(--color-ok)}
+.aft-down{color:var(--color-bad)}
+.aft-nowrow{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md) var(--cds-gap-xl)}
+.aft-nowv{font-family:var(--font-anthropic-serif);font-size:var(--cds-font-size-title);font-weight:400;line-height:1.2;margin-top:var(--cds-gap-xs)}
+.aft-psrc{color:var(--color-fg-muted);white-space:nowrap}
+.aft-estp{color:var(--color-fg-muted)}
+.aft-co{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-md);min-width:0}
+.aft-co h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.aft-co .meta{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs) var(--cds-gap-md)}
+.aft-co h3{font-size:var(--cds-font-size-caption);text-transform:uppercase;letter-spacing:.06em;color:var(--color-fg-muted);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-xs)}
+.aft-co p{margin:0;line-height:1.55;font-size:var(--cds-font-size-body);max-width:72ch}
+.aft-segs{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs)}
+.aft-seg{font-size:var(--cds-font-size-caption);border:1px solid var(--color-border-line);border-radius:999px;padding:.2rem .6rem}
+.aft-co .foot{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.aft-pnote{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:calc(-1 * var(--cds-gap-sm)) 0 0;line-height:1.5;max-width:68ch}
+.aft-fact .s{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:2px}
+.aft-table tbody tr[data-key] td.tk::after{content:" ›";color:var(--color-fg-muted);font-weight:400}
+.aft-back{font:inherit;font-size:var(--cds-font-size-caption);background:transparent;border:1px solid var(--color-border-line);color:var(--color-fg);border-radius:999px;padding:.35rem .8rem;cursor:pointer;align-self:flex-start}
+.aft-back:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.aft-detail{display:flex;flex-direction:column;gap:var(--cds-gap-lg);max-width:60rem;width:100%;margin-inline:auto;align-self:center}
+.aft-dtitle{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--cds-gap-sm) var(--cds-gap-md)}
+.aft-dtitle h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.aft-dco{color:var(--color-fg-muted);font-size:var(--cds-font-size-body)}
+.aft-dsum{font-size:var(--cds-font-size-body);line-height:1.55;margin:0;max-width:68ch}
+.aft-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));gap:var(--cds-gap-md)}
+.aft-fact{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md) var(--cds-pad-lg);min-width:0}
+.aft-fact .v{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin-top:var(--cds-gap-xs);overflow-wrap:anywhere}
+.aft-secs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--cds-gap-md)}
+.aft-sec{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);min-width:0}
+.aft-sec h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-sm)}
+.aft-sec p{margin:0;line-height:1.55;font-size:var(--cds-font-size-body)}
+.aft-sec.wide{grid-column:1/-1}
+.aft-sec .none{color:var(--color-fg-muted)}
+.aft-pairbtn{font:inherit;text-align:left;width:100%;background:transparent;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md);color:var(--color-fg);cursor:pointer;display:flex;gap:var(--cds-gap-sm);align-items:center;flex-wrap:wrap}
+.aft-pairbtn:hover{border-color:var(--color-fg-muted)}
+.aft-pairbtn:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.aft-src{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.aft-src a{color:inherit}
+.aft [hidden],.aft[hidden]{display:none !important}
+[data-dash-source-state=empty]{color:transparent}
+[data-dash-source-state=refreshing]{opacity:.5;transition:opacity var(--cds-dur-slow)}
+.aft-fail{display:flex;align-items:center;justify-content:center;gap:.4rem;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);min-height:inherit}
+.aft-fail::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
+</style>
+
+<div class="aft">
+ <div id="list-view" class="aft">
+  <header class="aft-head" id="top">
+    <h1>AI Portfolio Trades</h1>
+    <p class="aft-take" id="takeaway"><span class="dash-skeleton">—</span></p>
+  </header>
+
+  <section class="aft-tiles" id="portfolios" aria-label="Portfolios"></section>
+
+
+  <section class="aft-card" id="log">
+    <h2>Trade log</h2>
+    <p class="aft-sub">Every buy and sell @aifinancelabs has posted, through Oct 19, 2026. Size is the share of that portfolio. Prices marked “Day’s open (estimate)” are that day’s opening price because the post didn’t give one. Click a row for the full story.</p>
+    <div class="aft-legend" id="gain-legend"><span>Gain / loss vs. buy price:</span><span><span class="aft-final aft-up">In a bubble</span> final: the position was sold</span><span><span class="aft-gain aft-up">Green</span> / <span class="aft-gain aft-down">red</span> text: still open, measured against the <span id="quote-asof" data-source="quotes" data-field="as_of" data-row="0">latest</span> close</span><span>Not public: the AI never posted its buy price</span></div>
+    <div class="aft-tools">
+      <div id="chips" style="display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm)"></div>
+      <input class="aft-search" id="q" type="search" placeholder="Search ticker or company" aria-label="Search trades">
+    </div>
+    <div class="aft-tablebox">
+      <table class="aft-table" id="trade-table" data-source="trades" data-row-key="id">
+        <thead><tr>
+          <th data-field="date">Date</th>
+          <th data-field="portfolio">Portfolio</th>
+          <th data-field="action">Action</th>
+          <th data-field="ticker">Ticker</th>
+          <th data-field="company" class="aft-hide">Company</th>
+          <th data-field="size">Size</th>
+          <th data-field="price" class="r">Price</th>
+          <th data-field="price_source">Price from</th>
+          <th data-source="gains" data-field="gain" class="r">Gain / loss</th>
+          <th data-field="reason" class="aft-hide">Why</th>
+        </tr></thead>
+        <tbody id="trade-body"></tbody>
+      </table>
+      <p class="aft-empty" id="trade-empty" hidden>No trades match.</p>
+    </div>
+  </section>
+ </div>
+ <section id="trade-view" class="aft-detail" hidden aria-live="polite"></section>
+</div>
+
+<script>
+const ORDER = ['Claude', 'Claude WW3', 'GPT', 'Grok', 'DeepSeek', 'Muse', 'Gemini'];
+window.aftOrder = ORDER;
+window.aftColor = (p) => dash.colors[Math.max(0, ORDER.indexOf(p))];
+
+dash.calc('counts', {
+  inputs: ['trades', 'portfolios'],
+  title: 'Trades per portfolio',
+  description: 'Counts each portfolio\'s buys and sells in the trade log.',
+  fn: (trades, portfolios) => portfolios.map(p => {
+    const mine = trades.filter(t => t.portfolio === p.portfolio);
+    return {
+      portfolio: p.portfolio,
+      buys: mine.filter(t => t.action === 'Buy').length,
+      sells: mine.filter(t => t.action === 'Sell').length,
+      trades: mine.length
+    };
+  })
+});
+
+dash.calc('gains', {
+  inputs: ['trades', 'quotes'],
+  title: 'Gain or loss vs. buy price',
+  description: 'Open buys: latest close ÷ buy price − 1 (still moving). A buy later sold in the same portfolio, or a sell with a public buy price: sale price ÷ buy price − 1 (final).',
+  fn: (trades, quotes) => trades.map(t => {
+    if (t.action === 'Sell') {
+      return { id: t.id, gain: t.entry_price ? t.price / t.entry_price - 1 : null, final: !!t.entry_price, status: t.entry_price ? 'Final' : 'Not public' };
+    }
+    const exit = trades.find(x => x.action === 'Sell' && x.ticker === t.ticker && x.portfolio === t.portfolio && x.date > t.date);
+    if (exit) return { id: t.id, gain: t.price ? exit.price / t.price - 1 : null, final: true, status: 'Final' };
+    const q = quotes.find(x => x.ticker === t.ticker);
+    return { id: t.id, gain: q && t.price ? q.price / t.price - 1 : null, final: false, status: 'Open' };
+  })
+});
+
+dash.calc('trade_pnl', {
+  inputs: ['trades', 'quotes'],
+  title: 'P&L since each trade',
+  description: 'Buys: latest close ÷ buy price − 1. Sells: (sale price − latest close) ÷ sale price, so it is positive when the stock fell after the sale.',
+  fn: (trades, quotes) => trades.map(t => {
+    const q = quotes.find(x => x.ticker === t.ticker);
+    const now = q ? q.price : null;
+    let pnl = null;
+    if (now != null && t.price) pnl = t.action === 'Buy' ? now / t.price - 1 : (t.price - now) / t.price;
+    return { id: t.id, current: now, pnl };
+  })
+});
+
+dash.calc('summary', {
+  inputs: ['trades'],
+  title: 'Trade log totals',
+  description: 'Total trades, buys and sells, and the latest trade date.',
+  fn: (trades) => [{
+    trades: trades.length,
+    buys: trades.filter(t => t.action === 'Buy').length,
+    sells: trades.filter(t => t.action === 'Sell').length,
+    latest: trades.map(t => t.date).sort().slice(-1)[0] || ''
+  }]
+});
+</script>
+
+<script>
+const fmtPct = (v) => (v > 0 ? '+' : '') + d3.format('.1%')(v);
+const fmtDate = (s) => d3.utcFormat('%b %-d')(new Date(s + 'T00:00:00Z'));
+const fmtGain = (g) => (g > 0 ? '+' : g < 0 ? '−' : '') + d3.format('.1%')(Math.abs(g));
+const gainRow = (id) => { const s = dash.data('gains'); return s.status === 'ok' ? s.data.find(x => x.id === id) || null : null; };
+const gainOf = (id) => { const r = gainRow(id); return r ? r.gain : null; };
+const fmtLong = (s) => d3.utcFormat('%b %-d, %Y')(new Date(s + 'T00:00:00Z'));
+
+function drawTakeaway() {
+  const el = document.getElementById('takeaway');
+  const s = dash.data('summary');
+  el.replaceChildren();
+  if (s.status !== 'ok' || !s.data.length) {
+    if (s.status === 'error') { const f = document.createElement('span'); f.className = 'aft-fail'; f.textContent = 'Failed to load'; el.append(f); }
+    else { const k = document.createElement('span'); k.className = 'dash-skeleton'; k.textContent = '—'; el.append(k); }
+    return;
+  }
+  const r = s.data[0];
+  const b = (field, text) => { const x = document.createElement('b'); x.dataset.source = 'summary'; x.dataset.field = field; x.textContent = text; return x; };
+  el.append(b('trades', String(r.trades)), ' trades posted by @aifinancelabs (', b('buys', String(r.buys)), ' buys, ', b('sells', String(r.sells)), ' sells). Latest on ', b('latest', fmtDate(r.latest)),
+    ', when Claude, the AI World War III book, Grok and DeepSeek all rebalanced at the open and three of them bought into the AI build-out.');
+}
+
+function drawTiles() {
+  const box = document.getElementById('portfolios');
+  const p = dash.data('portfolios');
+  const c = dash.data('counts');
+  box.replaceChildren();
+  if (p.status !== 'ok') {
+    for (const name of window.aftOrder) {
+      const t = document.createElement('div'); t.className = 'aft-tile';
+      const n = document.createElement('div'); n.className = 'aft-name'; n.textContent = name;
+      const big = document.createElement('div'); big.className = 'aft-big' + (p.status === 'error' ? '' : ' dash-skeleton');
+      if (p.status === 'error') { big.className = 'aft-fail'; big.textContent = 'Failed to load'; } else big.textContent = '—';
+      t.append(n, big); box.append(t);
+    }
+    return;
+  }
+  const counts = c.status === 'ok' ? c.data : [];
+  for (const row of p.data) {
+    const enc = encodeURIComponent(row.portfolio);
+    const t = document.createElement('div'); t.className = 'aft-tile'; t.id = 'tile-' + row.portfolio.replace(/\W+/g, '-').toLowerCase();
+    const n = document.createElement('div'); n.className = 'aft-name';
+    const dot = document.createElement('span'); dot.className = 'aft-dot'; dot.style.background = window.aftColor(row.portfolio);
+    const nm = document.createElement('span'); nm.dataset.source = 'portfolios'; nm.dataset.field = 'portfolio'; nm.dataset.where = 'portfolio=' + enc; nm.textContent = row.portfolio;
+    n.append(dot, nm);
+    const big = document.createElement('div'); big.className = 'aft-big';
+    big.dataset.source = 'portfolios'; big.dataset.field = 'stat'; big.dataset.where = 'portfolio=' + enc;
+    big.textContent = row.stat == null ? '—' : fmtPct(Number(row.stat));
+    const lab = document.createElement('div'); lab.className = 'aft-cap';
+    lab.dataset.source = 'portfolios'; lab.dataset.field = 'stat_label'; lab.dataset.where = 'portfolio=' + enc; lab.textContent = row.stat_label;
+    const moves = document.createElement('div'); moves.className = 'aft-moves';
+    const cr = counts.find(x => x.portfolio === row.portfolio);
+    if (cr) {
+      const by = document.createElement('span'); by.className = 'aft-buy'; by.dataset.source = 'counts'; by.dataset.field = 'buys'; by.dataset.where = 'portfolio=' + enc; by.textContent = cr.buys + ' buys';
+      const se = document.createElement('span'); se.className = 'aft-sell'; se.dataset.source = 'counts'; se.dataset.field = 'sells'; se.dataset.where = 'portfolio=' + enc; se.textContent = cr.sells + ' sells';
+      moves.append(by, se);
+    }
+    const note = document.createElement('div'); note.className = 'aft-note';
+    note.dataset.source = 'portfolios'; note.dataset.field = 'note'; note.dataset.where = 'portfolio=' + enc; note.textContent = row.note;
+    t.append(n, big, lab, moves, note);
+    box.append(t);
+  }
+}
+
+
+window.aftFilter = window.aftFilter || { p: 'All', q: '' };
+function drawTable() {
+  const body = document.getElementById('trade-body');
+  const empty = document.getElementById('trade-empty');
+  const chips = document.getElementById('chips');
+  const d = dash.data('trades');
+  body.replaceChildren();
+  if (d.status !== 'ok') {
+    const tr = document.createElement('tr'); const td = document.createElement('td'); td.colSpan = 10;
+    if (d.status === 'error') { td.className = 'aft-fail'; td.textContent = 'Failed to load'; } else { td.className = 'dash-skeleton'; td.textContent = '—'; }
+    tr.append(td); body.append(tr); empty.hidden = true; return;
+  }
+  const qa = dash.data('quotes'); const qe = document.getElementById('quote-asof');
+  if (qe) qe.textContent = qa.status === 'ok' && qa.data.length ? fmtLong(qa.data[0].as_of) : 'latest';
+  const f = window.aftFilter;
+  const names = ['All', ...window.aftOrder.filter(n => d.data.some(t => t.portfolio === n))];
+  chips.replaceChildren(...names.map(n => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'aft-chip'; b.textContent = n;
+    b.setAttribute('aria-pressed', String(f.p === n));
+    b.addEventListener('click', () => { f.p = n; drawTable(); });
+    return b;
+  }));
+  const q = f.q.trim().toLowerCase();
+  const rows = d.data
+    .filter(t => f.p === 'All' || t.portfolio === f.p)
+    .filter(t => !q || (t.ticker + ' ' + t.company + ' ' + t.reason).toLowerCase().includes(q))
+    .slice().sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
+  for (const t of rows) {
+    const tr = document.createElement('tr'); tr.dataset.key = t.id;
+    const cell = (text, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = text; tr.append(td); return td; };
+    cell(fmtDate(t.date));
+    cell(t.portfolio);
+    const a = cell(''); const pill = document.createElement('span'); pill.className = 'aft-pill ' + (t.action === 'Buy' ? 'aft-buy' : 'aft-sell'); pill.textContent = t.action; a.append(pill);
+    cell(t.ticker, 'tk');
+    cell(t.company, 'aft-hide');
+    cell(t.size);
+    cell(t.price == null ? '—' : d3.format('$,.2f')(Number(t.price)), 'r' + (/estimate/i.test(t.price_source || '') ? ' aft-estp' : ''));
+    cell(t.price_source || '—', 'aft-psrc');
+    const gr = gainRow(t.id);
+    const g = gr ? gr.gain : null;
+    if (g == null) cell(t.action === 'Sell' ? 'Not public' : '—', 'r aft-psrc');
+    else if (gr.final) {
+      const td = cell('', 'r');
+      const b = document.createElement('span'); b.className = 'aft-final ' + (g >= 0 ? 'aft-up' : 'aft-down'); b.textContent = fmtGain(g);
+      b.title = 'Final: the position was sold'; td.append(b);
+    } else {
+      const td = cell(fmtGain(g), 'r aft-gain ' + (g >= 0 ? 'aft-up' : 'aft-down'));
+      td.title = 'Open: latest close vs. buy price';
+    }
+    cell(t.reason, 'aft-reason aft-hide');
+    tr.tabIndex = 0; tr.setAttribute('aria-label', `${t.action} ${t.ticker}, ${t.portfolio}, open details`);
+    body.append(tr);
+  }
+  empty.hidden = rows.length > 0;
+}
+
+const qInput = document.getElementById('q');
+qInput.addEventListener('input', () => { window.aftFilter.q = qInput.value; drawTable(); });
+
+document.getElementById('trade-body').addEventListener('click', (e) => {
+  const tr = e.target.closest('tr[data-key]'); if (tr) openTrade(tr.dataset.key);
+});
+document.getElementById('trade-body').addEventListener('keydown', (e) => {
+  const tr = e.target.closest('tr[data-key]');
+  if (tr && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openTrade(tr.dataset.key); }
+});
+
+window.aftView = window.aftView || { trade: null, focusRow: null };
+function openTrade(id) {
+  window.aftView.trade = id; window.aftView.focusRow = id;
+  dash.setLink('trade-' + id);
+  render();
+  window.scrollTo(0, 0);
+  const b = document.querySelector('#trade-view .aft-back'); if (b) b.focus();
+}
+function closeTrade() {
+  const id = window.aftView.trade;
+  window.aftView.trade = null;
+  dash.setLink('log');
+  render();
+  const row = document.querySelector(`#trade-body tr[data-key="${CSS.escape(id || '')}"]`);
+  if (row) { row.scrollIntoView({ block: 'center' }); row.focus(); }
+}
+
+function drawDetail() {
+  const box = document.getElementById('trade-view');
+  box.replaceChildren();
+  const d = dash.data('trades');
+  const id = window.aftView.trade;
+  const back = document.createElement('button'); back.type = 'button'; back.className = 'aft-back'; back.textContent = '← All trades';
+  back.addEventListener('click', closeTrade);
+  box.append(back);
+  if (d.status !== 'ok') {
+    const ph = document.createElement('div');
+    if (d.status === 'error') { ph.className = 'aft-fail'; ph.textContent = 'Failed to load'; } else { ph.className = 'dash-skeleton'; ph.textContent = '—'; }
+    box.append(ph); return;
+  }
+  const t = d.data.find(r => r.id === id);
+  if (!t) { const p = document.createElement('p'); p.className = 'aft-empty'; p.textContent = 'That trade is no longer in the log.'; box.append(p); return; }
+  const where = 'id=' + encodeURIComponent(t.id);
+  const mk = (tag, field, text, cls) => { const el = document.createElement(tag); if (cls) el.className = cls; el.dataset.source = 'trades'; el.dataset.field = field; el.dataset.where = where; el.textContent = text; return el; };
+
+  // Title
+  const head = document.createElement('div'); head.className = 'aft-dtitle';
+  const pill = mk('span', 'action', t.action, 'aft-pill ' + (t.action === 'Buy' ? 'aft-buy' : 'aft-sell'));
+  const h = mk('h1', 'ticker', t.ticker); h.id = 'trade-title';
+  head.append(pill, h, mk('span', 'company', t.company, 'aft-dco'));
+  box.append(head);
+  box.append(mk('p', 'summary', t.summary || '', 'aft-dsum'));
+
+  // Facts
+  const facts = document.createElement('div'); facts.className = 'aft-facts'; facts.id = 'trade-facts';
+  const fact = (label, field, text, subField, subText) => {
+    const f = document.createElement('div'); f.className = 'aft-fact';
+    const l = document.createElement('div'); l.className = 'aft-cap'; l.textContent = label;
+    f.append(l, mk('div', field, text, 'v'));
+    if (subField && subText) f.append(mk('div', subField, subText, 's'));
+    facts.append(f);
+  };
+  fact('Portfolio', 'portfolio', t.portfolio);
+  fact('Model', 'model', t.model);
+  fact('Traded', 'date', fmtLong(t.date));
+  fact('Posted', 'posted', t.posted ? fmtLong(t.posted) : '—');
+  fact('Size', 'size', t.size);
+  if (t.action === 'Sell') {
+    const f = document.createElement('div'); f.className = 'aft-fact'; f.id = 'trade-bought';
+    const l = document.createElement('div'); l.className = 'aft-cap'; l.textContent = 'Bought at';
+    f.append(l, mk('div', 'entry_price', t.entry_price == null ? 'Not public' : d3.format('$,.2f')(Number(t.entry_price)), 'v'));
+    if (t.entry_when) f.append(mk('div', 'entry_when', t.entry_when, 's'));
+    facts.append(f);
+  }
+  fact(t.action === 'Buy' ? 'Bought at' : 'Sold at', 'price', t.price == null ? 'Not stated' : d3.format('$,.2f')(Number(t.price)), 'price_source', t.price_source);
+  if (t.action === 'Sell') {
+    const f = document.createElement('div'); f.className = 'aft-fact'; f.id = 'trade-gain';
+    const l = document.createElement('div'); l.className = 'aft-cap'; l.textContent = 'Gain / loss';
+    const g = gainOf(t.id);
+    const v = document.createElement('div'); v.className = 'v' + (g == null ? '' : ' ' + (g >= 0 ? 'aft-up' : 'aft-down'));
+    v.dataset.source = 'gains'; v.dataset.field = 'gain'; v.dataset.where = where;
+    v.textContent = g == null ? 'Not public' : fmtGain(g);
+    f.append(l, v);
+    facts.append(f);
+  }
+  box.append(facts);
+  if (t.price_note) box.append(mk('p', 'price_note', t.price_note, 'aft-pnote'));
+  if (t.gain_basis) box.append(mk('p', 'gain_basis', t.gain_basis, 'aft-pnote'));
+
+  // About the company
+  const co = document.createElement('section'); co.className = 'aft-co'; co.id = 'trade-company';
+  const ch = document.createElement('h2'); ch.textContent = 'About ' + t.company; co.append(ch);
+  const cd = dash.data('companies');
+  const c = cd.status === 'ok' ? cd.data.find(r => r.ticker === t.ticker) : null;
+  if (cd.status === 'loading') { const k = document.createElement('p'); k.className = 'dash-skeleton'; k.textContent = '—'; co.append(k); }
+  else if (cd.status !== 'ok') { const f = document.createElement('div'); f.className = 'aft-fail'; f.textContent = 'Failed to load'; co.append(f); }
+  else if (!c) { const n = document.createElement('p'); n.className = 'none'; n.textContent = 'No company profile yet for ' + t.ticker + '.'; co.append(n); }
+  else {
+    const cw = 'ticker=' + encodeURIComponent(c.ticker);
+    const cm = (tag, field, text, cls) => { const el = document.createElement(tag); if (cls) el.className = cls; el.dataset.source = 'companies'; el.dataset.field = field; el.dataset.where = cw; el.textContent = text; return el; };
+    const meta = document.createElement('div'); meta.className = 'meta';
+    meta.append(cm('span', 'sector', c.sector), cm('span', 'hq', c.hq));
+    co.append(meta);
+    const blk = (title, field, text) => { const b = document.createElement('div'); const h3 = document.createElement('h3'); h3.textContent = title; b.append(h3, cm('p', field, text)); co.append(b); };
+    blk('What it is', 'about', c.about);
+    blk('How it makes money', 'revenue', c.revenue);
+    const sb = document.createElement('div'); const sh = document.createElement('h3'); sh.textContent = 'Main businesses'; sb.append(sh);
+    const segs = cm('div', 'segments', '', 'aft-segs');
+    for (const part of String(c.segments || '').split(' · ').filter(Boolean)) { const chip = document.createElement('span'); chip.className = 'aft-seg'; chip.textContent = part; segs.append(chip); }
+    sb.append(segs); co.append(sb);
+    const ft = document.createElement('p'); ft.className = 'foot'; ft.textContent = 'General company background, not from the @aifinancelabs post.'; co.append(ft);
+  }
+  // Sections
+  const secs = document.createElement('div'); secs.className = 'aft-secs';
+  const sec = (id, title, field, text, wide, fallback) => {
+    const s = document.createElement('section'); s.className = 'aft-sec' + (wide ? ' wide' : ''); s.id = id;
+    const hh = document.createElement('h2'); hh.textContent = title; s.append(hh);
+    if (text) s.append(mk('p', field, text));
+    else { const p = document.createElement('p'); p.className = 'none'; p.textContent = fallback; s.append(p); }
+    secs.append(s);
+  };
+  sec('trade-why', `Why ${t.model} made this trade`, 'thesis', t.thesis, true, 'The post gave no reasoning for this leg.');
+  sec('trade-risk', 'What could go wrong', 'risk', t.risk, false, 'The post didn\'t name a risk for this trade.');
+  sec('trade-watch', 'What to watch next', 'watch', t.watch, false, 'No upcoming date was mentioned.');
+  {
+    const s2 = document.createElement('section'); s2.className = 'aft-sec wide aft-now'; s2.id = 'trade-outcome';
+    const hh = document.createElement('h2'); hh.textContent = 'How it has gone so far'; s2.append(hh);
+    const pd = dash.data('trade_pnl');
+    const r = pd.status === 'ok' ? pd.data.find(x => x.id === t.id) : null;
+    if (pd.status === 'loading') { const k = document.createElement('p'); k.className = 'dash-skeleton'; k.textContent = '—'; s2.append(k); }
+    else if (pd.status !== 'ok') { const f = document.createElement('div'); f.className = 'aft-fail'; f.textContent = 'Failed to load'; s2.append(f); }
+    else {
+      const row = document.createElement('div'); row.className = 'aft-nowrow';
+      const pm = (field, text, cls) => { const el = document.createElement('div'); el.className = cls; el.dataset.source = 'trade_pnl'; el.dataset.field = field; el.dataset.where = where; el.textContent = text; return el; };
+      const qd = dash.data('quotes');
+      const q = qd.status === 'ok' ? qd.data.find(x => x.ticker === t.ticker) : null;
+      const c1 = document.createElement('div'); const l1 = document.createElement('div'); l1.className = 'aft-cap'; l1.textContent = 'Current price' + (q ? ' (' + fmtLong(q.as_of) + ' close)' : '');
+      c1.append(l1, pm('current', r && r.current != null ? d3.format('$,.2f')(r.current) : '—', 'aft-nowv'));
+      const c2 = document.createElement('div'); const l2 = document.createElement('div'); l2.className = 'aft-cap'; l2.textContent = t.action === 'Buy' ? 'P&L since buy' : 'P&L since sale';
+      const g = r ? r.pnl : null;
+      c2.append(l2, pm('pnl', g == null ? '—' : fmtGain(g), 'aft-nowv' + (g == null ? '' : g >= 0 ? ' aft-up' : ' aft-down')));
+      row.append(c1, c2); s2.append(row);
+    }
+    secs.append(s2);
+  }
+  box.append(secs);
+  box.append(co);
+
+  // Paired leg
+  const pair = t.pair ? d.data.find(r => r.id === t.pair) : null;
+  if (pair) {
+    const s = document.createElement('section'); s.className = 'aft-sec'; s.id = 'trade-pair';
+    const hh = document.createElement('h2'); hh.textContent = t.action === 'Sell' ? 'Where the money went' : 'Where the money came from'; s.append(hh);
+    const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'aft-pairbtn';
+    const pp = document.createElement('span'); pp.className = 'aft-pill ' + (pair.action === 'Buy' ? 'aft-buy' : 'aft-sell'); pp.textContent = pair.action;
+    const tk = document.createElement('b'); tk.textContent = pair.ticker;
+    const co = document.createElement('span'); co.className = 'aft-dco'; co.textContent = pair.company + ' · ' + pair.size;
+    const go = document.createElement('span'); go.className = 'aft-more'; go.style.marginLeft = 'auto'; go.textContent = 'Open →';
+    btn.append(pp, tk, co, go);
+    btn.addEventListener('click', () => openTrade(pair.id));
+    s.append(btn);
+    box.append(s);
+  }
+
+  // Source
+  const src = document.createElement('p'); src.className = 'aft-src';
+  const a = document.createElement('a'); a.href = t.post; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Read the original post on X';
+  src.append('Source: ', a, '. Reasoning is summarized from the post. It isn\'t investment advice.');
+  box.append(src);
+}
+
+function render() {
+  const inDetail = !!window.aftView.trade;
+  document.getElementById('list-view').hidden = inDetail;
+  document.getElementById('trade-view').hidden = !inDetail;
+  if (inDetail) drawDetail();
+  else { drawTakeaway(); drawTiles(); drawTable(); }
+}
+
+(function route() {
+  const h = location.hash.slice(1);
+  if (h.startsWith('trade-')) window.aftView.trade = h.slice(6);
+  else if (h) { const el = document.getElementById(h); if (el) setTimeout(() => el.scrollIntoView(), 0); }
+})();
+
+dash.onData(render);
+</script>
+
+</div></body></html>

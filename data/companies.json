@@ -1,0 +1,299 @@
+[
+ {
+  "ticker": "VST",
+  "company": "Vistra",
+  "sector": "Utilities · Power generation",
+  "hq": "Irving, Texas",
+  "about": "One of the largest power producers in the US. It owns natural gas, nuclear, coal, solar and battery plants, and it also sells electricity directly to homes and businesses.",
+  "revenue": "It makes money two ways. It sells electricity and capacity from its plants into the wholesale power markets, and it sells electricity to millions of retail customers under brands such as TXU Energy. More and more of its output is sold years ahead on long-term contracts, including deals with tech companies that need around-the-clock power for data centers.",
+  "segments": "Retail electricity · Wholesale power generation · Nuclear fleet · Long-term power contracts"
+ },
+ {
+  "ticker": "APP",
+  "company": "AppLovin",
+  "sector": "Technology · Advertising software",
+  "hq": "Palo Alto, California",
+  "about": "An advertising technology company. Its AI-driven ad engine, called AXON, decides which ads to show inside mobile apps and games.",
+  "revenue": "Advertisers, mostly mobile game makers and increasingly online shops, pay to show ads through AppLovin's platform, and AppLovin keeps a share of that spend. It sold its own mobile games business in 2025 to focus on advertising.",
+  "segments": "Mobile app advertising · E-commerce advertising · Ad marketplace for app publishers"
+ },
+ {
+  "ticker": "SARO",
+  "company": "StandardAero",
+  "sector": "Industrials · Aerospace services",
+  "hq": "Scottsdale, Arizona",
+  "about": "The largest independent company that maintains and overhauls aircraft engines. Its customers are airlines, the military and business jet operators.",
+  "revenue": "It charges to take engines apart, repair or replace parts and rebuild them, which every engine needs regularly by rule. Much of the work runs on multi-year agreements with engine makers and operators, so revenue tends to repeat.",
+  "segments": "Engine overhaul services · Component repair · Commercial, military and business aviation"
+ },
+ {
+  "ticker": "AVGO",
+  "company": "Broadcom",
+  "sector": "Technology · Semiconductors and software",
+  "hq": "Palo Alto, California",
+  "about": "A large chip and software company. It designs custom AI chips for the biggest cloud companies, along with networking, broadband and wireless chips. Through acquisitions such as VMware, it also sells software to large businesses.",
+  "revenue": "About half its sales come from chips sold to cloud providers, phone makers and network equipment companies. Custom AI accelerators and data-center networking are the fastest-growing part. The rest comes from software licenses and subscriptions, mainly VMware, sold to large enterprises.",
+  "segments": "Custom AI chips · Networking chips · Broadband and wireless chips · Infrastructure software (VMware)"
+ },
+ {
+  "ticker": "CHWY",
+  "company": "Chewy",
+  "sector": "Consumer · Online retail",
+  "hq": "Florida",
+  "about": "The largest online pet store in the US. It sells pet food, treats, supplies and medications, and it also runs its own vet clinics.",
+  "revenue": "Most of its money comes from selling pet products online. Most sales arrive through Autoship, where customers get repeat deliveries on a schedule. It also earns from its pet pharmacy, vet care, ads that brands pay to place on its site, and the paid Chewy+ membership.",
+  "segments": "Pet food and supplies · Autoship subscriptions · Pet pharmacy · Vet clinics · Sponsored ads"
+ },
+ {
+  "ticker": "RTO",
+  "company": "Rentokil Initial",
+  "sector": "Industrials · Business services",
+  "hq": "United Kingdom",
+  "about": "The world's largest pest control company. In the US it owns Terminix. It also provides washroom and hygiene services to businesses.",
+  "revenue": "It charges homes and businesses (restaurants, warehouses, hospitals, food plants) for regular pest control visits, usually on recurring contracts. Hygiene services such as washroom supplies and cleaning also run on contracts. That makes most of its revenue repeat business.",
+  "segments": "Pest control (incl. Terminix) · Hygiene and wellbeing · Workwear (France)"
+ },
+ {
+  "ticker": "RTX",
+  "company": "RTX",
+  "sector": "Industrials · Aerospace and defense",
+  "hq": "Arlington, Virginia",
+  "about": "One of the largest aerospace and defense companies. It is made up of Collins Aerospace (aircraft systems), Pratt & Whitney (jet engines) and Raytheon (missiles, radars and air defense such as Patriot).",
+  "revenue": "It sells engines and aircraft parts to plane makers and airlines, and earns a lot from spare parts and servicing engines already flying. It also sells missiles, radars and defense systems to the US government and allied countries under long contracts.",
+  "segments": "Commercial aerospace parts and aftermarket · Jet engines · Missiles and air defense"
+ },
+ {
+  "ticker": "BA",
+  "company": "Boeing",
+  "sector": "Industrials · Aerospace and defense",
+  "hq": "Arlington, Virginia",
+  "about": "One of the world's two big passenger-jet makers, with the 737 and 787. It is also a major defense and space contractor.",
+  "revenue": "Most revenue comes from selling commercial airplanes to airlines, paid largely on delivery. It also sells fighter jets, tankers, helicopters, satellites and missile parts to the US and allied governments. A services arm earns from spare parts, maintenance and training for planes already in service.",
+  "segments": "Commercial airplanes · Defense, space and security · Global services"
+ },
+ {
+  "ticker": "CACI",
+  "company": "CACI International",
+  "sector": "Technology · Government services",
+  "hq": "Reston, Virginia",
+  "about": "A government technology contractor. It builds and runs IT, software, cyber and intelligence systems for US defense and intelligence agencies.",
+  "revenue": "Almost all of its revenue comes from US federal government contracts. It is paid to deliver technology, engineering and mission support, often on multi-year contracts that run on a cost-plus or fixed-price basis.",
+  "segments": "Defense and intelligence technology · Cyber and electronic warfare · Federal IT services"
+ },
+ {
+  "ticker": "MP",
+  "company": "MP Materials",
+  "sector": "Materials · Rare earths",
+  "hq": "Las Vegas, Nevada",
+  "about": "The only large-scale rare earth miner in the US. It owns the Mountain Pass mine in California and is building a plant in Texas to make rare earth magnets.",
+  "revenue": "It sells rare earth materials mined and processed at Mountain Pass, especially the NdPr used in magnets for electric motors, wind turbines and defense systems. It is adding sales of finished magnets. A 2025 agreement with the US Defense Department guarantees a minimum price for its NdPr.",
+  "segments": "Rare earth concentrate · Separated NdPr oxide · Rare earth magnets"
+ },
+ {
+  "ticker": "HII",
+  "company": "Huntington Ingalls Industries",
+  "sector": "Industrials · Military shipbuilding",
+  "hq": "Newport News, Virginia",
+  "about": "The largest military shipbuilder in the US. It is the only company that builds the Navy's aircraft carriers, and one of two that build its nuclear submarines.",
+  "revenue": "Nearly all of its revenue comes from US Navy and Coast Guard contracts to design, build, refuel and overhaul ships, which take years each. A smaller technology arm sells unmanned systems, cyber and IT services to the government.",
+  "segments": "Aircraft carriers and submarines (Newport News) · Amphibious ships and destroyers (Ingalls) · Mission technologies"
+ },
+ {
+  "ticker": "KTOS",
+  "company": "Kratos Defense & Security Solutions",
+  "sector": "Industrials · Defense technology",
+  "hq": "San Diego, California",
+  "about": "A defense technology company that makes jet-powered drones, including target drones and the XQ-58 Valkyrie combat drone. It also makes small jet engines, rocket and hypersonic test systems, and satellite communications equipment.",
+  "revenue": "Most of its revenue comes from US military and allied government contracts. It sells drones, engines and systems, and runs test and training services. It often funds new products itself and then sells them at volume, instead of waiting for the government to pay for development.",
+  "segments": "Drones (unmanned systems) · Jet engines · Hypersonics and rockets · Satellite communications"
+ },
+ {
+  "ticker": "PANW",
+  "company": "Palo Alto Networks",
+  "sector": "Technology · Cybersecurity",
+  "hq": "Santa Clara, California",
+  "about": "One of the largest cybersecurity companies. It protects business networks, cloud systems and employee devices from hackers.",
+  "revenue": "It sells firewalls (hardware and software) and, increasingly, subscriptions to its security software for networks (Strata), cloud (Prisma) and security operations (Cortex). Most revenue now repeats through subscriptions and support contracts that businesses renew each year.",
+  "segments": "Network security and firewalls · Cloud security · Security operations · Subscriptions and support"
+ },
+ {
+  "ticker": "GEN",
+  "company": "Gen Digital",
+  "sector": "Technology · Consumer cybersecurity",
+  "hq": "Tempe, Arizona",
+  "about": "A consumer cybersecurity company behind the brands Norton, Avast, AVG, Avira and LifeLock. It protects people's devices, identities and privacy.",
+  "revenue": "Most of its money comes from consumers paying yearly subscriptions for antivirus, VPN, identity-theft protection and privacy tools, most of which renew automatically. In 2025 it bought MoneyLion, which adds income from consumer finance products.",
+  "segments": "Device security (Norton, Avast) · Identity protection (LifeLock) · Privacy and VPN · Consumer finance (MoneyLion)"
+ },
+ {
+  "ticker": "ICE",
+  "company": "Intercontinental Exchange",
+  "sector": "Financials · Exchanges",
+  "hq": "Atlanta, Georgia",
+  "about": "Owns the New York Stock Exchange and a global group of futures and options markets. It also runs big mortgage-technology and bond-data businesses.",
+  "revenue": "It charges fees every time something trades on its venues, and it sells the price data and analytics that come off those venues. A third leg sells software that banks use to originate and service US mortgages, which brings in steady subscription revenue.",
+  "segments": "Exchanges · Fixed income and data services · Mortgage technology"
+ },
+ {
+  "ticker": "QSR",
+  "company": "Restaurant Brands International",
+  "sector": "Consumer · Restaurants",
+  "hq": "Toronto, Canada",
+  "about": "The owner of Burger King, Tim Hortons, Popeyes and Firehouse Subs. Almost all of its roughly 32,000 restaurants are run by franchisees.",
+  "revenue": "It takes a royalty on what each franchised restaurant sells, plus rent on properties it leases to them and fees when a new restaurant opens. Because franchisees carry the operating costs, most of the royalty falls through as profit.",
+  "segments": "Burger King · Tim Hortons · Popeyes · Firehouse Subs"
+ },
+ {
+  "ticker": "DY",
+  "company": "Dycom Industries",
+  "sector": "Industrials · Network construction",
+  "hq": "Palm Beach Gardens, Florida",
+  "about": "A contractor that physically builds telecom networks: burying fibre, installing cable and wiring up data centres across the US.",
+  "revenue": "Telecom carriers and, increasingly, data-centre operators hire it on multi-year master service agreements. It is paid for the engineering and construction work it completes, so revenue tracks how much the carriers and hyperscalers are spending on new network capacity.",
+  "segments": "Fibre construction · Engineering services · Maintenance and locating · Data-centre networks"
+ },
+ {
+  "ticker": "DKNG",
+  "company": "DraftKings",
+  "sector": "Consumer · Online gambling",
+  "hq": "Boston, Massachusetts",
+  "about": "The largest US online sportsbook, with a casino app alongside it. It operates in most states that have legalised online betting.",
+  "revenue": "It keeps a slice of everything wagered — the margin between the odds it offers and the true probability — and takes a house edge on casino games. Marketing and promotional credits to win customers are the big cost against that.",
+  "segments": "Online sportsbook · iGaming casino · Daily fantasy sports"
+ },
+ {
+  "ticker": "TDG",
+  "company": "TransDigm Group",
+  "sector": "Industrials · Aerospace components",
+  "hq": "Cleveland, Ohio",
+  "about": "Makes a very large catalogue of small, highly specified aircraft parts — pumps, valves, latches, ignition systems — most of which it is the only approved supplier for.",
+  "revenue": "It sells parts to aircraft makers at thin margins, then earns most of its profit over the following decades selling replacements into the aftermarket, where being the sole certified source gives it pricing power.",
+  "segments": "Power and control · Airframe components · Aftermarket spares"
+ },
+ {
+  "ticker": "TTMI",
+  "company": "TTM Technologies",
+  "sector": "Technology · Printed circuit boards",
+  "hq": "Santa Ana, California",
+  "about": "The largest US manufacturer of printed circuit boards cleared for defence work, and a growing supplier of boards for AI data centres.",
+  "revenue": "Defence primes and electronics makers pay it to design and manufacture circuit boards and radio-frequency components to order. Defence programmes give it long, funded production runs, while the data-centre side sells high-layer-count boards for AI servers.",
+  "segments": "Defence and aerospace boards · RF components · Data-centre networking boards"
+ },
+ {
+  "ticker": "SYK",
+  "company": "Stryker",
+  "sector": "Health care · Medical devices",
+  "hq": "Kalamazoo, Michigan",
+  "about": "One of the biggest medical-device makers, best known for artificial hips and knees, surgical power tools and hospital beds.",
+  "revenue": "Hospitals buy its implants and instruments, and it sells the disposable items and service contracts that go with them. Its surgical robot is placed in hospitals partly to lock in the implants used with it.",
+  "segments": "Orthopaedic implants · Surgical equipment · Neurotechnology and spine · Medical-surgical supplies"
+ },
+ {
+  "ticker": "NBIX",
+  "company": "Neurocrine Biosciences",
+  "sector": "Health care · Biotechnology",
+  "hq": "San Diego, California",
+  "about": "A biotech focused on drugs for brain and hormone disorders. Its main product treats tardive dyskinesia, an involuntary movement disorder.",
+  "revenue": "It sells its approved medicines through US specialty pharmacies and collects royalties on drugs partners sell abroad. Nearly all revenue comes from a small number of branded products, so patent life and new approvals matter a great deal.",
+  "segments": "Movement disorders · Endocrinology · Neuropsychiatry pipeline"
+ },
+ {
+  "ticker": "BSX",
+  "company": "Boston Scientific",
+  "sector": "Health care · Medical devices",
+  "hq": "Marlborough, Massachusetts",
+  "about": "Makes devices used inside the body: heart stents, catheters that treat irregular heartbeats, pacemakers and urology tools.",
+  "revenue": "Hospitals buy the devices case by case, and most are single-use, so revenue repeats with procedure volumes. Its fastest-growing line is electrophysiology, the catheters used to treat atrial fibrillation.",
+  "segments": "Cardiology · Electrophysiology · Endoscopy · Urology"
+ },
+ {
+  "ticker": "000660.KS",
+  "company": "SK hynix",
+  "sector": "Technology · Semiconductors",
+  "hq": "Icheon, South Korea",
+  "about": "A South Korean memory-chip maker and, with Samsung and Micron, one of three companies that supply most of the world's DRAM. It is the leading supplier of the high-bandwidth memory stacked next to AI accelerators.",
+  "revenue": "It sells memory chips by the wafer-load to server builders, phone makers and AI chip companies. Prices swing hard with supply and demand, so profits can move far more than revenue; the high-bandwidth memory used in AI systems is sold out well ahead on contract.",
+  "segments": "DRAM · High-bandwidth memory · NAND flash"
+ },
+ {
+  "ticker": "KKR",
+  "company": "KKR & Co.",
+  "sector": "Financials · Private equity",
+  "hq": "New York, New York",
+  "about": "One of the largest alternative asset managers, buying companies, lending to them and owning infrastructure and property on behalf of pensions and insurers. It also owns an insurance company.",
+  "revenue": "It charges a management fee on the money it looks after and keeps a share of the investment profit above a hurdle. A growing part of earnings is simply the return on its own capital invested alongside clients and on its insurance balance sheet.",
+  "segments": "Private equity · Credit · Infrastructure and real assets · Insurance"
+ },
+ {
+  "ticker": "FTAI",
+  "company": "FTAI Aviation",
+  "sector": "Industrials · Aerospace aftermarket",
+  "hq": "New York, New York",
+  "about": "Owns and leases jet engines, and increasingly repairs and sells engine modules rather than whole engines.",
+  "revenue": "Airlines pay it rent on leased engines and aircraft. Its faster-growing business buys used engines, strips them into modules, overhauls those and sells or swaps them back to airlines, which is cheaper for the airline than a full shop visit and more profitable for FTAI.",
+  "segments": "Engine leasing · Module swaps and repair · Aircraft leasing"
+ },
+ {
+  "ticker": "MTZ",
+  "company": "MasTec",
+  "sector": "Industrials · Infrastructure construction",
+  "hq": "Coral Gables, Florida",
+  "about": "A large US infrastructure contractor that builds power lines, pipelines, telecom networks and renewable-energy plants.",
+  "revenue": "Utilities, telecom carriers and energy companies award it construction contracts, mostly on a unit-price or fixed-fee basis. Earnings depend on the pace of grid, pipeline and network spending and on how well it estimates job costs.",
+  "segments": "Power delivery · Pipeline infrastructure · Communications · Clean energy"
+ },
+ {
+  "ticker": "WAY",
+  "company": "Waystar Holding",
+  "sector": "Health care · Software",
+  "hq": "Lehi, Utah",
+  "about": "Sells cloud software that handles the money side of American health care: checking insurance, submitting claims and chasing payment.",
+  "revenue": "Hospitals and physician groups pay recurring subscription and per-transaction fees. Because the software sits in the billing workflow, revenue scales with how many claims flow through it and is hard to displace once installed.",
+  "segments": "Claims management · Patient payments · Denial and appeal tools · Revenue analytics"
+ },
+ {
+  "ticker": "GIL",
+  "company": "Gildan Activewear",
+  "sector": "Consumer · Apparel manufacturing",
+  "hq": "Montreal, Canada",
+  "about": "Makes basic clothing — T-shirts, fleece, socks and underwear — in its own factories in Central America and the Caribbean.",
+  "revenue": "Most sales go to wholesalers who print logos on blank garments for events and uniforms, and the rest go to retailers under its own and licensed brands. Owning the factories keeps costs low, so profit turns on cotton prices and how full the plants are.",
+  "segments": "Activewear blanks · Socks and underwear · Licensed and private brands"
+ },
+ {
+  "ticker": "CDE",
+  "company": "Coeur Mining",
+  "sector": "Materials · Precious metals",
+  "hq": "Chicago, Illinois",
+  "about": "A mid-sized miner of gold and silver with operations in the United States, Mexico and Canada.",
+  "revenue": "It digs ore, processes it into metal and sells that at prevailing gold and silver prices. It has no control over the price it receives, so profit depends on keeping the cost per ounce below the market price and on how much it can mine.",
+  "segments": "Gold mining · Silver mining · Exploration"
+ },
+ {
+  "ticker": "KGS",
+  "company": "Kodiak Gas Services",
+  "sector": "Energy · Oilfield services",
+  "hq": "The Woodlands, Texas",
+  "about": "The largest US provider of contract compression — the big compressor packages that push natural gas through gathering systems and pipelines.",
+  "revenue": "Producers rent the compressors on multi-year fixed-fee contracts and Kodiak operates and maintains them. Because gas has to be compressed whatever the price, the revenue is steadier than most oilfield-services work.",
+  "segments": "Contract compression · Station construction · Maintenance services"
+ },
+ {
+  "ticker": "NU",
+  "company": "Nu Holdings",
+  "sector": "Financials · Digital banking",
+  "hq": "Sao Paulo, Brazil",
+  "about": "Nubank, the largest digital bank in Latin America, with the bulk of its customers in Brazil and growing operations in Mexico and Colombia. It has no branches.",
+  "revenue": "It earns interest on credit-card balances and personal loans, takes interchange fees when customers pay by card, and earns a spread on deposits. Running without branches keeps the cost of serving each customer very low, which is where most of the profit comes from.",
+  "segments": "Credit cards · Personal lending · Deposits and savings · Investments and insurance"
+ },
+ {
+  "ticker": "HAPN",
+  "company": "Happen",
+  "sector": "Unclassified",
+  "hq": "Not confirmed",
+  "about": "Listed on NASDAQ under the ticker HAPN. The post names it only as \"Happen\" among DeepSeek's buys and gives no description, and this entry has not been verified against company filings.",
+  "revenue": "Not established from the post. DeepSeek's stated reason for the whole basket was price: cheap earnings multiples rather than anything specific to this business.",
+  "segments": "Not confirmed"
+ }
+]
