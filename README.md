@@ -27,6 +27,9 @@ The current version covers the **last 10 posts as of Oct 19, 2026**, with trades
 ```
 ai-portfolio-trades/
 ├── README.md                  ← this file
+├── index.html                 ← what GitHub Pages serves; a copy of dashboard/standalone.html, rebuilt by publish.sh
+├── publish.sh                 ← rebuild index.html, commit and push in one command
+├── Open Dashboard.command     ← double-click to open the local copy in Chrome
 ├── data/
 │   ├── trades.json            ← one row per buy or sell (the main dataset)
 │   ├── portfolios.json        ← one row per portfolio: return figure + notes
@@ -136,6 +139,22 @@ The owner asked for the "Buys and sells by portfolio" bar chart to be **removed*
 
 You can also rebuild the page in any stack (React, Notion, Sheets, etc.) from the JSON alone.
 
+## 4b. Where it lives
+
+- **Live dashboard: https://0xfaizan19.github.io/ai-portfolio-trades/** — this link never changes. It is served by GitHub Pages from `main`, repo root.
+- Repo: https://github.com/0xfaizan19/ai-portfolio-trades (public — GitHub Pages needs a public repo on a free plan).
+- `index.html` at the repo root is a **byte copy of `dashboard/standalone.html`**. Never edit it by hand; `publish.sh` regenerates it. Editing only `standalone.html` and pushing will leave the live site stale.
+
+### Publishing a change
+
+```bash
+./publish.sh "what changed"
+```
+
+That copies `dashboard/standalone.html` over `index.html`, commits everything and pushes. GitHub Pages rebuilds in roughly a minute, and the link above serves the new version. Check it went out with `gh api repos/0xfaizan19/ai-portfolio-trades/pages --jq .status` (wait for `built`).
+
+So a full update is: edit the JSON → re-sync the inline `window.__DATA` in `standalone.html` → `./publish.sh`.
+
 ## 5. How to update it (the recurring job)
 
 ### Step 1: Read new posts
@@ -175,7 +194,7 @@ Rules:
 1. Append the new rows to `trades.json`, continuing the ids. Fill in `posted`, `pair`, `summary`, `thesis`, `risk`, `watch` and `outcome` from the post, paraphrased in plain words. When a later post reports how an earlier trade did, update that trade's `outcome`.
 2. Update `stat`, `stat_label`, `as_of` and `note` in `portfolios.json` when a newer post gives a figure.
 3. Add the new posts to `sources.md`.
-4. Update the page. For `standalone.html`, paste the new arrays into `window.__DATA`. For the Claude artifact, upload the new JSON files as assets, then update the `trades` / `portfolios` dataset documents' `source.url`, `source.name` and `updated` fields.
+4. Update the page. For `standalone.html`, paste the new arrays into `window.__DATA`. Then run `./publish.sh "…"` so the root `index.html` and the live site pick it up. For the Claude artifact, upload the new JSON files as assets, then update the `trades` / `portfolios` dataset documents' `source.url`, `source.name` and `updated` fields.
 5. Change "the last 10 posts" and the date range in the page copy if they no longer fit. The takeaway sentence also names the Broadcom sales and says "DeepSeek made no new trades". Rewrite that sentence when newer trades take over the headline.
 
 ## 6. Things to know
