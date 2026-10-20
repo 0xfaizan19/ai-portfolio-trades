@@ -28,6 +28,7 @@ The current version covers the **last 10 posts as of Oct 19, 2026**, with trades
 ai-portfolio-trades/
 ├── README.md                  ← this file
 ├── index.html                 ← what GitHub Pages serves; a copy of dashboard/standalone.html, rebuilt by sync.py
+├── refresh_quotes.py          ← rewrites data/quotes.json with the latest close for every ticker
 ├── sync.py                    ← stamps meta.json, rebuilds the inline data, regenerates index.html
 ├── publish.sh                 ← runs sync.py, commits and pushes in one command
 ├── Open Dashboard.command     ← double-click to open the local copy in Chrome
@@ -165,11 +166,18 @@ So a full update is: edit `data/*.json` → `./publish.sh "what changed"`. Never
 
 ### Step 1: Read new posts
 
-- Open https://x.com/aifinancelabs **while logged in**. Logged out, X shows only the pinned posts.
-- Skip the pinned post (a DeepSeek promo from May 29, 2026).
-- Most posts come in pairs: the main post, then a self-reply that only contains an Autopilot link. **Count only the main posts.**
-- The timeline cuts long posts short. Open each post's own page (`/aifinancelabs/status/<id>`) to read the full text.
-- Find the newest post already recorded in `sources.md` and process only the posts after it.
+- Open https://x.com/aifinancelabs **while logged in**, using Claude-in-Chrome (the user's own Chrome, "Browser 1", deviceId `a0a7abb7-3c75-4446-bb48-81a4e43e0768`, signed in as @faizanmoltbot). The built-in browser is logged out, and logged out X stops the timeline after **6 posts** — not enough.
+- Skip the pinned post (a DeepSeek promo from May 29, 2026) and its May 28 companion.
+- Most posts come in pairs seconds apart: the main post, then a self-reply that only contains an Autopilot link. **Count only the main posts** — the main one is the *lower* of the two ids.
+- Post ids are snowflakes, so sorting ids as numbers sorts them by time.
+- **Don't trust the post count or the cursor alone — scan back by date.** The profile timeline silently omits posts: on Oct 19, 2026 a 13-post backlog had been missed this way. Scroll until you are past the oldest date already in `sources.md`, then reconcile against the table.
+
+### Reading the posts reliably
+
+- Harvest the timeline by scrolling and collecting `article` elements: the permalink gives the id, `time[datetime]` the timestamp. Scroll in batches of about 10 × 1.5s — a single long loop trips the 45-second CDP timeout.
+- The timeline truncates long posts with "Show more". **Do not click it** — the click can land on an unrelated card and navigate away. Instead open the post's own page, `/aifinancelabs/status/<id>`, and read `[data-testid="tweetText"]`.
+- `document.title` on a post page holds the opening ~250 characters of the post. That is the cheapest way to triage many posts at once: batch navigate + read title, and only open the full text for the ones that mention trades.
+- Returning lots of post text in one Chrome `javascript_tool` result can trip an output filter ("BLOCKED: Cookie/query string data"), usually on the Autopilot links. Return ids and dates in bulk, then pull text post by post.
 
 ### Step 2: Pull out the trades
 
