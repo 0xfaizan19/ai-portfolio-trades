@@ -28,6 +28,7 @@ The current version covers the **last 10 posts as of Oct 19, 2026**, with trades
 ai-portfolio-trades/
 ├── README.md                  ← this file
 ├── index.html                 ← what GitHub Pages serves; a copy of dashboard/standalone.html, rebuilt by sync.py
+├── checkpoint.py              ← show / record the daily routine's resume point
 ├── refresh_quotes.py          ← rewrites data/quotes.json with the latest close for every ticker
 ├── sync.py                    ← stamps meta.json, rebuilds the inline data, regenerates index.html
 ├── publish.sh                 ← runs sync.py, commits and pushes in one command
@@ -37,7 +38,8 @@ ai-portfolio-trades/
 │   ├── portfolios.json        ← one row per portfolio: return figure + notes
 │   ├── companies.json         ← one row per ticker: what the company is and how it makes money
 │   ├── quotes.json            ← latest closing price per ticker (snapshot; refresh on every update)
-│   └── meta.json              ← {"updated": "YYYY-MM-DD"} behind the "Last updated" bubble; sync.py stamps it
+│   ├── meta.json              ← {"updated": "YYYY-MM-DD"} behind the "Last updated" bubble; sync.py stamps it
+│   └── checkpoint.json        ← where the daily routine got to; written by checkpoint.py, not by hand
 ├── dashboard/
 │   ├── standalone.html        ← opens in any browser; data built in (needs internet for d3)
 │   └── dashboard-page.html    ← the page as written for Claude's "Dashboard" artifact type
@@ -171,6 +173,30 @@ So a full update is: edit `data/*.json` → `./publish.sh "what changed"`. Never
 - Most posts come in pairs seconds apart: the main post, then a self-reply that only contains an Autopilot link. **Count only the main posts** — the main one is the *lower* of the two ids.
 - Post ids are snowflakes, so sorting ids as numbers sorts them by time.
 - **Don't trust the post count or the cursor alone — scan back by date.** The profile timeline silently omits posts: on Oct 19, 2026 a 13-post backlog had been missed this way. Scroll until you are past the oldest date already in `sources.md`, then reconcile against the table.
+
+### The checkpoint
+
+`sources.md` is the human-readable record of posts read. `data/checkpoint.json` is the machine-readable resume point, so a run that is skipped, interrupted or unable to reach X does not lose its place.
+
+```bash
+python3 checkpoint.py show      # where the last update got to — run this FIRST, before reading X
+```
+
+Scan back past `confirmed_through`, not merely past the last post you happen to recognise. At the end of every run, record what happened:
+
+```bash
+# X was read all the way back to the checkpoint
+python3 checkpoint.py record --status ok \
+    --newest-post-id <id> --newest-post-at <ISO8601> --note "<what changed>"
+
+# X could not be read at all (Chrome shut, logged out, app closed at 7am)
+python3 checkpoint.py record --status posts-unread --note "<why>"
+
+# posts were read but something else failed part-way
+python3 checkpoint.py record --status partial --note "<what is incomplete>"
+```
+
+**The cursor only moves on `--status ok`.** Anything else logs the attempt and leaves `confirmed_through` where it was, so the gap widens and the next successful run covers all of it. `checkpoint.py show` then prints a warning naming that uncovered gap, so missed days get picked up instead of stepped over. Always record a status, including when the run failed — a run that records nothing looks exactly like a run that never happened.
 
 ### Reading the posts reliably
 
