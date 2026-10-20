@@ -27,14 +27,16 @@ The current version covers the **last 10 posts as of Oct 19, 2026**, with trades
 ```
 ai-portfolio-trades/
 ├── README.md                  ← this file
-├── index.html                 ← what GitHub Pages serves; a copy of dashboard/standalone.html, rebuilt by publish.sh
-├── publish.sh                 ← rebuild index.html, commit and push in one command
+├── index.html                 ← what GitHub Pages serves; a copy of dashboard/standalone.html, rebuilt by sync.py
+├── sync.py                    ← stamps meta.json, rebuilds the inline data, regenerates index.html
+├── publish.sh                 ← runs sync.py, commits and pushes in one command
 ├── Open Dashboard.command     ← double-click to open the local copy in Chrome
 ├── data/
 │   ├── trades.json            ← one row per buy or sell (the main dataset)
 │   ├── portfolios.json        ← one row per portfolio: return figure + notes
 │   ├── companies.json         ← one row per ticker: what the company is and how it makes money
-│   └── quotes.json            ← latest closing price per ticker (snapshot; refresh on every update)
+│   ├── quotes.json            ← latest closing price per ticker (snapshot; refresh on every update)
+│   └── meta.json              ← {"updated": "YYYY-MM-DD"} behind the "Last updated" bubble; sync.py stamps it
 ├── dashboard/
 │   ├── standalone.html        ← opens in any browser; data built in (needs internet for d3)
 │   └── dashboard-page.html    ← the page as written for Claude's "Dashboard" artifact type
@@ -112,18 +114,22 @@ A swap such as "sold RTX for Boeing" becomes **two rows**: one Sell and one Buy.
 
 From top to bottom:
 
-1. **Title and takeaway line.** Totals for trades, buys and sells, plus the latest trade date, all computed from trades.json.
-2. **Portfolio cards** (one per portfolio). Each shows the colored name, the headline return (or "—"), what that return measures, buy and sell counts computed from trades.json, and the note.
+1. **Title and a "Last updated" bubble** in the top right, fed by `data/meta.json`. `sync.py` stamps it with the current date on every run, so it tracks the trade log automatically. There is no takeaway sentence; it was removed.
+2. **Portfolio cards**, all on one row (`--aft-cols` is set from the number of portfolios; below 900px they scroll sideways instead of wrapping). Each shows the colored name, the headline return (or "—"), the period and the date it was measured, buy and sell counts, and then **the S&P 500 over the same period and the gap in percentage points**, green when ahead and red when behind. The `note` field is still in the data but is no longer displayed.
+
+   `stat` and `benchmark` must come from the **same post**, so both numbers cover the same window — that is why portfolios carry different `as_of` dates. If a newer post gives a return without an S&P figure, keep the older matched pair rather than mixing them.
 3. **Trade log table.** Columns include Price, Price from and **Gain / loss vs. the buy price**:
    - **Open position** (a buy not yet sold): latest close from quotes.json ÷ buy price − 1, as plain green or red text. It updates whenever quotes.json is refreshed.
    - **Final** (a sell with a public buy price, or a buy later sold in the same portfolio): sale price ÷ buy price − 1, shown inside a **bubble** (a pill with a colored outline) so it reads as locked in.
    - "Not public" for a sell whose buy price was never posted.
-   A legend under the subtitle explains the bubble vs. plain color. The `gains` calc in the page script does this math. Newest first. **Clicking a row (or pressing Enter on it) opens that trade's detail page**. Chips filter by portfolio, and a search box matches ticker, company or reason. Columns: Date, Portfolio, Action (green Buy / red Sell pill), Ticker, Company, Size, Price, Why. Company and Why hide on narrow screens.
+   The `gains` calc in the page script does this math. Newest first. **Clicking a row (or pressing Enter on it) opens that trade's detail page**. There is no subtitle or legend under the heading; both were removed. A search box matches ticker, company or reason.
+
+   **Portfolio chips are multi-select.** `window.aftFilter.sel` is a `Set`: clicking a portfolio toggles it, so several can be on at once, and an empty set means everything. Clicking **All** clears the set, which deselects every portfolio and shows the full log. Columns: Date, Portfolio, Action (green Buy / red Sell pill), Ticker, Company, Size, Price, Why. Company and Why hide on narrow screens.
 
 4. **Trade detail page** (one per trade). It is a centered column (max 60rem wide). It replaces the list view, and "← All trades" goes back. It shows:
-   - a Buy/Sell pill, ticker and company, then the `summary`
+   - a large blue "← All trades" button (`.aft-back`), then a Buy/Sell pill, ticker and company, then the `summary`
    - fact tiles: Portfolio, Model, Traded (`date`), Posted, Size, then the price. A buy shows "Bought at". A sell shows **"Bought at"** (`entry_price` + `entry_when`, or "Not public") **and** "Sold at", plus a Gain / loss tile.
-   - cards: "Why <model> made this trade" (`thesis`), "What could go wrong" (`risk`), "What to watch next" (`watch`), and "How it has gone so far". That last card shows **only** the current price (with its date) and the % P&L in green or red, computed from quotes.json. The owner asked for exactly that, so no text goes in it. The `outcome` field is kept in the data but not displayed.
+   - cards: "Why <model> made this trade" (`thesis`), "What could go wrong" (`risk`), "What to watch next" (`watch`), and "How it has gone so far". That last card shows **only** the current price (with its date) and the % P&L in green or red, computed from quotes.json, set in the sans-serif face at 1.6rem/600 for legibility (`.aft-nowv`). The owner asked for exactly that, so no text goes in it. The `outcome` field is kept in the data but not displayed.
    - "Where the money went / came from", a button that opens the `pair` trade
    - **About the company**: sector, HQ, "What it is", "How it makes money" and main-business chips (from companies.json), placed right under "How it has gone so far"
    - for sells, a **Gain / loss** tile (green or red) showing the buy price it's measured against, plus a line explaining the basis
@@ -151,9 +157,9 @@ You can also rebuild the page in any stack (React, Notion, Sheets, etc.) from th
 ./publish.sh "what changed"
 ```
 
-That copies `dashboard/standalone.html` over `index.html`, commits everything and pushes. GitHub Pages rebuilds in roughly a minute, and the link above serves the new version. Check it went out with `gh api repos/0xfaizan19/ai-portfolio-trades/pages --jq .status` (wait for `built`).
+That runs `sync.py` — which stamps `data/meta.json` with today's date, rewrites the inline `window.__DATA` in `dashboard/standalone.html` from `data/*.json`, and copies the result to `index.html` — then commits everything and pushes. GitHub Pages rebuilds in roughly a minute, and the link above serves the new version. Check it went out with `gh api repos/0xfaizan19/ai-portfolio-trades/pages --jq .status` (wait for `built`).
 
-So a full update is: edit the JSON → re-sync the inline `window.__DATA` in `standalone.html` → `./publish.sh`.
+So a full update is: edit `data/*.json` → `./publish.sh "what changed"`. Never hand-edit `index.html` or the `window.__DATA` block; `sync.py` owns both.
 
 ## 5. How to update it (the recurring job)
 
@@ -194,7 +200,7 @@ Rules:
 1. Append the new rows to `trades.json`, continuing the ids. Fill in `posted`, `pair`, `summary`, `thesis`, `risk`, `watch` and `outcome` from the post, paraphrased in plain words. When a later post reports how an earlier trade did, update that trade's `outcome`.
 2. Update `stat`, `stat_label`, `as_of` and `note` in `portfolios.json` when a newer post gives a figure.
 3. Add the new posts to `sources.md`.
-4. Update the page. For `standalone.html`, paste the new arrays into `window.__DATA`. Then run `./publish.sh "…"` so the root `index.html` and the live site pick it up. For the Claude artifact, upload the new JSON files as assets, then update the `trades` / `portfolios` dataset documents' `source.url`, `source.name` and `updated` fields.
+4. Run `./publish.sh "…"`. `sync.py` pushes the JSON into `window.__DATA`, regenerates `index.html` and re-stamps the "Last updated" bubble — do not hand-edit any of those. **Render-logic changes still have to be made by hand in both `standalone.html` and `dashboard-page.html`**, which share identical markup and script. For the Claude artifact, upload the new JSON files as assets, then update the `trades` / `portfolios` dataset documents' `source.url`, `source.name` and `updated` fields.
 5. Change "the last 10 posts" and the date range in the page copy if they no longer fit. The takeaway sentence also names the Broadcom sales and says "DeepSeek made no new trades". Rewrite that sentence when newer trades take over the headline.
 
 ## 6. Things to know
