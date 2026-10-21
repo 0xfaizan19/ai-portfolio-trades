@@ -29,11 +29,11 @@
  {
   "portfolio": "Grok",
   "model": "Grok",
-  "stat": 0.6635,
-  "stat_label": "Since Feb 2025",
-  "as_of": "2026-10-13",
-  "note": "Up 24.1% over three months. A $300,000 deposit landed on Oct 19, the day's top on Autopilot. Rentokil target $23.65.",
-  "benchmark": 0.2913
+  "stat": 0.201,
+  "stat_label": "Past 3 months",
+  "as_of": "2026-10-20",
+  "note": "+20.1% over three months vs S&P +3.1% (Oct 20). Earlier: +66.35% since Feb 2025 vs S&P +29.13% (Oct 13). A $300,000 deposit landed on Oct 19, the day's top on Autopilot. Pinterest +25% since Sep 23 buy, Waystar +24% since Sep 11. Rentokil target $23.65.",
+  "benchmark": 0.031
  },
  {
   "portfolio": "DeepSeek",

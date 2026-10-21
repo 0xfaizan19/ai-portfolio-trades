@@ -1,9 +1,11 @@
 # Sources: posts read
 
-All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 19, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
+All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 20, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
 
 | # | Posted | Post | Portfolio | Type | What it said | Trade ids |
 |---|---|---|---|---|---|---|
+| 0a | Oct 20, 4:24 PM | [2112641185860731016](https://x.com/aifinancelabs/status/2112641185860731016) | Grok | Scoreboard | +20.1% over 3 months vs S&P +3.1%. Gains from miners/memory held through summer, all sold Sep 11 into health care, power, software. Pinterest +25% since Sep 23 buy, Waystar +24% since Sep 11. Trades are older than the window. | — |
+| 0b | Oct 20, 4:18 PM | [2112639701681377761](https://x.com/aifinancelabs/status/2112639701681377761) | GPT | Position spotlight | Chewy (GPT's #2 position) +5% today, ~18% since the Oct 8 buy, ~$21.57. Autoship 84.6% of sales. Next report Dec 9. | — (outcome for t05) |
 | 1 | Oct 19, 6:38 PM | [2112312565468471417](https://x.com/aifinancelabs/status/2112312565468471417) | Claude | Position spotlight | Pharvaris (~7% of book) +7.3% today; Claude still −14.5% on it. FDA decision due by Apr 23, 2027. | — |
 | 2 | Oct 19, 6:26 PM | [2112309451512267248](https://x.com/aifinancelabs/status/2112309451512267248) | GPT | Weekly scoreboard | +2.8% last week vs S&P −2.0%; +11.8% over 3 months vs +1.7%. Chewy +10.7%, Intuit +7.4%, Stryker +6.2%. Stryker and Intuit ~10% each. Pharvaris <4%, −10.8% on the week. | — |
 | 2a | Oct 19, 6:04 PM | [2112303873255756185](https://x.com/aifinancelabs/status/2112303873255756185) | Grok | Deposit / scoreboard | $300,000 deposit, the day's top on Autopilot. +24.1% over 3 months, +65.3% since Feb 2025. | — |
@@ -27,7 +29,9 @@ All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 19, 2026**, 
 | 9 | Oct 7, 6:06 PM | [2107955835444064412](https://x.com/aifinancelabs/status/2107955835444064412) | Claude | Comeback | Vistra (then the biggest position) +19% in 3 days, closed $166.72. Claude had added on Aug 12 @ $149. Reports Nov 6. | — (Aug 12 add is before the window) |
 | 10 | Oct 7, 10:15 AM | [2107837096568451545](https://x.com/aifinancelabs/status/2107837096568451545) | Claude | Video | Why Claude holds Micron. | — |
 
-**Newest post processed:** `2112312565468471417` (Oct 19, 2026, 6:38 PM). On the next update, start after this one.
+**Newest post processed:** `2112641185860731016` (Oct 20, 2026, 4:24 PM). On the next update, start after this one.
+
+**Checked Oct 21, 2026 (daily run):** two new main posts on Oct 20 (rows 0a, 0b). Neither contains a new trade.
 
 **Checked Oct 20, 2026 (daily run):** no new main posts after `2112312565468471417`. X search also showed two Oct 19 replies to commenters, [2112313010954121573](https://x.com/aifinancelabs/status/2112313010954121573) (Grok vs. Micron banter) and [2112313800938696937](https://x.com/aifinancelabs/status/2112313800938696937) (Claude: book −15.1% since Aug 19 while the S&P is about flat). Neither contains a trade.
 
@@ -51,6 +55,6 @@ Found with X search (`from:aifinancelabs <company>`, Latest tab). They aren't am
 
 Prices not stated in a post come from Yahoo Finance daily bars: `https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?period1=<unix>&period2=<unix>&interval=1d`, with a browser User-Agent. Latest closes for `quotes.json` use `?range=5d&interval=1d`. This source matched every price the posts did state: VST $165.81, AVGO $370.62 and RTO $19.98 on Oct 8, and VST $149.00 on Aug 12.
 
-Latest closes in `quotes.json`: **Oct 19, 2026** (32 tickers).
+Latest closes in `quotes.json`: **Oct 20, 2026** (32 tickers).
 
 Oct 14 opens for t16–t36 came from Yahoo daily bars and are labelled `Day's open`, because the post says the trades were made at Wednesday's open. SK hynix (`000660.KS`) trades in Seoul in Korean won, so no USD price is stored for t25 and no gain is shown for it.
