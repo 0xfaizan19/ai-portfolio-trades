@@ -1,19 +1,24 @@
 {
- "confirmed_through": "2026-10-20T20:24:44Z",
- "newest_post_id": "2112641185860731016",
- "newest_post_at": "2026-10-20T20:24:44Z",
- "last_run_at": "2026-10-21T11:04:33Z",
+ "confirmed_through": "2026-10-22T01:04:07Z",
+ "newest_post_id": "2113073881695318242",
+ "newest_post_at": "2026-10-22T01:04:07Z",
+ "last_run_at": "2026-10-23T00:32:08Z",
  "last_run_status": "ok",
  "data": {
-  "trades": 37,
+  "trades": 47,
   "portfolios": 7,
-  "companies": 33,
-  "quotes": 32,
-  "newest_trade_id": "t37",
-  "newest_trade_date": "2026-10-14",
-  "quotes_as_of": "2026-10-20"
+  "companies": 41,
+  "quotes": 40,
+  "newest_trade_id": "t47",
+  "newest_trade_date": "2026-10-21",
+  "quotes_as_of": "2026-10-21"
  },
  "history": [
+  {
+   "at": "2026-10-23T00:32:08Z",
+   "status": "ok",
+   "note": "3 new posts (Oct 21): 10 trades t38-t47 (Claude SKWD->SE, GPT SYK/WAY->TMUS/SCHW/WSE/ITRI, WW3 NOC->AKAM); WW3 +194% vs S&P ~91%; quotes to Oct 21"
+  },
   {
    "at": "2026-10-21T11:04:33Z",
    "status": "ok",
