@@ -1,162 +1,202 @@
 [
  {
   "ticker": "VST",
-  "price": 150.32,
-  "as_of": "2026-10-20"
+  "price": 156.14,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "APP",
-  "price": 272.46,
-  "as_of": "2026-10-20"
+  "price": 267.9,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "SARO",
-  "price": 21.43,
-  "as_of": "2026-10-20"
+  "price": 21.45,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "AVGO",
-  "price": 334.37,
-  "as_of": "2026-10-20"
+  "price": 337.8,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "CHWY",
-  "price": 21.53,
-  "as_of": "2026-10-20"
+  "price": 21.33,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "RTO",
-  "price": 21.21,
-  "as_of": "2026-10-20"
+  "price": 21.04,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "RTX",
-  "price": 193.34,
-  "as_of": "2026-10-20"
+  "price": 191.6,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "BA",
-  "price": 190.47,
-  "as_of": "2026-10-20"
+  "price": 192.28,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "CACI",
-  "price": 607.75,
-  "as_of": "2026-10-20"
+  "price": 623.38,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "MP",
-  "price": 39.05,
-  "as_of": "2026-10-20"
+  "price": 39.5,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "HII",
-  "price": 272.23,
-  "as_of": "2026-10-20"
+  "price": 273.95,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "KTOS",
-  "price": 38.96,
-  "as_of": "2026-10-20"
+  "price": 38.74,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "PANW",
-  "price": 340.28,
-  "as_of": "2026-10-20"
+  "price": 347.25,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "GEN",
-  "price": 24.08,
-  "as_of": "2026-10-20"
+  "price": 24.12,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "ICE",
-  "price": 158.57,
-  "as_of": "2026-10-20"
+  "price": 157.69,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "QSR",
-  "price": 75.11,
-  "as_of": "2026-10-20"
+  "price": 74.15,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "DY",
-  "price": 252.0,
-  "as_of": "2026-10-20"
+  "price": 237.45,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "DKNG",
-  "price": 20.48,
-  "as_of": "2026-10-20"
+  "price": 20.53,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "TDG",
-  "price": 1143.06,
-  "as_of": "2026-10-20"
+  "price": 1129.38,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "TTMI",
-  "price": 95.51,
-  "as_of": "2026-10-20"
+  "price": 102.15,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "SYK",
-  "price": 304.4,
-  "as_of": "2026-10-20"
+  "price": 297.6,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "NBIX",
-  "price": 142.0,
-  "as_of": "2026-10-20"
+  "price": 141.31,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "BSX",
-  "price": 45.58,
-  "as_of": "2026-10-20"
+  "price": 44.51,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "KKR",
-  "price": 89.21,
-  "as_of": "2026-10-20"
+  "price": 89.87,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "FTAI",
-  "price": 157.95,
-  "as_of": "2026-10-20"
+  "price": 163.52,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "MTZ",
-  "price": 187.34,
-  "as_of": "2026-10-20"
+  "price": 180.96,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "WAY",
-  "price": 28.81,
-  "as_of": "2026-10-20"
+  "price": 28.84,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "HAPN",
-  "price": 14.58,
-  "as_of": "2026-10-20"
+  "price": 14.72,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "GIL",
-  "price": 40.91,
-  "as_of": "2026-10-20"
+  "price": 40.31,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "CDE",
   "price": 15.13,
-  "as_of": "2026-10-20"
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "KGS",
-  "price": 47.43,
-  "as_of": "2026-10-20"
+  "price": 49.02,
+  "as_of": "2026-10-21"
  },
  {
   "ticker": "NU",
-  "price": 15.09,
-  "as_of": "2026-10-20"
+  "price": 15.05,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "SKWD",
+  "price": 61.4,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "SE",
+  "price": 77.94,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "TMUS",
+  "price": 153.75,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "SCHW",
+  "price": 91.64,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "WSE",
+  "price": 11.05,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "ITRI",
+  "price": 85.01,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "NOC",
+  "price": 539.31,
+  "as_of": "2026-10-21"
+ },
+ {
+  "ticker": "AKAM",
+  "price": 90.27,
+  "as_of": "2026-10-21"
  }
 ]

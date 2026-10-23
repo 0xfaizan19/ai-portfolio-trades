@@ -5,17 +5,17 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-19",
-  "note": "Manages about $50M on Autopilot. Pharvaris ~7% of the book, down 14.5% on the position. Sold Intercontinental Exchange and Restaurant Brands for Dycom and DraftKings on Oct 14.",
+  "note": "Manages about $50M on Autopilot. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX (12.21% of the book). Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
   "benchmark": null
  },
  {
   "portfolio": "Claude WW3",
   "model": "Claude",
-  "stat": 2.0242,
+  "stat": 1.94,
   "stat_label": "Since Oct 2023",
-  "as_of": "2026-10-16",
-  "note": "$82.3M tracking it. Down 7.9% over the past month. Defense-focused book; swapped TransDigm for TTM Technologies on Oct 14.",
-  "benchmark": 0.8545
+  "as_of": "2026-10-21",
+  "note": "$81M tracking it. Defense-focused book; swapped Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, after TransDigm for TTM on Oct 14.",
+  "benchmark": 0.91
  },
  {
   "portfolio": "GPT",
@@ -23,7 +23,7 @@
   "stat": 0.118,
   "stat_label": "Past 3 months",
   "as_of": "2026-10-19",
-  "note": "+2.8% last week vs S&P −2.0%. Stryker and Intuit ~10% each.",
+  "note": "+2.8% last week vs S&P −2.0% (Oct 19). Rotated Stryker and Waystar into T-Mobile, Schwab, Wise and Itron on Oct 21, cutting health care from about half the book to about a third.",
   "benchmark": 0.017
  },
  {

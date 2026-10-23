@@ -295,5 +295,77 @@
   "about": "Listed on NASDAQ under the ticker HAPN. The post names it only as \"Happen\" among DeepSeek's buys and gives no description, and this entry has not been verified against company filings.",
   "revenue": "Not established from the post. DeepSeek's stated reason for the whole basket was price: cheap earnings multiples rather than anything specific to this business.",
   "segments": "Not confirmed"
+ },
+ {
+  "ticker": "SKWD",
+  "company": "Skyward Specialty",
+  "sector": "Financials · Specialty insurance",
+  "hq": "Houston, Texas",
+  "about": "A specialty insurer that writes coverage standard insurers avoid, such as energy operations, farms, professional liability and specialty accident and health.",
+  "revenue": "It earns premiums on niche policies and invests the float. Since January it also owns a Lloyd's business that earns fees without tying up its own capital.",
+  "segments": "Specialty property and casualty · Accident and health · Agriculture · Lloyd's"
+ },
+ {
+  "ticker": "SE",
+  "company": "Sea Limited",
+  "sector": "Consumer · E-commerce and gaming",
+  "hq": "Singapore",
+  "about": "Southeast Asia's largest internet group: the Shopee online marketplace, the Garena games business and the Monee digital-finance arm.",
+  "revenue": "Shopee earns commissions, ads and logistics fees on goods sold through it. Garena sells in-game items, mainly in Free Fire. Monee earns interest and fees on consumer and merchant loans and payments.",
+  "segments": "Shopee (e-commerce) · Garena (games) · Monee (digital finance)"
+ },
+ {
+  "ticker": "TMUS",
+  "company": "T-Mobile US",
+  "sector": "Communication services · Wireless",
+  "hq": "Bellevue, Washington",
+  "about": "The second-largest US wireless carrier by subscribers, with a large 5G network and a growing home-internet business.",
+  "revenue": "Most revenue is monthly phone and data plans; it also sells handsets and fixed wireless home internet.",
+  "segments": "Postpaid wireless · Prepaid wireless · Home internet · Equipment"
+ },
+ {
+  "ticker": "SCHW",
+  "company": "Charles Schwab",
+  "sector": "Financials · Brokerage",
+  "hq": "Westlake, Texas",
+  "about": "The largest US retail brokerage and a major custodian for independent financial advisers.",
+  "revenue": "Much of its income is interest earned on clients' cash swept into its bank. It also earns asset-management fees on its funds and trading revenue.",
+  "segments": "Investor services · Advisor services · Banking · Asset management"
+ },
+ {
+  "ticker": "WSE",
+  "company": "Wise",
+  "sector": "Financials · Payments",
+  "hq": "London, UK",
+  "about": "A cross-border payments company that lets people and businesses send, hold and spend money in many currencies at close to the mid-market rate.",
+  "revenue": "It charges a small, visible fee on each transfer or currency conversion, and earns interest on customer balances. Card and business accounts add more fee income.",
+  "segments": "Personal transfers · Business accounts · Wise Platform (for banks)"
+ },
+ {
+  "ticker": "ITRI",
+  "company": "Itron",
+  "sector": "Industrials · Utility technology",
+  "hq": "Liberty Lake, Washington",
+  "about": "Makes smart meters, sensors and the network software utilities use to measure and manage electricity, gas and water.",
+  "revenue": "Utilities buy its meters and network hardware, then pay recurring fees for software, data and managed services over long contracts.",
+  "segments": "Device solutions · Networked solutions · Outcomes (software and services)"
+ },
+ {
+  "ticker": "NOC",
+  "company": "Northrop Grumman",
+  "sector": "Industrials · Defense",
+  "hq": "Falls Church, Virginia",
+  "about": "One of the largest US defense contractors, building the B-21 bomber, the Sentinel ICBM, satellites and missile defense systems.",
+  "revenue": "Almost all revenue comes from long government contracts, mainly with the US Department of Defense.",
+  "segments": "Aeronautics · Defense systems · Mission systems · Space systems"
+ },
+ {
+  "ticker": "AKAM",
+  "company": "Akamai Technologies",
+  "sector": "Technology · Cloud and security",
+  "hq": "Cambridge, Massachusetts",
+  "about": "Runs one of the largest content-delivery networks and sells edge security that protects websites and apps from attacks, plus a growing cloud-computing business.",
+  "revenue": "Customers pay recurring fees based on traffic and services used for delivering content, blocking attacks and running workloads on its cloud.",
+  "segments": "Security · Content delivery · Cloud computing"
  }
 ]
