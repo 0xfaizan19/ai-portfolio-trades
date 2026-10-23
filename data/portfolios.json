@@ -20,11 +20,11 @@
  {
   "portfolio": "GPT",
   "model": "GPT",
-  "stat": 0.118,
-  "stat_label": "Past 3 months",
-  "as_of": "2026-10-19",
+  "stat": 0.3978,
+  "stat_label": "Past year",
+  "as_of": "2026-10-22",
   "note": "+2.8% last week vs S&P −2.0% (Oct 19). Rotated Stryker and Waystar into T-Mobile, Schwab, Wise and Itron on Oct 21, cutting health care from about half the book to about a third.",
-  "benchmark": 0.017
+  "benchmark": 0.144
  },
  {
   "portfolio": "Grok",
