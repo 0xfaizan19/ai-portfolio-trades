@@ -1,9 +1,10 @@
 # Sources: posts read
 
-All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 22, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
+All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 23, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
 
 | # | Posted | Post | Portfolio | Type | What it said | Trade ids |
 |---|---|---|---|---|---|---|
+| 0v | Oct 23, 1:34 PM | [2113685532660335087](https://x.com/aifinancelabs/status/2113685532660335087) | Claude | Position spotlight | Book +0.8% on the day vs S&P −0.5% as US crude tops $103. Vista Energy (largest stock position) +5%, Devon +4%. Thesis on both; Vista +2.4% and Devon +4.8% on average cost. Vista Q3 results Oct 28. No trade. | — |
 | 0w | Oct 22, 10:55 PM | [2113464354179871131](https://x.com/aifinancelabs/status/2113464354179871131) | GPT | Scoreboard / recap | +39.78% over the past year vs S&P +14.40%. Restates three swaps: Vistra → Pinterest (Sep 23; PINS +25%, VST flat), Kratos → ADMA (Sep 25; ADMA +15%, KTOS −19%), Broadcom → Chewy (Oct 8; CHWY +23%, AVGO −13%). The Sep swaps predate the tracked window and give no size or price, so they are not recorded. | — (outcomes for t04–t05) |
 | 0x | Oct 21, 9:04 PM | [2113073881695318242](https://x.com/aifinancelabs/status/2113073881695318242) | Claude WW3 | **Trade + recap** | +194% since Oct 2023 vs S&P about +91%, $81M tracking. At Wednesday's (Oct 21) open sold all 7.11% Northrop Grumman @ $537.20; bought Akamai 4.11% @ $91.61; the other 3.00% went to BOXX (cash ETF). | t46–t47 |
 | 0y | Oct 21, 8:32 PM | [2113066049176260755](https://x.com/aifinancelabs/status/2113066049176260755) | GPT | **Trade** | At Wednesday's (Oct 21) open sold all 10.37% Stryker @ $297.57 and all 8.08% Waystar @ $28.88; bought T-Mobile 6.00% @ $151.55, Schwab 4.44% @ $91.63, Wise 4.00% @ $11.09 (Nasdaq: WSE), Itron 4.00% @ $84.74. Health care cut from about half the book to a third. | t40–t45 |
@@ -33,7 +34,7 @@ All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 22, 2026**, 
 | 9 | Oct 7, 6:06 PM | [2107955835444064412](https://x.com/aifinancelabs/status/2107955835444064412) | Claude | Comeback | Vistra (then the biggest position) +19% in 3 days, closed $166.72. Claude had added on Aug 12 @ $149. Reports Nov 6. | — (Aug 12 add is before the window) |
 | 10 | Oct 7, 10:15 AM | [2107837096568451545](https://x.com/aifinancelabs/status/2107837096568451545) | Claude | Video | Why Claude holds Micron. | — |
 
-**Newest post processed:** `2113464354179871131` (Oct 22, 2026, 10:55 PM). On the next update, start after this one.
+**Newest post processed:** `2113685532660335087` (Oct 23, 2026, 1:34 PM). On the next update, start after this one.
 
 **Checked Oct 21, 2026 (daily run):** two new main posts on Oct 20 (rows 0a, 0b). Neither contains a new trade.
 
@@ -61,6 +62,6 @@ Found with X search (`from:aifinancelabs <company>`, Latest tab). They aren't am
 
 Prices not stated in a post come from Yahoo Finance daily bars: `https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?period1=<unix>&period2=<unix>&interval=1d`, with a browser User-Agent. Latest closes for `quotes.json` use `?range=5d&interval=1d`. This source matched every price the posts did state: VST $165.81, AVGO $370.62 and RTO $19.98 on Oct 8, and VST $149.00 on Aug 12.
 
-Latest closes in `quotes.json`: **Oct 21, 2026** (40 tickers).
+Latest closes in `quotes.json`: **Oct 23, 2026** (40 tickers).
 
 Oct 14 opens for t16–t36 came from Yahoo daily bars and are labelled `Day's open`, because the post says the trades were made at Wednesday's open. SK hynix (`000660.KS`) trades in Seoul in Korean won, so no USD price is stored for t25 and no gain is shown for it.
