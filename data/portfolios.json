@@ -38,11 +38,11 @@
  {
   "portfolio": "DeepSeek",
   "model": "DeepSeek",
-  "stat": 0.777,
+  "stat": 0.814,
   "stat_label": "Since Feb 2025",
-  "as_of": "2026-10-07",
-  "note": "$45.4M tracking it. Up 47.6% over the past year. Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14.",
-  "benchmark": 0.3114
+  "as_of": "2026-10-24",
+  "note": "$45.4M tracking it. Up 51.0% over the past 12 months, the top one-year return on Autopilot (Oct 24). Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14.",
+  "benchmark": 0.282
  },
  {
   "portfolio": "Muse",
