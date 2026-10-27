@@ -1,9 +1,11 @@
 # Sources: posts read
 
-All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 24, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
+All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 26, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
 
 | # | Posted | Post | Portfolio | Type | What it said | Trade ids |
 |---|---|---|---|---|---|---|
+| 0s | Oct 26, 3:14 PM | [2114797960877805794](https://x.com/aifinancelabs/status/2114797960877805794) | Claude | Commentary | Claude's read on Anthropic's S-1 (Nasdaq: ANT, filed Oct 26). Notes Nvidia and Micron are in its book. No trade. | — |
+| 0t | Oct 26, 1:18 PM | [2114768726130041300](https://x.com/aifinancelabs/status/2114768726130041300) | Claude | Commentary | Lula wins Brazil runoff; EWZ down 20%+. Claude book +0.6%, owns no Brazilian stock; Sea −0.7%, Vista −3%. No trade. | — |
 | 0u | Oct 24, 8:30 PM | [2114152612786245692](https://x.com/aifinancelabs/status/2114152612786245692) | DeepSeek | Scoreboard | Tops Autopilot's one-year return: +51.0% over 12 months. +81.4% since Feb 3, 2025 vs S&P +28.2%. No trade. | — |
 | 0v | Oct 23, 1:34 PM | [2113685532660335087](https://x.com/aifinancelabs/status/2113685532660335087) | Claude | Position spotlight | Book +0.8% on the day vs S&P −0.5% as US crude tops $103. Vista Energy (largest stock position) +5%, Devon +4%. Thesis on both; Vista +2.4% and Devon +4.8% on average cost. Vista Q3 results Oct 28. No trade. | — |
 | 0w | Oct 22, 10:55 PM | [2113464354179871131](https://x.com/aifinancelabs/status/2113464354179871131) | GPT | Scoreboard / recap | +39.78% over the past year vs S&P +14.40%. Restates three swaps: Vistra → Pinterest (Sep 23; PINS +25%, VST flat), Kratos → ADMA (Sep 25; ADMA +15%, KTOS −19%), Broadcom → Chewy (Oct 8; CHWY +23%, AVGO −13%). The Sep swaps predate the tracked window and give no size or price, so they are not recorded. | — (outcomes for t04–t05) |
@@ -35,7 +37,7 @@ All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 24, 2026**, 
 | 9 | Oct 7, 6:06 PM | [2107955835444064412](https://x.com/aifinancelabs/status/2107955835444064412) | Claude | Comeback | Vistra (then the biggest position) +19% in 3 days, closed $166.72. Claude had added on Aug 12 @ $149. Reports Nov 6. | — (Aug 12 add is before the window) |
 | 10 | Oct 7, 10:15 AM | [2107837096568451545](https://x.com/aifinancelabs/status/2107837096568451545) | Claude | Video | Why Claude holds Micron. | — |
 
-**Newest post processed:** `2114152612786245692` (Oct 24, 2026, 8:30 PM). On the next update, start after this one.
+**Newest post processed:** `2114797960877805794` (Oct 26, 2026, 3:14 PM). On the next update, start after this one.
 
 **Checked Oct 26, 2026 (daily run):** no new main posts after `2114152612786245692` (timeline scanned back to Oct 16). X search showed one Oct 25 reply to a commenter, [2114206089717699036](https://x.com/aifinancelabs/status/2114206089717699036) (DeepSeek: last month was bad but the 3-month record is positive). No trade.
 

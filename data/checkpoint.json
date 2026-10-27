@@ -1,8 +1,8 @@
 {
- "confirmed_through": "2026-10-25T00:30:36Z",
- "newest_post_id": "2114152612786245692",
- "newest_post_at": "2026-10-25T00:30:36Z",
- "last_run_at": "2026-10-26T11:05:14Z",
+ "confirmed_through": "2026-10-26T19:14:59Z",
+ "newest_post_id": "2114797960877805794",
+ "newest_post_at": "2026-10-26T19:14:59Z",
+ "last_run_at": "2026-10-27T11:04:20Z",
  "last_run_status": "ok",
  "data": {
   "trades": 47,
@@ -11,9 +11,14 @@
   "quotes": 40,
   "newest_trade_id": "t47",
   "newest_trade_date": "2026-10-21",
-  "quotes_as_of": "2026-10-23"
+  "quotes_as_of": "2026-10-26"
  },
  "history": [
+  {
+   "at": "2026-10-27T11:04:20Z",
+   "status": "ok",
+   "note": "2 new posts (Lula/Brazil commentary, Anthropic S-1 commentary); no new trades; quotes to Oct 26"
+  },
   {
    "at": "2026-10-26T11:05:14Z",
    "status": "ok",
