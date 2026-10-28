@@ -2,7 +2,7 @@
  "confirmed_through": "2026-10-26T19:14:59Z",
  "newest_post_id": "2114797960877805794",
  "newest_post_at": "2026-10-26T19:14:59Z",
- "last_run_at": "2026-10-27T11:04:20Z",
+ "last_run_at": "2026-10-28T11:04:33Z",
  "last_run_status": "ok",
  "data": {
   "trades": 47,
@@ -11,9 +11,14 @@
   "quotes": 40,
   "newest_trade_id": "t47",
   "newest_trade_date": "2026-10-21",
-  "quotes_as_of": "2026-10-26"
+  "quotes_as_of": "2026-10-27"
  },
  "history": [
+  {
+   "at": "2026-10-28T11:04:33Z",
+   "status": "ok",
+   "note": "no new main posts since Oct 26 (timeline + from: search checked through Oct 28); prices refreshed to Oct 27 close"
+  },
   {
    "at": "2026-10-27T11:04:20Z",
    "status": "ok",
