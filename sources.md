@@ -1,9 +1,10 @@
 # Sources: posts read
 
-All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 26, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
+All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 29, 2026**, newest first. The Oct 9–Oct 19 window flagged as a gap in the previous pass has now been read in full. Times are Eastern. The pinned post and the link-only self-replies are excluded.
 
 | # | Posted | Post | Portfolio | Type | What it said | Trade ids |
 |---|---|---|---|---|---|---|
+| 0r | Oct 29, 1:25 PM | [2115857637078171694](https://x.com/aifinancelabs/status/2115857637078171694) | Claude | **Trade** | At the Oct 29 open sold Devon Energy @ $51.39 and bought Ultra Clean Holdings @ $54.46; rest of proceeds to BOXX. No sizes given. Devon was bought Sep 2 around $49.16 ([2095248839519449124](https://x.com/aifinancelabs/status/2095248839519449124)). Next test: Applied Materials Nov 12. | t48–t49 |
 | 0s | Oct 26, 3:14 PM | [2114797960877805794](https://x.com/aifinancelabs/status/2114797960877805794) | Claude | Commentary | Claude's read on Anthropic's S-1 (Nasdaq: ANT, filed Oct 26). Notes Nvidia and Micron are in its book. No trade. | — |
 | 0t | Oct 26, 1:18 PM | [2114768726130041300](https://x.com/aifinancelabs/status/2114768726130041300) | Claude | Commentary | Lula wins Brazil runoff; EWZ down 20%+. Claude book +0.6%, owns no Brazilian stock; Sea −0.7%, Vista −3%. No trade. | — |
 | 0u | Oct 24, 8:30 PM | [2114152612786245692](https://x.com/aifinancelabs/status/2114152612786245692) | DeepSeek | Scoreboard | Tops Autopilot's one-year return: +51.0% over 12 months. +81.4% since Feb 3, 2025 vs S&P +28.2%. No trade. | — |
@@ -37,7 +38,7 @@ All main posts from https://x.com/aifinancelabs from Oct 7 to **Oct 26, 2026**, 
 | 9 | Oct 7, 6:06 PM | [2107955835444064412](https://x.com/aifinancelabs/status/2107955835444064412) | Claude | Comeback | Vistra (then the biggest position) +19% in 3 days, closed $166.72. Claude had added on Aug 12 @ $149. Reports Nov 6. | — (Aug 12 add is before the window) |
 | 10 | Oct 7, 10:15 AM | [2107837096568451545](https://x.com/aifinancelabs/status/2107837096568451545) | Claude | Video | Why Claude holds Micron. | — |
 
-**Newest post processed:** `2114797960877805794` (Oct 26, 2026, 3:14 PM). On the next update, start after this one.
+**Newest post processed:** `2115857637078171694` (Oct 29, 2026, 1:25 PM). On the next update, start after this one.
 
 **Checked Oct 26, 2026 (daily run):** no new main posts after `2114152612786245692` (timeline scanned back to Oct 16). X search showed one Oct 25 reply to a commenter, [2114206089717699036](https://x.com/aifinancelabs/status/2114206089717699036) (DeepSeek: last month was bad but the 3-month record is positive). No trade.
 
@@ -61,12 +62,13 @@ Found with X search (`from:aifinancelabs <company>`, Latest tab). They aren't am
 | Aug 19, 2026 | [2090273074658615380](https://x.com/aifinancelabs/status/2090273074658615380) | Claude WW3's Aug 12 rebuild: Palo Alto trimmed 12.9% → 5.4%, CACI 12.9% → 8.4%, MP Materials raised 3.8% → 8.3%, Huntington Ingalls bought new at 5.3%. Sets t11's `entry_price` (Aug 12 open, $55.80). |
 | Aug 20, 2026 | [2090408514992918942](https://x.com/aifinancelabs/status/2090408514992918942) | Claude bought Vista Energy at $70.50 (7.6%). Context only. |
 
+| Sep 2, 2026 | [2095248839519449124](https://x.com/aifinancelabs/status/2095248839519449124) | Claude opened Devon Energy at 5% of the book, filled around $49.16. Sets t48's `entry_price`. |
 | Aug 27, 2026 | [2093033946908901848](https://x.com/aifinancelabs/status/2093033946908901848) | Claude sold Kinross and bought Skyward Specialty at the Aug 26 open. No price stated; t38's `entry_price` is the Aug 26 open from Yahoo ($57.59). No buy posts were found for Northrop (WW3) or GPT's Stryker and Waystar, so those gains are "Not public". |
 
 ## Price data
 
 Prices not stated in a post come from Yahoo Finance daily bars: `https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?period1=<unix>&period2=<unix>&interval=1d`, with a browser User-Agent. Latest closes for `quotes.json` use `?range=5d&interval=1d`. This source matched every price the posts did state: VST $165.81, AVGO $370.62 and RTO $19.98 on Oct 8, and VST $149.00 on Aug 12.
 
-Latest closes in `quotes.json`: **Oct 28, 2026** (40 tickers).
+Latest closes in `quotes.json`: **Oct 29, 2026** (42 tickers).
 
 Oct 14 opens for t16–t36 came from Yahoo daily bars and are labelled `Day's open`, because the post says the trades were made at Wednesday's open. SK hynix (`000660.KS`) trades in Seoul in Korean won, so no USD price is stored for t25 and no gain is shown for it.

@@ -367,5 +367,23 @@
   "about": "Runs one of the largest content-delivery networks and sells edge security that protects websites and apps from attacks, plus a growing cloud-computing business.",
   "revenue": "Customers pay recurring fees based on traffic and services used for delivering content, blocking attacks and running workloads on its cloud.",
   "segments": "Security · Content delivery · Cloud computing"
+ },
+ {
+  "ticker": "UCTT",
+  "company": "Ultra Clean Holdings",
+  "sector": "Semiconductor equipment",
+  "hq": "Hayward, California",
+  "about": "Ultra Clean Holdings supplies critical subsystems, components and parts that go inside the machines used to make semiconductors, and cleans and analyses those parts for chipmakers.",
+  "revenue": "Most revenue comes from selling gas delivery systems and other subsystems to chip-equipment makers such as Lam Research and Applied Materials, so sales rise and fall with spending on new fab tools. A smaller services business earns recurring fees for cleaning and coating parts used in chip factories.",
+  "segments": "Semiconductor subsystems · Gas delivery systems · Parts cleaning and analytics services"
+ },
+ {
+  "ticker": "DVN",
+  "company": "Devon Energy",
+  "sector": "Oil and gas exploration and production",
+  "hq": "Oklahoma City, Oklahoma",
+  "about": "Devon Energy is a large US independent oil and gas producer with most of its output from the Delaware Basin in Texas and New Mexico.",
+  "revenue": "It earns money by producing and selling crude oil, natural gas and natural gas liquids, so its profits move with commodity prices. It returns much of its cash flow to shareholders through a fixed-plus-variable dividend and buybacks.",
+  "segments": "Delaware Basin · Eagle Ford · Anadarko Basin · Williston Basin · Powder River Basin"
  }
 ]
