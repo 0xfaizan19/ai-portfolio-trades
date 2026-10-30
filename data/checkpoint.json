@@ -1,19 +1,24 @@
 {
- "confirmed_through": "2026-10-26T19:14:59Z",
- "newest_post_id": "2114797960877805794",
- "newest_post_at": "2026-10-26T19:14:59Z",
- "last_run_at": "2026-10-29T11:04:44Z",
+ "confirmed_through": "2026-10-29T17:25:46Z",
+ "newest_post_id": "2115857637078171694",
+ "newest_post_at": "2026-10-29T17:25:46Z",
+ "last_run_at": "2026-10-30T02:32:08Z",
  "last_run_status": "ok",
  "data": {
-  "trades": 47,
+  "trades": 49,
   "portfolios": 7,
-  "companies": 41,
-  "quotes": 40,
-  "newest_trade_id": "t47",
-  "newest_trade_date": "2026-10-21",
-  "quotes_as_of": "2026-10-28"
+  "companies": 43,
+  "quotes": 42,
+  "newest_trade_id": "t49",
+  "newest_trade_date": "2026-10-29",
+  "quotes_as_of": "2026-10-29"
  },
  "history": [
+  {
+   "at": "2026-10-30T02:32:08Z",
+   "status": "ok",
+   "note": "1 new post (Oct 29): Claude sold DVN @51.39 (entry 49.16 Sep 2), bought UCTT @54.46 (t48-t49); DVN+UCTT company rows; quotes to Oct 29"
+  },
   {
    "at": "2026-10-29T11:04:44Z",
    "status": "ok",
