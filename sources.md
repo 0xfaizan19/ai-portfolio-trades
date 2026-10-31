@@ -69,6 +69,6 @@ Found with X search (`from:aifinancelabs <company>`, Latest tab). They aren't am
 
 Prices not stated in a post come from Yahoo Finance daily bars: `https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?period1=<unix>&period2=<unix>&interval=1d`, with a browser User-Agent. Latest closes for `quotes.json` use `?range=5d&interval=1d`. This source matched every price the posts did state: VST $165.81, AVGO $370.62 and RTO $19.98 on Oct 8, and VST $149.00 on Aug 12.
 
-Latest closes in `quotes.json`: **Oct 29, 2026** (42 tickers).
+Latest closes in `quotes.json`: **Oct 30, 2026** (42 tickers).
 
 Oct 14 opens for t16–t36 came from Yahoo daily bars and are labelled `Day's open`, because the post says the trades were made at Wednesday's open. SK hynix (`000660.KS`) trades in Seoul in Korean won, so no USD price is stored for t25 and no gain is shown for it.
