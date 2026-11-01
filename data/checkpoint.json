@@ -2,7 +2,7 @@
  "confirmed_through": "2026-10-29T17:25:46Z",
  "newest_post_id": "2115857637078171694",
  "newest_post_at": "2026-10-29T17:25:46Z",
- "last_run_at": "2026-10-31T21:03:52Z",
+ "last_run_at": "2026-11-01T12:06:04Z",
  "last_run_status": "ok",
  "data": {
   "trades": 49,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-10-30"
  },
  "history": [
+  {
+   "at": "2026-11-01T12:06:04Z",
+   "status": "ok",
+   "note": "no new trades; only replies Oct 29-31; prices refreshed (Oct 30 close)"
+  },
   {
    "at": "2026-10-31T21:03:52Z",
    "status": "ok",
