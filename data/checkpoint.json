@@ -2,7 +2,7 @@
  "confirmed_through": "2026-10-29T17:25:46Z",
  "newest_post_id": "2115857637078171694",
  "newest_post_at": "2026-10-29T17:25:46Z",
- "last_run_at": "2026-11-03T12:05:59Z",
+ "last_run_at": "2026-11-03T22:06:06Z",
  "last_run_status": "ok",
  "data": {
   "trades": 49,
@@ -11,9 +11,14 @@
   "quotes": 42,
   "newest_trade_id": "t49",
   "newest_trade_date": "2026-10-29",
-  "quotes_as_of": "2026-11-02"
+  "quotes_as_of": "2026-11-03"
  },
  "history": [
+  {
+   "at": "2026-11-03T22:06:06Z",
+   "status": "ok",
+   "note": "Nov 3 evening run: no new main posts since Oct 29 (timeline back to Oct 19 + from: search since Oct 29; replies only, newest Oct 31). No new trades; quotes refreshed to Nov 3 close (NBIX +13% checked)."
+  },
   {
    "at": "2026-11-03T12:05:59Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-10-21T11:04:33Z",
    "status": "ok",
    "note": "2 new posts (Oct 20), no new trades; Grok 3-month return updated, Chewy outcome noted; prices to Oct 20"
-  },
-  {
-   "at": "2026-10-20T11:04:12Z",
-   "status": "ok",
-   "note": "no new trades; 2 Oct 19 replies checked, no trades; quotes still Oct 19 close"
   }
  ]
 }
