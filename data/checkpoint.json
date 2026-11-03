@@ -2,7 +2,7 @@
  "confirmed_through": "2026-10-29T17:25:46Z",
  "newest_post_id": "2115857637078171694",
  "newest_post_at": "2026-10-29T17:25:46Z",
- "last_run_at": "2026-11-02T22:04:42Z",
+ "last_run_at": "2026-11-03T12:05:59Z",
  "last_run_status": "ok",
  "data": {
   "trades": 49,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-02"
  },
  "history": [
+  {
+   "at": "2026-11-03T12:05:59Z",
+   "status": "ok",
+   "note": "Nov 3 run: no new main posts since Oct 29 (timeline back to Oct 20 + from: search since Oct 29; replies only, newest Oct 31). No new trades; quotes at Nov 2 close."
+  },
   {
    "at": "2026-11-02T22:04:42Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-10-20T11:04:12Z",
    "status": "ok",
    "note": "no new trades; 2 Oct 19 replies checked, no trades; quotes still Oct 19 close"
-  },
-  {
-   "at": "2026-10-20T02:54:32Z",
-   "status": "ok",
-   "note": "Backlog cleared: Oct 9-19 read, t16-t37 added. Verified by the first test run."
   }
  ]
 }
