@@ -1,8 +1,8 @@
 {
- "confirmed_through": "2026-10-29T17:25:46Z",
- "newest_post_id": "2115857637078171694",
- "newest_post_at": "2026-10-29T17:25:46Z",
- "last_run_at": "2026-11-03T22:06:06Z",
+ "confirmed_through": "2026-11-03T22:17:02Z",
+ "newest_post_id": "2117742876662620370",
+ "newest_post_at": "2026-11-03T22:17:02Z",
+ "last_run_at": "2026-11-04T12:10:19Z",
  "last_run_status": "ok",
  "data": {
   "trades": 49,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-03"
  },
  "history": [
+  {
+   "at": "2026-11-04T12:10:19Z",
+   "status": "ok",
+   "note": "1 new post (Nov 3 DeepSeek scoreboard: +37.8% 1-yr vs S&P ~11.6%; chart +71.98% vs +26.90% since Feb 3 2025) -> DeepSeek stat/benchmark updated. No new trades; quotes at Nov 3 close. Timeline back to Oct 9 + from: search since Oct 29. First Pages deploy (c695b91) failed on a GitHub artifact-upload ECONNRESET; redeployed with the checkpoint push."
+  },
   {
    "at": "2026-11-03T22:06:06Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-10-23T00:32:08Z",
    "status": "ok",
    "note": "3 new posts (Oct 21): 10 trades t38-t47 (Claude SKWD->SE, GPT SYK/WAY->TMUS/SCHW/WSE/ITRI, WW3 NOC->AKAM); WW3 +194% vs S&P ~91%; quotes to Oct 21"
-  },
-  {
-   "at": "2026-10-21T11:04:33Z",
-   "status": "ok",
-   "note": "2 new posts (Oct 20), no new trades; Grok 3-month return updated, Chewy outcome noted; prices to Oct 20"
   }
  ]
 }
