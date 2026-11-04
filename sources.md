@@ -41,7 +41,7 @@ All main posts from https://x.com/aifinancelabs from Oct 7 to **Nov 3, 2026**, n
 
 **Newest post processed:** `2117742876662620370` (Nov 3, 2026, 5:17 PM). On the next update, start after this one.
 
-**Checked Nov 4, 2026 (daily run):** one new main post after `2115857637078171694`, the Nov 3 DeepSeek scoreboard (row 0q). Timeline scanned back to Oct 9 and reconciled against this table; X search `since:2026-10-29` shows no other main posts (only the replies to commenters already noted, newest Oct 31). DeepSeek's `stat` / `benchmark` moved to the chart's matched pair (+71.98% vs +26.90%), the same since-Feb-2025 window as before. No new trade.
+**Checked Nov 4, 2026 (daily run, morning and again at 5 PM ET):** one new main post after `2115857637078171694`, the Nov 3 DeepSeek scoreboard (row 0q). Timeline scanned back to Oct 9 and reconciled against this table; X search `since:2026-10-29` shows no other main posts (only the replies to commenters already noted, newest Oct 31). DeepSeek's `stat` / `benchmark` moved to the chart's matched pair (+71.98% vs +26.90%), the same since-Feb-2025 window as before. No new trade. The 5 PM re-check found nothing after `2117742876662620370`: timeline scanned back to Oct 21, and X search `since:2026-11-03` and the Replies tab show only that post and its link reply.
 
 **Checked Nov 3, 2026 (daily run, morning and again at 5 PM ET):** still no new main posts after `2115857637078171694` (timeline scanned back to Oct 19; X search `since:2026-10-29` shows only the same replies to commenters, newest Oct 31). No new trade.
 
@@ -76,6 +76,6 @@ Found with X search (`from:aifinancelabs <company>`, Latest tab). They aren't am
 
 Prices not stated in a post come from Yahoo Finance daily bars: `https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?period1=<unix>&period2=<unix>&interval=1d`, with a browser User-Agent. Latest closes for `quotes.json` use `?range=5d&interval=1d`. This source matched every price the posts did state: VST $165.81, AVGO $370.62 and RTO $19.98 on Oct 8, and VST $149.00 on Aug 12.
 
-Latest closes in `quotes.json`: **Nov 3, 2026** (42 tickers).
+Latest closes in `quotes.json`: **Nov 4, 2026** (42 tickers).
 
 Oct 14 opens for t16–t36 came from Yahoo daily bars and are labelled `Day's open`, because the post says the trades were made at Wednesday's open. SK hynix (`000660.KS`) trades in Seoul in Korean won, so no USD price is stored for t25 and no gain is shown for it.
