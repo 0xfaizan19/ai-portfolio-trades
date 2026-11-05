@@ -385,5 +385,185 @@
   "about": "Devon Energy is a large US independent oil and gas producer with most of its output from the Delaware Basin in Texas and New Mexico.",
   "revenue": "It earns money by producing and selling crude oil, natural gas and natural gas liquids, so its profits move with commodity prices. It returns much of its cash flow to shareholders through a fixed-plus-variable dividend and buybacks.",
   "segments": "Delaware Basin · Eagle Ford · Anadarko Basin · Williston Basin · Powder River Basin"
+ },
+ {
+  "ticker": "KBR",
+  "company": "KBR",
+  "sector": "Industrials · Government services and engineering",
+  "hq": "Houston, Texas",
+  "about": "An engineering and technology contractor that does most of its work for the US and allied governments, from space and defense support to military logistics. It also licenses chemical and refining process technology, and it plans to split into two companies.",
+  "revenue": "Most revenue comes from long government contracts for engineering, science, IT and support services. The smaller technology arm earns licence fees, proprietary equipment sales and consulting on ammonia, refining and chemical plants.",
+  "segments": "Government and defense services · Space and intelligence work · Process technology licensing"
+ },
+ {
+  "ticker": "EXE",
+  "company": "Expand Energy",
+  "sector": "Energy · Natural gas production",
+  "hq": "Spring, Texas",
+  "about": "The largest natural gas producer in the US, formed in 2024 when Chesapeake Energy combined with Southwestern Energy. Its wells are in the Appalachian Basin and the Haynesville shale of Louisiana and Texas.",
+  "revenue": "It sells natural gas, plus some oil and natural gas liquids, so its profits rise and fall with gas prices; hedges smooth part of that. It returns cash through a base dividend plus buybacks or variable payouts.",
+  "segments": "Marcellus and Utica (Appalachia) · Haynesville · Gas marketing"
+ },
+ {
+  "ticker": "ALNY",
+  "company": "Alnylam Pharmaceuticals",
+  "sector": "Health care · Biotechnology",
+  "hq": "Cambridge, Massachusetts",
+  "about": "The leading developer of RNA interference (RNAi) medicines, which silence the genes that make disease-causing proteins. Its biggest franchise treats transthyretin (TTR) amyloidosis, which damages the heart and nerves.",
+  "revenue": "It sells its own drugs, led by Amvuttra and Onpattro for TTR amyloidosis, plus Givlaari and Oxlumo for rare liver and kidney diseases. It also earns royalties and milestones from partners, including Novartis on the cholesterol drug Leqvio.",
+  "segments": "TTR amyloidosis (Amvuttra, Onpattro) · Rare disease drugs · Partner royalties · RNAi pipeline"
+ },
+ {
+  "ticker": "BWXT",
+  "company": "BWX Technologies",
+  "sector": "Industrials · Nuclear components",
+  "hq": "Lynchburg, Virginia",
+  "about": "The sole maker of nuclear reactors and reactor fuel for US Navy submarines and aircraft carriers. It also makes parts for commercial nuclear plants and medical isotopes, and runs nuclear sites for the US government.",
+  "revenue": "Most revenue comes from long US government contracts for naval reactors and fuel, which give it a deep backlog. The rest comes from commercial nuclear components and services, mainly in Canada, medical radioisotopes and site-management fees.",
+  "segments": "Government Operations (naval reactors and fuel) · Commercial Operations · Medical isotopes"
+ },
+ {
+  "ticker": "CXM",
+  "company": "Sprinklr",
+  "sector": "Technology · Customer experience software",
+  "hq": "New York, New York",
+  "about": "Makes cloud software that large companies use to run customer interactions across social media, messaging, chat and contact centers in one place.",
+  "revenue": "Most revenue is subscription fees for its platform, sold to big enterprises on multi-year contracts. A smaller share comes from implementation and other professional services.",
+  "segments": "Customer service and contact center · Social listening and marketing · Insights · Professional services"
+ },
+ {
+  "ticker": "PINS",
+  "company": "Pinterest",
+  "sector": "Communication services · Social media",
+  "hq": "San Francisco, California",
+  "about": "A visual discovery site and app where people save and search images of ideas and products, used by more than 500 million people a month.",
+  "revenue": "Nearly all revenue is advertising: brands and retailers pay to show promoted pins and shopping ads to people planning purchases. Most users are outside the US, but most revenue still comes from the US and Canada.",
+  "segments": "Advertising · Shopping ads · US and Canada · Europe · Rest of world"
+ },
+ {
+  "ticker": "PHVS",
+  "company": "Pharvaris",
+  "sector": "Health care · Biotechnology",
+  "hq": "Zug, Switzerland",
+  "about": "A late-stage drug developer working on deucrictibant, an oral pill that blocks the bradykinin B2 receptor, to treat and prevent swelling attacks in hereditary angioedema (HAE) and related conditions.",
+  "revenue": "It has no product sales yet and funds its research with cash raised from investors. Revenue depends on deucrictibant winning approval and selling as an on-demand and preventive HAE treatment.",
+  "segments": "Deucrictibant (on-demand HAE) · Deucrictibant (HAE prevention) · Acquired angioedema"
+ },
+ {
+  "ticker": "INTU",
+  "company": "Intuit",
+  "sector": "Technology · Financial software",
+  "hq": "Mountain View, California",
+  "about": "Makes TurboTax tax software, QuickBooks accounting software for small businesses, the Credit Karma personal-finance app and the Mailchimp email marketing service.",
+  "revenue": "Most revenue comes from subscriptions and fees for QuickBooks and its add-ons such as payroll and payments, and from TurboTax filing fees, which arrive mostly in the US tax season. Credit Karma earns referral fees when members take out cards and loans.",
+  "segments": "QuickBooks and Mailchimp (businesses) · TurboTax (consumers) · Credit Karma · ProTax"
+ },
+ {
+  "ticker": "UBER",
+  "company": "Uber Technologies",
+  "sector": "Technology · Ride-hailing and delivery",
+  "hq": "San Francisco, California",
+  "about": "Runs the world's largest ride-hailing network and the Uber Eats food and grocery delivery service in dozens of countries, plus a freight brokerage.",
+  "revenue": "It keeps a cut of each ride and delivery booked through its apps, plus fees and a growing advertising business. Uber One memberships add recurring fees.",
+  "segments": "Mobility · Delivery · Freight · Advertising"
+ },
+ {
+  "ticker": "CRGY",
+  "company": "Crescent Energy",
+  "sector": "Energy · Oil and gas production",
+  "hq": "Houston, Texas",
+  "about": "A US oil and gas producer that has grown by buying mature, slower-declining assets, mainly in the Eagle Ford, Permian and Uinta basins. It also owns mineral and royalty interests.",
+  "revenue": "It sells crude oil, natural gas and natural gas liquids, so profits move with commodity prices; hedges cover part of its output. It returns cash through dividends and buybacks.",
+  "segments": "Eagle Ford · Permian Basin · Uinta Basin · Minerals and royalties"
+ },
+ {
+  "ticker": "KGC",
+  "company": "Kinross Gold",
+  "sector": "Materials · Gold mining",
+  "hq": "Toronto, Canada",
+  "about": "One of the world's larger gold miners, with mines in the Americas and West Africa, including Tasiast (Mauritania), Paracatu (Brazil), La Coipa (Chile), and Fort Knox and Round Mountain (US).",
+  "revenue": "It earns money by selling the gold, and some silver, that it mines, so profit depends on the gold price minus its all-in cost per ounce.",
+  "segments": "Tasiast · Paracatu · La Coipa · US mines (Fort Knox, Round Mountain, Bald Mountain) · Great Bear project"
+ },
+ {
+  "ticker": "GTX",
+  "company": "Garrett Motion",
+  "sector": "Consumer · Auto parts",
+  "hq": "Plymouth, Michigan",
+  "about": "One of the largest makers of turbochargers for cars and trucks. It is also building electric boosting, high-speed electric motors and compressors for industrial uses.",
+  "revenue": "It sells turbochargers and related parts to carmakers and truck makers worldwide, and replacement parts through the aftermarket. Newer lines sell compressors and electric motors for industrial and electrified uses.",
+  "segments": "Light-vehicle turbochargers · Commercial-vehicle turbochargers · Aftermarket · Industrial compression and e-motors"
+ },
+ {
+  "ticker": "BILI",
+  "company": "Bilibili",
+  "sector": "Communication services · Online video",
+  "hq": "Shanghai, China",
+  "about": "A video platform popular with young people in China, known for anime, gaming and user-made videos with live on-screen comments.",
+  "revenue": "It earns money from paid features such as premium memberships and live-streaming tips, from advertising, and from mobile games it publishes, plus some merchandise.",
+  "segments": "Value-added services · Advertising · Mobile games · IP derivatives and other"
+ },
+ {
+  "ticker": "AMTM",
+  "company": "Amentum",
+  "sector": "Industrials · Government services",
+  "hq": "Chantilly, Virginia",
+  "about": "A US government contractor formed in 2024 when Amentum merged with Jacobs' government services business. It provides engineering, technology, environmental cleanup and nuclear services to the US and allied governments.",
+  "revenue": "It is paid under long government contracts for work such as intelligence analytics, space systems, cybersecurity, military platform support and nuclear site cleanup.",
+  "segments": "Digital Solutions · Global Engineering Solutions"
+ },
+ {
+  "ticker": "OCUL",
+  "company": "Ocular Therapeutix",
+  "sector": "Health care · Biotechnology",
+  "hq": "Bedford, Massachusetts",
+  "about": "Develops eye medicines built on a dissolvable hydrogel that releases drug over time. Its lead candidate, AXPAXLI, is an implant for wet age-related macular degeneration in late-stage trials.",
+  "revenue": "Current revenue comes from Dextenza, an eye insert for pain and inflammation after eye surgery. The bigger prize is AXPAXLI, which would compete with frequent eye injections if approved.",
+  "segments": "Dextenza (on the market) · AXPAXLI (wet AMD, diabetic retinopathy) · Pipeline"
+ },
+ {
+  "ticker": "NVDA",
+  "company": "Nvidia",
+  "sector": "Technology · Semiconductors",
+  "hq": "Santa Clara, California",
+  "about": "The leading designer of graphics processors (GPUs) and the dominant supplier of the chips and systems used to train and run AI models.",
+  "revenue": "Most revenue now comes from data centers: AI accelerators, full server systems and networking sold to cloud providers and large companies. Gaming graphics cards, professional visualization and automotive chips make up the rest.",
+  "segments": "Data center (AI chips, networking) · Gaming · Professional visualization · Automotive"
+ },
+ {
+  "ticker": "LFTO",
+  "company": "Liftoff Mobile",
+  "sector": "Communication services · Mobile advertising",
+  "hq": "Redwood City, California",
+  "about": "Runs an AI-driven performance marketing and ad monetization platform (Cortex) for mobile apps, helping app makers, especially games, find users and earn money from in-app ads.",
+  "revenue": "Advertisers pay it to acquire users who install and spend in their apps, and it takes a share of the ad revenue it generates for app publishers through its in-app ad exchange and mediation tools.",
+  "segments": "User acquisition (advertisers) · Ad monetization (publishers) · Gaming · Consumer apps"
+ },
+ {
+  "ticker": "FLEX",
+  "company": "Flex",
+  "sector": "Technology · Electronics manufacturing",
+  "hq": "Austin, Texas",
+  "about": "One of the world's largest contract manufacturers, building electronics and equipment for other companies, with a fast-growing business in power and cooling gear for data centers.",
+  "revenue": "Customers pay it to design, source and assemble their products, from networking gear and appliances to car electronics and medical devices. Margins are thin on assembly work and higher on its own power and cooling products.",
+  "segments": "Cloud and Power Infrastructure · Integrated Technology Solutions · Regulated Manufacturing Solutions"
+ },
+ {
+  "ticker": "DOX",
+  "company": "Amdocs",
+  "sector": "Technology · Telecom software and services",
+  "hq": "St. Louis, Missouri",
+  "about": "Supplies billing, customer-management and network software, plus long-term managed services, to telecom and media companies such as AT&T and T-Mobile.",
+  "revenue": "Most revenue comes from multi-year managed-services contracts in which it runs and updates customers' systems, plus software licences and project work. A few very large telecom customers account for much of its revenue.",
+  "segments": "Managed services · Billing and monetization software · Customer experience (CRM) · Cloud and network services"
+ },
+ {
+  "ticker": "MLYS",
+  "company": "Mineralys Therapeutics",
+  "sector": "Health care · Biotechnology",
+  "hq": "Radnor, Pennsylvania",
+  "about": "A drug developer focused on lorundrostat, a once-daily pill that blocks aldosterone production, for hard-to-control high blood pressure and kidney disease.",
+  "revenue": "It has no product sales yet and funds itself with cash from investors. Revenue would come from selling lorundrostat if the FDA approves it.",
+  "segments": "Lorundrostat (hypertension) · Chronic kidney disease · Obstructive sleep apnea"
  }
 ]

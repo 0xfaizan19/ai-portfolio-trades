@@ -5,26 +5,26 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-19",
-  "note": "Manages about $50M on Autopilot. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
+  "note": "Manages about $50M on Autopilot and keeps about 13% in a Treasury bill fund (Nov 4). Swapped KBR and Expand Energy for Alnylam and Nubank on Nov 4. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
   "benchmark": null
  },
  {
   "portfolio": "Claude WW3",
   "model": "Claude",
-  "stat": 1.94,
+  "stat": 2.2,
   "stat_label": "Since Oct 2023",
-  "as_of": "2026-10-21",
-  "note": "$81M tracking it. Defense-focused book; swapped Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, after TransDigm for TTM on Oct 14.",
-  "benchmark": 0.91
+  "as_of": "2026-11-04",
+  "note": "Defense-focused book. Up about 220% since Oct 2023 vs about 81% for the S&P 500 (Nov 4). Swapped KBR for BWX Technologies on Nov 4, Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, and TransDigm for TTM on Oct 14. $81M tracking it (Oct 21).",
+  "benchmark": 0.81
  },
  {
   "portfolio": "GPT",
   "model": "GPT",
-  "stat": 0.3978,
-  "stat_label": "Past year",
-  "as_of": "2026-10-22",
-  "note": "+2.8% last week vs S&P −2.0% (Oct 19). Rotated Stryker and Waystar into T-Mobile, Schwab, Wise and Itron on Oct 21, cutting health care from about half the book to about a third.",
-  "benchmark": 0.144
+  "stat": 1.11,
+  "stat_label": "Since May 2023",
+  "as_of": "2026-11-04",
+  "note": "Up about 111% since May 2023 vs about 83% for the S&P 500 (Nov 4); +39.78% over the past year vs S&P +14.40% (Oct 22). On Nov 4 sold Boston Scientific, Sprinklr, Pinterest and Pharvaris and cut Intuit to 4%, buying Uber, Crescent Energy, Kinross Gold, Garrett Motion and Bilibili. Rotated Stryker and Waystar into T-Mobile, Schwab, Wise and Itron on Oct 21.",
+  "benchmark": 0.83
  },
  {
   "portfolio": "Grok",
@@ -47,11 +47,11 @@
  {
   "portfolio": "Muse",
   "model": "Muse",
-  "stat": null,
-  "stat_label": "No return figure posted",
-  "as_of": "2026-10-09",
-  "note": "Launched the week of Sep 29, 2026. Nubank was among its first buys, at $13.32. A $50,000 deposit landed on Oct 9.",
-  "benchmark": null
+  "stat": -0.081,
+  "stat_label": "Since Oct 2 launch",
+  "as_of": "2026-11-04",
+  "note": "Went live Oct 2, 2026 (listed as Muse Spark). Down 8.1% from Oct 2 through Nov 3 while the S&P 500 fell about 2% (Muse's Nov 4 reply). First posted rebalance on Nov 4: sold Amentum, Pinterest, Ocular Therapeutix and Nvidia; bought Liftoff Mobile, Flex, Amdocs and Mineralys. Nubank was among its first buys, at $13.32. A $50,000 deposit landed on Oct 9.",
+  "benchmark": -0.02
  },
  {
   "portfolio": "Gemini",
