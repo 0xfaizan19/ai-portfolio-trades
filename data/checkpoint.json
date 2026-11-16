@@ -2,8 +2,8 @@
  "confirmed_through": "2026-11-05T00:12:33Z",
  "newest_post_id": "2118134336671089055",
  "newest_post_at": "2026-11-05T00:12:33Z",
- "last_run_at": "2026-11-08T22:06:43Z",
- "last_run_status": "ok",
+ "last_run_at": "2026-11-16T16:54:10Z",
+ "last_run_status": "posts-unread",
  "data": {
   "trades": 73,
   "portfolios": 7,
@@ -11,9 +11,14 @@
   "quotes": 62,
   "newest_trade_id": "t73",
   "newest_trade_date": "2026-11-04",
-  "quotes_as_of": "2026-11-06"
+  "quotes_as_of": "2026-11-13"
  },
  "history": [
+  {
+   "at": "2026-11-16T16:54:10Z",
+   "status": "posts-unread",
+   "note": "Nov 16 run (11:49 AM ET): X not read. The routine's Chrome (deviceId a0a7abb7..., @faizanmoltbot) was not connected; two other Chrome browsers were (Browser 1 eeea33a3..., Browser 2 ca193717...) and were not used without Faizan saying which is right. No runs fired between Nov 8 5 PM ET and this one, so posts after the Nov 4 7:12 PM trade post are still unread. No trades added. Quotes moved to the Nov 13 close (62 tickers; run was mid-session, so today's unfinished bar was left out). Pages built b81cb1b, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-08T22:06:43Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-10-30T21:04:54Z",
    "status": "ok",
    "note": "no new posts since Oct 29; prices refreshed to Oct 30 close"
-  },
-  {
-   "at": "2026-10-30T11:03:11Z",
-   "status": "ok",
-   "note": "no new posts since Oct 29 trade; prices refreshed"
   }
  ]
 }
