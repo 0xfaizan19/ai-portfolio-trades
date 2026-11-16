@@ -30,7 +30,8 @@ def counts():
             out[k] = None
     try:
         tr = json.load(open(ROOT / "data/trades.json"))
-        out["newest_trade_id"] = max((t["id"] for t in tr), default=None)
+        # compare the number, not the string: "t100" sorts below "t99" as text
+        out["newest_trade_id"] = max(tr, key=lambda t: int(t["id"][1:]))["id"] if tr else None
         out["newest_trade_date"] = max((t["date"] for t in tr), default=None)
     except Exception:
         pass
@@ -57,7 +58,12 @@ def show():
     d = c.get("data", {})
     print(f"data              : trades {d.get('trades')} (newest {d.get('newest_trade_id')}, "
           f"{d.get('newest_trade_date')}), quotes as of {d.get('quotes_as_of')}")
-    bad = [h for h in c.get("history", []) if h.get("status") != "ok"]
+    # Only runs since the last "ok" one leave a gap; a later "ok" run has covered anything older.
+    bad = []
+    for h in c.get("history", []):  # newest first
+        if h.get("status") == "ok":
+            break
+        bad.append(h)
     if bad:
         print(f"\n{len(bad)} earlier run(s) did not complete the post scan — the gap since "
               f"{c.get('confirmed_through')} has not been covered yet:")
