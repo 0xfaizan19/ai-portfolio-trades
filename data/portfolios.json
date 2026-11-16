@@ -5,17 +5,17 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-19",
-  "note": "Manages about $50M on Autopilot and keeps about 13% in a Treasury bill fund (Nov 4). Swapped KBR and Expand Energy for Alnylam and Nubank on Nov 4. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
+  "note": "Manages about $50M on Autopilot and keeps about 13% in a Treasury bill fund (Nov 4). Swapped Neurocrine (plus some BOXX cash) for Brighthouse Financial (5%) and Dana (4%) on Nov 12. AppLovin, bought Oct 8, was up 45.8% and about 7.5% of the book on Nov 9. Swapped KBR and Expand Energy for Alnylam and Nubank on Nov 4. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
   "benchmark": null
  },
  {
   "portfolio": "Claude WW3",
   "model": "Claude",
-  "stat": 2.2,
+  "stat": 2.0862,
   "stat_label": "Since Oct 2023",
-  "as_of": "2026-11-04",
-  "note": "Defense-focused book. Up about 220% since Oct 2023 vs about 81% for the S&P 500 (Nov 4). Swapped KBR for BWX Technologies on Nov 4, Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, and TransDigm for TTM on Oct 14. $81M tracking it (Oct 21).",
-  "benchmark": 0.81
+  "as_of": "2026-11-13",
+  "note": "Defense-focused book. Up 208.62% since Oct 31, 2023 vs 81.04% for the S&P 500 at the Nov 12 close, with $92.9M tracking it. At the Nov 12 open sold Firefly, cut V2X from 6.79% to 3.79% and bought Venture Global and Redwire. Trimmed V2X and bought AAR on Oct 29 (reported Nov 9, when Huntington Ingalls was the largest position at 10.88%). Swapped KBR for BWX Technologies on Nov 4, Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, and TransDigm for TTM on Oct 14.",
+  "benchmark": 0.8104
  },
  {
   "portfolio": "GPT",
@@ -32,7 +32,7 @@
   "stat": 0.201,
   "stat_label": "Past 3 months",
   "as_of": "2026-10-20",
-  "note": "+20.1% over three months vs S&P +3.1% (Oct 20). Earlier: +66.35% since Feb 2025 vs S&P +29.13% (Oct 13). A $300,000 deposit landed on Oct 19, the day's top on Autopilot. Pinterest +25% since Sep 23 buy, Waystar +24% since Sep 11. Rentokil target $23.65.",
+  "note": "+20.1% over three months vs S&P +3.1% (Oct 20). Earlier: +66.35% since Feb 2025 vs S&P +29.13% (Oct 13). Swapped Alnylam, Boston Scientific, Rentokil and Pinterest for Sandisk, Modine, TTM and Ionis on Nov 12. FTAI, bought Oct 14 at 5% of the book, was 6.08% and up 19.1% on Nov 9, when the whole book rose 3.2% vs 2.4% for the S&P. A $300,000 deposit landed on Oct 19, the day's top on Autopilot.",
   "benchmark": 0.031
  },
  {
@@ -41,7 +41,7 @@
   "stat": 0.7198,
   "stat_label": "Since Feb 2025",
   "as_of": "2026-11-03",
-  "note": "$45.4M tracking it. +71.98% from Feb 3, 2025 to Nov 2, 2026 vs S&P +26.90% (chart in the Nov 3 post). Up 37.8% over the past year vs about 11.6% for the S&P, the best one-year return on Autopilot (Nov 3); Micron added about 6.5 points of that, Innodata, TE Connectivity, Vertiv and Broadcom most of the rest. Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14.",
+  "note": "$45.4M tracking it. +71.98% from Feb 3, 2025 to Nov 2, 2026 vs S&P +26.90% (chart in the Nov 3 post). Up 37.8% over the past year vs about 11.6% for the S&P, the best one-year return on Autopilot (Nov 3); Micron added about 6.5 points of that, Innodata, TE Connectivity, Vertiv and Broadcom most of the rest. Swapped BioCryst, Pampa Energía, Amentum, NRG and NESR for Ichor, Inter & Co, X-Energy, Structure Therapeutics and UroGen on Nov 12. Down about 7% over the month to Nov 9 vs about 3% for the S&P, and fell 6.7% on Nov 5 vs 4.4% (replies). Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14.",
   "benchmark": 0.269
  },
  {

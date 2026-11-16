@@ -565,5 +565,176 @@
   "about": "A drug developer focused on lorundrostat, a once-daily pill that blocks aldosterone production, for hard-to-control high blood pressure and kidney disease.",
   "revenue": "It has no product sales yet and funds itself with cash from investors. Revenue would come from selling lorundrostat if the FDA approves it.",
   "segments": "Lorundrostat (hypertension) · Chronic kidney disease · Obstructive sleep apnea"
+ },
+ {
+  "ticker": "BHF",
+  "company": "Brighthouse Financial",
+  "sector": "Financials · Annuities and life insurance",
+  "hq": "Charlotte, North Carolina",
+  "about": "One of the largest US sellers of annuities, spun off from MetLife in 2017, with a block of life insurance policies as well. It has agreed to a $70-a-share cash takeover by Aquarian Holdings that still needs state insurance approvals.",
+  "revenue": "It earns fees on the variable and index-linked annuities it sells, mostly through banks and brokers, and investment income on the money it holds until payouts come due. Life insurance premiums make up the rest.",
+  "segments": "Annuities · Life insurance · Run-off policies"
+ },
+ {
+  "ticker": "DAN",
+  "company": "Dana",
+  "sector": "Consumer discretionary · Vehicle drivetrains",
+  "hq": "Maumee, Ohio",
+  "about": "Makes axles, driveshafts, transmissions and electric drive systems for cars, trucks and commercial vehicles. It sells to vehicle makers, not to drivers.",
+  "revenue": "Car and truck makers buy its drivetrain parts and electric-drive units for the vehicles they build, usually under multi-year supply contracts. It also sells seals and thermal-management parts used across many kinds of vehicles.",
+  "segments": "Light-vehicle drivetrains · Commercial-vehicle drivetrains · Electric drive systems · Seals and thermal parts"
+ },
+ {
+  "ticker": "FLY",
+  "company": "Firefly Aerospace",
+  "sector": "Industrials · Space launch",
+  "hq": "Cedar Park, Texas",
+  "about": "Builds the Alpha small rocket and Blue Ghost lunar landers, and is developing a larger rocket with Northrop Grumman. It listed on Nasdaq in 2025.",
+  "revenue": "NASA, the Defense Department and satellite companies pay it to launch payloads and to deliver cargo to the Moon. It also earns money building spacecraft and rocket hardware for other companies.",
+  "segments": "Launch (Alpha, Eclipse) · Lunar landers (Blue Ghost) · Spacecraft · Defense"
+ },
+ {
+  "ticker": "VVX",
+  "company": "V2X",
+  "sector": "Industrials · Government services",
+  "hq": "McLean, Virginia",
+  "about": "Runs bases, logistics, aircraft maintenance and training for the US military and allied governments. It was formed in 2022 when Vectrus merged with Vertex Aerospace.",
+  "revenue": "Nearly all of its sales come from government contracts, many of them multi-year, to operate and maintain bases, equipment and aircraft. It is paid for the services and people it supplies under each task order.",
+  "segments": "Base operations and logistics · Aircraft maintenance · Training and readiness · Communications and IT"
+ },
+ {
+  "ticker": "AIR",
+  "company": "AAR Corp",
+  "sector": "Industrials · Aviation services",
+  "hq": "Wood Dale, Illinois",
+  "about": "An independent aviation services company that supplies aircraft parts and repairs and maintains aircraft for airlines and the US government.",
+  "revenue": "It sells new and used aircraft parts, overhauls aircraft and components in its repair shops, and runs supply-chain and logistics programs for military customers. Airlines and defense agencies are its main customers.",
+  "segments": "Parts supply · Repair and engineering · Integrated solutions · Expeditionary services"
+ },
+ {
+  "ticker": "VG",
+  "company": "Venture Global",
+  "sector": "Energy · Liquefied natural gas",
+  "hq": "Arlington, Virginia",
+  "about": "A US exporter of liquefied natural gas with two export plants in Louisiana, Calcasieu Pass and Plaquemines, and a third, CP2, being built. It listed on the NYSE in 2025.",
+  "revenue": "It buys natural gas, chills it into liquid and ships it abroad. Most of its output is sold under long-term contracts to utilities and energy companies, and the rest as single cargoes at market prices.",
+  "segments": "Calcasieu Pass · Plaquemines LNG · CP2 (under construction) · Shipping"
+ },
+ {
+  "ticker": "RDW",
+  "company": "Redwire",
+  "sector": "Industrials · Space infrastructure",
+  "hq": "Jacksonville, Florida",
+  "about": "Builds parts and systems for spacecraft, such as roll-out solar arrays, antennas, cameras and docking hardware. Since 2025 it also makes military drones through Edge Autonomy.",
+  "revenue": "NASA, the Defense Department and commercial satellite builders pay it under contracts to design and deliver space hardware. Its drone business sells small uncrewed aircraft to defense customers.",
+  "segments": "Space infrastructure · Spacecraft components · Uncrewed aircraft (Edge Autonomy)"
+ },
+ {
+  "ticker": "BCRX",
+  "company": "BioCryst Pharmaceuticals",
+  "sector": "Health care · Biotechnology",
+  "hq": "Durham, North Carolina",
+  "about": "Makes Orladeyo, a daily pill that prevents attacks of hereditary angioedema, a rare swelling disorder, and develops treatments for other rare diseases.",
+  "revenue": "Nearly all of its sales come from Orladeyo, mainly in the US. It also earns some royalties and partnership fees.",
+  "segments": "Orladeyo (hereditary angioedema) · Rare-disease pipeline"
+ },
+ {
+  "ticker": "PAM",
+  "company": "Pampa Energía",
+  "sector": "Utilities · Power and energy (Argentina)",
+  "hq": "Buenos Aires, Argentina",
+  "about": "Argentina's largest independent energy company. It generates electricity and produces natural gas and oil, much of it from the Vaca Muerta shale. Its shares trade in New York as ADRs.",
+  "revenue": "It sells power to Argentina's grid and large customers, sells gas and oil from its fields, and makes petrochemicals. It also earns income from stakes in Argentina's main gas pipeline company (TGS) and power transmission company (Transener).",
+  "segments": "Power generation · Oil and gas · Petrochemicals · Pipeline and transmission stakes"
+ },
+ {
+  "ticker": "NRG",
+  "company": "NRG Energy",
+  "sector": "Utilities · Power generation and retail",
+  "hq": "Houston, Texas",
+  "about": "One of the largest US power companies. It owns gas, coal and nuclear power plants, mostly in Texas and the eastern US, and sells electricity to millions of homes under brands such as Reliant.",
+  "revenue": "Most of its money comes from selling electricity and natural gas to homes and businesses on retail plans. Its plants also sell power and capacity into wholesale markets, and it sells smart-home security through Vivint.",
+  "segments": "Retail electricity · Power generation · Smart home (Vivint)"
+ },
+ {
+  "ticker": "NESR",
+  "company": "National Energy Services Reunited",
+  "sector": "Energy · Oilfield services",
+  "hq": "Houston, Texas",
+  "about": "An oilfield services company that works almost entirely in the Middle East and North Africa, with Saudi Aramco and other national oil companies as its main clients.",
+  "revenue": "National oil companies pay it to drill, test and maintain wells and to pump fracturing and stimulation treatments, under multi-year service contracts.",
+  "segments": "Production services · Drilling and evaluation services"
+ },
+ {
+  "ticker": "SNDK",
+  "company": "Sandisk",
+  "sector": "Technology · Flash memory",
+  "hq": "Milpitas, California",
+  "about": "Makes NAND flash memory chips and the drives built from them, from data-center SSDs to memory cards. It was spun off from Western Digital in February 2025.",
+  "revenue": "It sells flash chips and solid-state drives to data-center operators, PC and phone makers, and consumers. Flash prices swing with supply and demand, so its profits rise and fall with the memory cycle.",
+  "segments": "Data-center SSDs · PC and phone storage · Consumer storage (cards and USB drives)"
+ },
+ {
+  "ticker": "MOD",
+  "company": "Modine Manufacturing",
+  "sector": "Industrials · Thermal management",
+  "hq": "Racine, Wisconsin",
+  "about": "Makes heating and cooling equipment. Its fastest-growing line is cooling systems for data centers; it also makes heat-transfer parts for vehicles and industrial machines.",
+  "revenue": "It sells chillers, air handlers and other cooling gear to companies that build and run data centers, plus heating and ventilation equipment for schools and commercial buildings. Truck, bus and machinery makers buy its radiators and heat exchangers.",
+  "segments": "Climate Solutions (data-center cooling, HVAC) · Performance Technologies (vehicle and industrial)"
+ },
+ {
+  "ticker": "IONS",
+  "company": "Ionis Pharmaceuticals",
+  "sector": "Health care · Biotechnology",
+  "hq": "Carlsbad, California",
+  "about": "Develops RNA-targeted (antisense) medicines. It sells Tryngolza for a rare blood-fat disorder and Dawnzera for hereditary angioedema, and helped create Spinraza for spinal muscular atrophy.",
+  "revenue": "It earns product sales from its own drugs, royalties on drugs it developed with partners, such as Biogen's Spinraza and AstraZeneca's Wainua, and fees from research partnerships.",
+  "segments": "Own medicines · Royalties · Partnered research"
+ },
+ {
+  "ticker": "ICHR",
+  "company": "Ichor Holdings",
+  "sector": "Technology · Semiconductor equipment parts",
+  "hq": "Fremont, California",
+  "about": "Makes the gas and liquid delivery systems that go inside chip-making machines.",
+  "revenue": "It sells these subsystems and precision parts to equipment makers such as Lam Research and Applied Materials, so its sales track how much chipmakers spend on new equipment.",
+  "segments": "Gas delivery systems · Liquid delivery systems · Machined and plastic parts"
+ },
+ {
+  "ticker": "INTR",
+  "company": "Inter & Co",
+  "sector": "Financials · Digital banking",
+  "hq": "Belo Horizonte, Brazil",
+  "about": "A Brazilian digital bank (Banco Inter) whose single app covers banking, investing, insurance and shopping. It has no branches.",
+  "revenue": "It earns interest on mortgages, payroll-deducted loans, credit cards and business loans, plus fees from card spending, investments, insurance and commissions on its in-app marketplace.",
+  "segments": "Banking and lending · Investments · Insurance · In-app shopping"
+ },
+ {
+  "ticker": "XE",
+  "company": "X-Energy",
+  "sector": "Industrials · Nuclear reactor design",
+  "hq": "Rockville, Maryland",
+  "about": "Designs the Xe-100, a small modular nuclear reactor cooled by helium, and makes the TRISO pellet fuel it runs on. Its first plant is planned at a Dow chemical site in Texas.",
+  "revenue": "So far most of its money comes from government cost-sharing awards and engineering work for customers such as Dow and Amazon. Selling reactors, fuel and services is still ahead of it.",
+  "segments": "Xe-100 reactors · TRISO-X fuel · Engineering services"
+ },
+ {
+  "ticker": "GPCR",
+  "company": "Structure Therapeutics",
+  "sector": "Health care · Biotechnology",
+  "hq": "South San Francisco, California",
+  "about": "A clinical-stage drug developer making pills that act on cell-surface receptors (GPCRs). Its lead drug, aleniglipron, is an oral GLP-1 for obesity.",
+  "revenue": "It has no approved products, so it has no sales yet. It pays for its trials with cash raised from investors.",
+  "segments": "Oral GLP-1 (obesity) · Other metabolic and lung programs"
+ },
+ {
+  "ticker": "URGN",
+  "company": "UroGen Pharma",
+  "sector": "Health care · Specialty pharma",
+  "hq": "Princeton, New Jersey",
+  "about": "Develops treatments for urologic cancers that avoid surgery. It sells Jelmyto for a rare upper-tract cancer and Zusduri for a common low-grade form of bladder cancer.",
+  "revenue": "Its sales come from Jelmyto and Zusduri, which urologists give in their clinics and hospitals buy. It is still working toward its first profitable quarter.",
+  "segments": "Jelmyto · Zusduri · Pipeline"
  }
 ]

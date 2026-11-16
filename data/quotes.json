@@ -308,5 +308,100 @@
   "ticker": "MLYS",
   "price": 15.33,
   "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "BHF",
+  "price": 43.89,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "DAN",
+  "price": 23.9,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "FLY",
+  "price": 25.21,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "VVX",
+  "price": 80.28,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "VG",
+  "price": 13.14,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "RDW",
+  "price": 7.73,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "SNDK",
+  "price": 885.01,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "MOD",
+  "price": 135.66,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "IONS",
+  "price": 29.06,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "BCRX",
+  "price": 7.61,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "PAM",
+  "price": 65.21,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "NRG",
+  "price": 97.1,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "NESR",
+  "price": 21.19,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "ICHR",
+  "price": 35.72,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "INTR",
+  "price": 4.15,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "XE",
+  "price": 11.08,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "GPCR",
+  "price": 20.0,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "URGN",
+  "price": 26.18,
+  "as_of": "2026-11-13"
+ },
+ {
+  "ticker": "AIR",
+  "price": 108.42,
+  "as_of": "2026-11-13"
  }
 ]
