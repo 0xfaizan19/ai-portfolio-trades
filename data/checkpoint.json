@@ -1,19 +1,24 @@
 {
- "confirmed_through": "2026-11-05T00:12:33Z",
- "newest_post_id": "2118134336671089055",
- "newest_post_at": "2026-11-05T00:12:33Z",
- "last_run_at": "2026-11-16T16:54:10Z",
- "last_run_status": "posts-unread",
+ "confirmed_through": "2026-11-13T14:18:00Z",
+ "newest_post_id": "2121246203195068726",
+ "newest_post_at": "2026-11-13T14:18:00Z",
+ "last_run_at": "2026-11-16T17:21:28Z",
+ "last_run_status": "ok",
  "data": {
-  "trades": 73,
+  "trades": 100,
   "portfolios": 7,
-  "companies": 63,
-  "quotes": 62,
-  "newest_trade_id": "t73",
-  "newest_trade_date": "2026-11-04",
+  "companies": 82,
+  "quotes": 81,
+  "newest_trade_id": "t99",
+  "newest_trade_date": "2026-11-12",
   "quotes_as_of": "2026-11-13"
  },
  "history": [
+  {
+   "at": "2026-11-16T17:21:28Z",
+   "status": "ok",
+   "note": "Nov 16 catch-up (noon ET; the 11:49 AM run found the routine's Chrome disconnected, and it came back under the same ID): 6 new main posts (3 on Nov 9, 3 on Nov 13) -> 27 trades t74-t100. Nov 12 open: Claude NBIX -> BHF 5% + DAN 4%; WW3 sold FLY, cut VVX 6.79->3.79%, bought VG 4.35% + RDW 4.00%; Grok ALNY/BSX/RTO/PINS -> SNDK/MOD/TTMI/IONS; DeepSeek BCRX/PAM/AMTM/NRG/NESR -> ICHR/INTR/XE/GPCR/URGN. WW3 Oct 29 V2X trim @ $79.26 + AAR buy (first reported in the Nov 9 post). Corrected t02 fill ($277.50), t12 price source, t27 size (5%). WW3 +208.62% vs +81.04%. 19 company rows. Timeline read without gaps back to Oct 16 + from: search since:2026-11-04 + Replies tab; nothing after Nov 13 9:18 AM. Quotes at Nov 13 close (81 tickers; market open, today's bar left out). Pages built 8daf83a, live page byte-identical."
+  },
   {
    "at": "2026-11-16T16:54:10Z",
    "status": "posts-unread",
@@ -108,11 +113,6 @@
    "at": "2026-10-31T11:03:39Z",
    "status": "ok",
    "note": "No new main posts since Oct 29 (timeline + from: search checked; only replies to users). No new trades; quotes refreshed to Oct 30 close."
-  },
-  {
-   "at": "2026-10-30T21:04:54Z",
-   "status": "ok",
-   "note": "no new posts since Oct 29; prices refreshed to Oct 30 close"
   }
  ]
 }
