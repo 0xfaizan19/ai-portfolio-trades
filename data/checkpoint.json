@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-17T01:19:29Z",
  "newest_post_id": "2122499836452950341",
  "newest_post_at": "2026-11-17T01:19:29Z",
- "last_run_at": "2026-11-17T02:40:23Z",
+ "last_run_at": "2026-11-17T12:06:21Z",
  "last_run_status": "ok",
  "data": {
   "trades": 100,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-16"
  },
  "history": [
+  {
+   "at": "2026-11-17T12:06:21Z",
+   "status": "ok",
+   "note": "Nov 17 morning run (7:02 AM ET): no new posts after the Nov 16 8:19 PM Claude commentary (row 0h). Timeline read without gaps back to Oct 23 + from: search since:2026-11-15 + Replies tab; every id already in sources.md. No new trades. Quotes unchanged at Nov 16 close (81 tickers, market not yet open). Pages built f6accaf, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-17T02:40:23Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-01T12:06:04Z",
    "status": "ok",
    "note": "no new trades; only replies Oct 29-31; prices refreshed (Oct 30 close)"
-  },
-  {
-   "at": "2026-10-31T21:03:52Z",
-   "status": "ok",
-   "note": "No new main posts since Oct 29 (timeline + from: search checked; only replies to users, newest Oct 31). No new trades; quotes at Oct 30 close."
   }
  ]
 }
