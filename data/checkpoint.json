@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-19T05:42:20Z",
  "newest_post_id": "2123290761152061760",
  "newest_post_at": "2026-11-19T05:42:20Z",
- "last_run_at": "2026-11-19T12:26:56Z",
+ "last_run_at": "2026-11-19T22:06:51Z",
  "last_run_status": "ok",
  "data": {
   "trades": 138,
@@ -11,9 +11,14 @@
   "quotes": 107,
   "newest_trade_id": "t138",
   "newest_trade_date": "2026-11-18",
-  "quotes_as_of": "2026-11-18"
+  "quotes_as_of": "2026-11-19"
  },
  "history": [
+  {
+   "at": "2026-11-19T22:06:51Z",
+   "status": "ok",
+   "note": "Nov 19 evening run (5:02 PM ET): no new posts after the Nov 19 12:42 AM four-book trade post (row 0f). Timeline read without gaps back to Oct 21 (row 0x) + from: search since:2026-11-18 + Replies tab; all 19 main ids harvested already in sources.md (the rest are link-only self-replies, the pinned post and the support reply already noted). No new trades. Quotes moved to the Nov 19 close (107 tickers, all dated Nov 19; DKNG -6.1%, MTZ -5.8%, CDE -5.7%, PANW +6.4%, URGN +6.5%, SNDX +6.7% checked against Yahoo's 4 PM close). Pages built 8e22f27, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-19T12:26:56Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-03T22:06:06Z",
    "status": "ok",
    "note": "Nov 3 evening run: no new main posts since Oct 29 (timeline back to Oct 19 + from: search since Oct 29; replies only, newest Oct 31). No new trades; quotes refreshed to Nov 3 close (NBIX +13% checked)."
-  },
-  {
-   "at": "2026-11-03T12:05:59Z",
-   "status": "ok",
-   "note": "Nov 3 run: no new main posts since Oct 29 (timeline back to Oct 20 + from: search since Oct 29; replies only, newest Oct 31). No new trades; quotes at Nov 2 close."
   }
  ]
 }
