@@ -736,5 +736,239 @@
   "about": "Develops treatments for urologic cancers that avoid surgery. It sells Jelmyto for a rare upper-tract cancer and Zusduri for a common low-grade form of bladder cancer.",
   "revenue": "Its sales come from Jelmyto and Zusduri, which urologists give in their clinics and hospitals buy. It is still working toward its first profitable quarter.",
   "segments": "Jelmyto · Zusduri · Pipeline"
+ },
+ {
+  "ticker": "ACM",
+  "company": "AECOM",
+  "sector": "Industrials · Engineering and consulting",
+  "hq": "Dallas, Texas",
+  "about": "One of the largest infrastructure consulting firms in the world. It designs and manages projects such as transit systems, water works, bridges and government facilities for public agencies and companies.",
+  "revenue": "Clients pay it fees for engineering, design, program management and advisory work, much of it under multi-year contracts with US and foreign governments. It has moved away from building projects itself to focus on higher-margin professional services.",
+  "segments": "Transportation · Water and environment · Facilities · Program management · Advisory"
+ },
+ {
+  "ticker": "FPS",
+  "company": "Forgent Power Solutions",
+  "sector": "Industrials · Electrical equipment",
+  "hq": "Dayton, Minnesota",
+  "about": "Makes electrical distribution equipment, including low- and medium-voltage switchgear and substation, padmount and dry-type transformers, for data centers, utility grids and industrial sites. It listed on the NYSE in February 2026.",
+  "revenue": "It sells the equipment that steps down and routes power inside data centers, plants and utility sites, much of it built to order against a backlog of contracted projects. Data-center builders are a large source of demand.",
+  "segments": "Switchgear · Transformers · Power distribution"
+ },
+ {
+  "ticker": "CLBT",
+  "company": "Cellebrite",
+  "sector": "Technology · Digital forensics software",
+  "hq": "Petah Tikva, Israel",
+  "about": "Makes software and devices that police, prosecutors and government agencies use to extract and analyse data from phones and computers during investigations.",
+  "revenue": "Most revenue comes from subscriptions and licenses sold to law enforcement and government agencies around the world, with some sales to companies for internal investigations. Customers renew each year, so revenue is largely recurring.",
+  "segments": "Digital forensics (data collection and review) · Investigative analytics · Case management"
+ },
+ {
+  "ticker": "ADMA",
+  "company": "ADMA Biologics",
+  "sector": "Health care · Plasma-derived biologics",
+  "hq": "Ramsey, New Jersey",
+  "about": "Makes medicines from donated blood plasma, mainly immune globulins that protect people with weak immune systems from infection. It runs its own plasma collection centers.",
+  "revenue": "Most sales come from its immune globulin products, led by Asceniv and Bivigam, sold to hospitals, specialty pharmacies and infusion centers. It also sells some of the plasma it collects to other drugmakers.",
+  "segments": "Asceniv · Bivigam · Nabi-HB · Plasma collection"
+ },
+ {
+  "ticker": "AXS",
+  "company": "Axis Capital",
+  "sector": "Financials · Specialty insurance",
+  "hq": "Pembroke, Bermuda",
+  "about": "A specialty insurer and reinsurer that covers complex business risks such as professional liability, cyber, marine, energy and property.",
+  "revenue": "It collects premiums for the risks it underwrites and earns investment income on the money it holds until claims are paid. Profit depends on pricing policies above the claims that come in later, so its reserve estimates matter.",
+  "segments": "Specialty insurance · Reinsurance"
+ },
+ {
+  "ticker": "ACAD",
+  "company": "Acadia Pharmaceuticals",
+  "sector": "Health care · Biotechnology",
+  "hq": "San Diego, California",
+  "about": "A drugmaker focused on brain and nervous-system disorders. It sells Nuplazid for hallucinations and delusions in Parkinson's disease and Daybue for Rett syndrome.",
+  "revenue": "Almost all revenue comes from sales of its two approved drugs, mostly in the US. It spends much of the profit on trials of new drugs for neurological and psychiatric conditions.",
+  "segments": "Nuplazid · Daybue · Pipeline"
+ },
+ {
+  "ticker": "NXT",
+  "company": "Nextpower",
+  "sector": "Industrials · Solar equipment",
+  "hq": "Fremont, California",
+  "about": "Formerly Nextracker, the largest maker of solar trackers, the motorised mounts that turn utility-scale solar panels to follow the sun. It renamed itself Nextpower in late 2025 as it added other power-plant equipment.",
+  "revenue": "It sells tracker systems, plus software, foundations and electrical gear, to developers and builders of large solar farms, mostly in the US. Revenue is booked as projects are delivered from its backlog.",
+  "segments": "Solar trackers · Software and services · Foundations and electrical equipment"
+ },
+ {
+  "ticker": "TER",
+  "company": "Teradyne",
+  "sector": "Technology · Semiconductor test equipment",
+  "hq": "North Reading, Massachusetts",
+  "about": "Makes the automated equipment chipmakers use to test semiconductors, including AI processors and memory, before they ship. It also makes collaborative and mobile robots.",
+  "revenue": "Most revenue comes from selling and servicing chip-testing systems to chipmakers and contract manufacturers, so it rises and falls with their production plans. Its robotics arm, Universal Robots and MiR, sells robots to factories and warehouses.",
+  "segments": "Semiconductor test · Product test · Robotics"
+ },
+ {
+  "ticker": "VKTX",
+  "company": "Viking Therapeutics",
+  "sector": "Health care · Biotechnology",
+  "hq": "San Diego, California",
+  "about": "A drug developer working on treatments for obesity and metabolic disease, led by VK2735, a GLP-1 drug being tested as an injection and as a pill. It has no approved products.",
+  "revenue": "It has no product sales. It pays for its trials with cash raised from investors, and any future revenue depends on approval and launch of its obesity drugs or a deal with a larger drugmaker.",
+  "segments": "VK2735 (obesity, injection and pill) · VK2809 (liver disease) · Pipeline"
+ },
+ {
+  "ticker": "SNDX",
+  "company": "Syndax Pharmaceuticals",
+  "sector": "Health care · Biotechnology",
+  "hq": "Waltham, Massachusetts",
+  "about": "A cancer drugmaker with two approved medicines: Revuforj, a menin inhibitor for certain acute leukemias, and Niktimvo, for chronic graft-versus-host disease.",
+  "revenue": "It earns product sales of Revuforj and a share of Niktimvo's profits through its partner Incyte. It is still spending heavily to widen the drugs' approved uses.",
+  "segments": "Revuforj (revumenib) · Niktimvo (axatilimab) · Pipeline"
+ },
+ {
+  "ticker": "LGN",
+  "company": "Legence",
+  "sector": "Industrials · Building systems services",
+  "hq": "San Jose, California",
+  "about": "Engineers, installs and maintains the mechanical, electrical and energy-efficiency systems in buildings such as data centers, hospitals, labs and factories. Backed by Blackstone, it listed on Nasdaq in September 2025.",
+  "revenue": "Clients pay it for engineering and consulting work, for installing cooling, heating and other building systems, and for ongoing maintenance contracts. Much of the work is booked into a multi-year backlog.",
+  "segments": "Engineering and consulting · Installation and maintenance"
+ },
+ {
+  "ticker": "CAMT",
+  "company": "Camtek",
+  "sector": "Technology · Semiconductor equipment",
+  "hq": "Migdal HaEmek, Israel",
+  "about": "Makes inspection and measurement machines that chipmakers use to check wafers for defects, especially in advanced packaging such as the high-bandwidth memory and chiplets inside AI chips.",
+  "revenue": "It sells its inspection and metrology systems, plus service, to chipmakers and packaging houses, mostly in Asia. Muse's Nov 18 post puts advanced packaging at about 80% of revenue.",
+  "segments": "Advanced packaging inspection · Metrology · Compound semiconductors"
+ },
+ {
+  "ticker": "PRAX",
+  "company": "Praxis Precision Medicines",
+  "sector": "Health care · Biotechnology",
+  "hq": "Boston, Massachusetts",
+  "about": "A drug developer focused on epilepsy and movement disorders such as essential tremor, with drugs that target the brain's ion channels.",
+  "revenue": "It has no product sales yet and funds its research with cash raised from investors. Future revenue depends on approval and launch of its first drugs; Muse's Nov 18 post mentions FDA decisions due Dec 27 and Jan 29.",
+  "segments": "Essential tremor · Epilepsy · Pipeline"
+ },
+ {
+  "ticker": "FIGR",
+  "company": "Figure Technology Solutions",
+  "sector": "Financials · Lending technology",
+  "hq": "New York, New York (some profiles say San Francisco)",
+  "about": "A lender and loan marketplace built on its own blockchain, Provenance. It originates, sells and services loans, mainly home-equity lines of credit, for itself and for partner lenders, and listed on Nasdaq in September 2025.",
+  "revenue": "It earns fees when loans are originated and sold through its platform and its Figure Connect marketplace, plus servicing and technology fees from partners. Growth depends on how much loan volume flows through the marketplace.",
+  "segments": "Home-equity lending · Figure Connect marketplace · Partner technology · Provenance blockchain"
+ },
+ {
+  "ticker": "NVT",
+  "company": "nVent Electric",
+  "sector": "Industrials · Electrical equipment",
+  "hq": "London, United Kingdom",
+  "about": "Makes enclosures, electrical connection and protection products, and thermal-management gear, including liquid-cooling systems for data-center servers.",
+  "revenue": "It sells through distributors and directly to builders of data centers, utilities, factories and commercial buildings. Data-center cooling and power products have been driving its growth.",
+  "segments": "Systems protection (enclosures and cooling) · Electrical connections"
+ },
+ {
+  "ticker": "SIMO",
+  "company": "Silicon Motion",
+  "sector": "Technology · Semiconductors",
+  "hq": "Hsinchu, Taiwan",
+  "about": "Designs the controller chips that manage NAND flash memory in solid-state drives, phones, memory cards and data-center storage.",
+  "revenue": "It sells controllers to flash-memory makers and drive brands, which pair them with NAND chips. Sales rise and fall with flash demand and the move to faster drives for PCs and AI servers.",
+  "segments": "SSD controllers · Embedded storage controllers · Enterprise storage"
+ },
+ {
+  "ticker": "CPRT",
+  "company": "Copart",
+  "sector": "Industrials · Online vehicle auctions",
+  "hq": "Dallas, Texas",
+  "about": "Runs online auctions for used, damaged and salvage vehicles, most of them cars that insurers have written off after accidents or storms.",
+  "revenue": "It earns fees from sellers, mainly insurance companies, for storing and auctioning their vehicles, and fees from buyers on each sale. Its volume depends on how many cars insurers declare total losses.",
+  "segments": "US auctions · International auctions"
+ },
+ {
+  "ticker": "PRG",
+  "company": "PROG Holdings",
+  "sector": "Financials · Lease-to-own and consumer finance",
+  "hq": "Salt Lake City, Utah",
+  "about": "Owns Progressive Leasing, which lets shoppers with weak credit take home furniture, appliances and electronics on lease-to-own plans at partner retailers, and Four Technologies, a buy-now-pay-later app.",
+  "revenue": "It buys the goods from retailers and leases them to customers, collecting lease payments that add up to more than the item's price. Losses from customers who stop paying are its main risk.",
+  "segments": "Progressive Leasing · Four Technologies (buy now, pay later)"
+ },
+ {
+  "ticker": "TBBK",
+  "company": "The Bancorp",
+  "sector": "Financials · Banking",
+  "hq": "Wilmington, Delaware",
+  "about": "A bank holding company whose bank, based in Sioux Falls, South Dakota, works behind the scenes for fintech companies, issuing their debit and prepaid cards and holding their customers' deposits. It also lends against vehicle fleets and real estate.",
+  "revenue": "It earns fees on the card programs and accounts it runs for fintech partners, and interest on its loans, which are funded by the low-cost deposits those partners bring in.",
+  "segments": "Fintech solutions (payments and cards) · Institutional banking · Commercial fleet leasing · Real estate bridge lending"
+ },
+ {
+  "ticker": "ENVA",
+  "company": "Enova International",
+  "sector": "Financials · Online lending",
+  "hq": "Chicago, Illinois",
+  "about": "An online lender to consumers and small businesses that many banks don't serve, through brands such as CashNetUSA, NetCredit and OnDeck.",
+  "revenue": "It earns interest and fees on instalment loans, lines of credit and small-business loans, all made online using its own credit models. Losses on loans that go bad are its main cost, so results swing with the credit health of its borrowers.",
+  "segments": "Consumer lending (CashNetUSA, NetCredit) · Small business lending (OnDeck, Headway)"
+ },
+ {
+  "ticker": "HIMX",
+  "company": "Himax Technologies",
+  "sector": "Technology · Semiconductors",
+  "hq": "Tainan, Taiwan",
+  "about": "Designs display driver chips for TVs, laptops, phones and car screens, plus image sensors and optics used in augmented-reality devices.",
+  "revenue": "Most revenue comes from selling display driver and timing-controller chips to panel makers, with car displays a large share. Newer lines in AR optics and optical links for AI servers are still small.",
+  "segments": "Display drivers · Timing controllers · Automotive displays · AR optics and sensing"
+ },
+ {
+  "ticker": "SKHY",
+  "company": "SK hynix",
+  "sector": "Technology · Semiconductors",
+  "hq": "Icheon, South Korea",
+  "about": "A South Korean memory-chip maker and, with Samsung and Micron, one of three companies that supply most of the world's DRAM. It is the leading supplier of the high-bandwidth memory stacked next to AI accelerators. SKHY is its US listing on Nasdaq, quoted in dollars; the Seoul shares trade as 000660.KS.",
+  "revenue": "It sells memory chips by the wafer-load to server builders, phone makers and AI chip companies. Prices swing hard with supply and demand, so profits can move far more than revenue; the high-bandwidth memory used in AI systems is sold out well ahead on contract.",
+  "segments": "DRAM · High-bandwidth memory · NAND flash"
+ },
+ {
+  "ticker": "AADX",
+  "company": "Applied Aerospace & Defense",
+  "sector": "Industrials · Aerospace and defense",
+  "hq": "Huntsville, Alabama",
+  "about": "An NYSE-listed maker of subsystems for space and defense programs. Its exchange profile lists three markets: aerospace and launch systems, defense aviation and airborne systems, and C5ISR and precision-strike systems.",
+  "revenue": "It sells subsystems and components into government space and defense programs, so revenue follows contract awards. Gemini's Nov 18 post cites a record $1.26B backlog; its revenue mix has not been checked against company filings for this entry.",
+  "segments": "Aerospace and launch systems · Defense aviation and airborne systems · C5ISR and precision strike"
+ },
+ {
+  "ticker": "STUB",
+  "company": "StubHub",
+  "sector": "Consumer · Online ticket marketplace",
+  "hq": "New York, New York",
+  "about": "Runs StubHub and viagogo, online marketplaces where fans buy and resell tickets to concerts, sports and theater. It listed on the NYSE in September 2025.",
+  "revenue": "It takes fees from buyers and sellers on each ticket sold, so revenue tracks the value of tickets traded on its sites. It also sells some tickets directly for venues and teams.",
+  "segments": "StubHub (North America) · viagogo (international) · Direct ticket sales"
+ },
+ {
+  "ticker": "UUUU",
+  "company": "Energy Fuels",
+  "sector": "Materials · Uranium and rare earths",
+  "hq": "Lakewood, Colorado",
+  "about": "A leading US uranium producer that runs the White Mesa Mill in Utah, the only working conventional uranium mill in the country. It also processes rare earth elements and owns mineral-sands projects.",
+  "revenue": "It sells uranium concentrate to nuclear utilities under contracts and on the spot market, and vanadium when prices allow. Rare earth oxides used in magnets are a newer, growing line.",
+  "segments": "Uranium · Rare earth elements · Vanadium · Heavy mineral sands"
+ },
+ {
+  "ticker": "LUNR",
+  "company": "Intuitive Machines",
+  "sector": "Industrials · Space",
+  "hq": "Houston, Texas",
+  "about": "A space company that builds and flies robotic lunar landers and runs data and navigation services for missions to the Moon, much of it for NASA.",
+  "revenue": "Most revenue comes from NASA and other government contracts for lunar delivery missions, lunar rovers and deep-space communications. It is lumpy because it is booked as large missions progress.",
+  "segments": "Lunar access (landers) · Data transmission and navigation · Infrastructure services"
  }
 ]

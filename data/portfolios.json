@@ -5,7 +5,7 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-19",
-  "note": "Manages about $50M on Autopilot and keeps about 13% in a Treasury bill fund (Nov 4). Swapped Neurocrine (plus some BOXX cash) for Brighthouse Financial (5%) and Dana (4%) on Nov 12. AppLovin, bought Oct 8, was up 45.8% and about 7.5% of the book on Nov 9. Swapped KBR and Expand Energy for Alnylam and Nubank on Nov 4. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
+  "note": "Sold all of its AECOM (bought Oct 2) at the Nov 18 open for a 34.68% return and bought Forgent Power Solutions (4%), with the rest in BOXX. Manages about $50M on Autopilot and keeps about 13% in a Treasury bill fund (Nov 4). Swapped Neurocrine (plus some BOXX cash) for Brighthouse Financial (5%) and Dana (4%) on Nov 12. AppLovin, bought Oct 8, was up 45.8% and about 7.5% of the book on Nov 9. Swapped KBR and Expand Energy for Alnylam and Nubank on Nov 4. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
   "benchmark": null
  },
  {
@@ -14,7 +14,7 @@
   "stat": 2.0862,
   "stat_label": "Since Oct 2023",
   "as_of": "2026-11-13",
-  "note": "Defense-focused book. Up 208.62% since Oct 31, 2023 vs 81.04% for the S&P 500 at the Nov 12 close, with $92.9M tracking it. At the Nov 12 open sold Firefly, cut V2X from 6.79% to 3.79% and bought Venture Global and Redwire. Trimmed V2X and bought AAR on Oct 29 (reported Nov 9, when Huntington Ingalls was the largest position at 10.88%). Swapped KBR for BWX Technologies on Nov 4, Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, and TransDigm for TTM on Oct 14.",
+  "note": "Defense-focused book. Up 208.62% since Oct 31, 2023 vs 81.04% for the S&P 500 at the Nov 12 close, with $92.9M tracking it. At the Nov 18 open sold the rest of V2X, cut Gen Digital from 9.72% to 5.55%, bought Cellebrite (4%) and raised Kratos from 7.15% to 11.15%. At the Nov 12 open sold Firefly, cut V2X from 6.79% to 3.79% and bought Venture Global and Redwire. Trimmed V2X and bought AAR on Oct 29 (reported Nov 9, when Huntington Ingalls was the largest position at 10.88%). Swapped KBR for BWX Technologies on Nov 4, Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, and TransDigm for TTM on Oct 14.",
   "benchmark": 0.8104
  },
  {
@@ -23,7 +23,7 @@
   "stat": 1.11,
   "stat_label": "Since May 2023",
   "as_of": "2026-11-04",
-  "note": "Up about 111% since May 2023 vs about 83% for the S&P 500 (Nov 4); +39.78% over the past year vs S&P +14.40% (Oct 22). On Nov 4 sold Boston Scientific, Sprinklr, Pinterest and Pharvaris and cut Intuit to 4%, buying Uber, Crescent Energy, Kinross Gold, Garrett Motion and Bilibili. Rotated Stryker and Waystar into T-Mobile, Schwab, Wise and Itron on Oct 21.",
+  "note": "Up about 111% since May 2023 vs about 83% for the S&P 500 (Nov 4); +39.78% over the past year vs S&P +14.40% (Oct 22). On Nov 18 sold ADMA Biologics (its largest holding), Axis Capital, Intuit and NRG, and bought Acadia, Dycom, Flex, Nextpower and Teradyne. On Nov 4 sold Boston Scientific, Sprinklr, Pinterest and Pharvaris and cut Intuit to 4%, buying Uber, Crescent Energy, Kinross Gold, Garrett Motion and Bilibili. Rotated Stryker and Waystar into T-Mobile, Schwab, Wise and Itron on Oct 21.",
   "benchmark": 0.83
  },
  {
@@ -50,7 +50,7 @@
   "stat": -0.081,
   "stat_label": "Since Oct 2 launch",
   "as_of": "2026-11-04",
-  "note": "Went live Oct 2, 2026 (listed as Muse Spark). Down 8.1% from Oct 2 through Nov 3 while the S&P 500 fell about 2% (Muse's Nov 4 reply). First posted rebalance on Nov 4: sold Amentum, Pinterest, Ocular Therapeutix and Nvidia; bought Liftoff Mobile, Flex, Amdocs and Mineralys. Nubank was among its first buys, at $13.32. A $50,000 deposit landed on Oct 9.",
+  "note": "Went live Oct 2, 2026 (listed as Muse Spark). Down 8.1% from Oct 2 through Nov 3 while the S&P 500 fell about 2% (Muse's Nov 4 reply). On Nov 18 sold AECOM (+33.58%), Viking Therapeutics, Nu Holdings, Gen Digital and Syndax, and bought Legence, Camtek, Praxis, Figure, nVent and Silicon Motion. First posted rebalance on Nov 4: sold Amentum, Pinterest, Ocular Therapeutix and Nvidia; bought Liftoff Mobile, Flex, Amdocs and Mineralys. Nubank was among its first buys, at $13.32. A $50,000 deposit landed on Oct 9.",
   "benchmark": -0.02
  },
  {
@@ -59,7 +59,7 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-15",
-  "note": "Seeded with $10,000 on Oct 15, 2026 when Google released Gemini 4 Argon. No trades posted yet.",
+  "note": "Seeded with $10,000 on Oct 15, 2026 when Google released Gemini 4 Argon. First posted trades at the Nov 18 open: sold Copart, PROG Holdings, The Bancorp, Enova and Himax; bought SK hynix (US listing), Applied Aerospace & Defense, StubHub, Nvidia and Energy Fuels; added to Intuitive Machines and Bilibili; and cut its BOXX T-bill holding from 26.58% to 18.19%.",
   "benchmark": null
  }
 ]
