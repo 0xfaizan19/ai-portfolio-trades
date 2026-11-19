@@ -1,19 +1,24 @@
 {
- "confirmed_through": "2026-11-17T01:19:29Z",
- "newest_post_id": "2122499836452950341",
- "newest_post_at": "2026-11-17T01:19:29Z",
- "last_run_at": "2026-11-18T22:07:07Z",
+ "confirmed_through": "2026-11-19T05:42:20Z",
+ "newest_post_id": "2123290761152061760",
+ "newest_post_at": "2026-11-19T05:42:20Z",
+ "last_run_at": "2026-11-19T12:26:56Z",
  "last_run_status": "ok",
  "data": {
-  "trades": 100,
+  "trades": 138,
   "portfolios": 7,
-  "companies": 82,
-  "quotes": 81,
-  "newest_trade_id": "t100",
-  "newest_trade_date": "2026-11-12",
+  "companies": 108,
+  "quotes": 107,
+  "newest_trade_id": "t138",
+  "newest_trade_date": "2026-11-18",
   "quotes_as_of": "2026-11-18"
  },
  "history": [
+  {
+   "at": "2026-11-19T12:26:56Z",
+   "status": "ok",
+   "note": "Nov 19 morning run (7:02 AM ET): 2 new main posts after row 0h, both after the Nov 18 5 PM run -> 38 trades t101-t138. Claude: sold AECOM (Oct 2 buy, +34.68%) @ $80.16, bought Forgent 4% @ $21.71. Nov 18 open: WW3 sold V2X, cut Gen Digital 9.72->5.55%, bought Cellebrite 4%, Kratos 7.15->11.15%; GPT ADMA/AXS/INTU/NRG -> ACAD/DY/FLEX/NXT/TER; Muse ACM/VKTX/NU/GEN/SNDX -> LGN/CAMT/PRAX/FIGR/NVT/SIMO; Gemini (first posted trades) CPRT/PRG/TBBK/ENVA/HIMX -> SKHY/AADX/STUB/NVDA/UUUU plus adds to LUNR/BILI (BOXX cut 26.58->18.19%, not recorded). Card fills checked against Yahoo Nov 18 opens; 8 legs without a card price use the open. 26 company rows. Timeline read without gaps back to Oct 21 + from: search since:2026-11-16 + Replies tab (only other id: a support reply, no trade). Quotes at Nov 18 close (107 tickers, pulled before the open). Pages built 31cf0f7, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-18T22:07:07Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-03T12:05:59Z",
    "status": "ok",
    "note": "Nov 3 run: no new main posts since Oct 29 (timeline back to Oct 20 + from: search since Oct 29; replies only, newest Oct 31). No new trades; quotes at Nov 2 close."
-  },
-  {
-   "at": "2026-11-02T22:04:42Z",
-   "status": "ok",
-   "note": "Second Nov 2 run: no new main posts since Oct 29 (timeline + from: search; only replies to users, newest Oct 31). No new trades; quotes refreshed to Nov 2 close."
   }
  ]
 }
