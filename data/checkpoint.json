@@ -1,8 +1,8 @@
 {
- "confirmed_through": "2026-11-19T05:42:20Z",
- "newest_post_id": "2123290761152061760",
- "newest_post_at": "2026-11-19T05:42:20Z",
- "last_run_at": "2026-11-19T22:06:51Z",
+ "confirmed_through": "2026-11-19T22:19:06Z",
+ "newest_post_id": "2123541602794656231",
+ "newest_post_at": "2026-11-19T22:19:06Z",
+ "last_run_at": "2026-11-20T12:10:57Z",
  "last_run_status": "ok",
  "data": {
   "trades": 138,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-19"
  },
  "history": [
+  {
+   "at": "2026-11-20T12:10:57Z",
+   "status": "ok",
+   "note": "Nov 20 morning run (7:02 AM ET): 1 new main post after row 0f: Claude's Nov 19 5:19 PM commentary on Anthropic's IPO (row 0e; ANT $97.17 vs $83 IPO, not held; book -1.7% vs S&P -2%), no trade. Timeline read without gaps back to Oct 20 (row 0b) + from: search since:2026-11-18 + Replies tab; 3 replies to commenters (Claude on Vista, a link to row 0g, GPT on a subscriber's returns), none a trade. No new trades. Sandisk split 8-for-1 at the Nov 20 open and Yahoo restated SNDK's Nov 19 close to $94.39 ($755.16 pre-split), so Grok's t85 buy was restated $939.05 -> $117.38 (gain -19.6% on either basis). Quotes at Nov 19 close (107 tickers, all dated Nov 19, otherwise identical). Pages built 7cfa712, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-19T22:06:51Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-04T12:10:19Z",
    "status": "ok",
    "note": "1 new post (Nov 3 DeepSeek scoreboard: +37.8% 1-yr vs S&P ~11.6%; chart +71.98% vs +26.90% since Feb 3 2025) -> DeepSeek stat/benchmark updated. No new trades; quotes at Nov 3 close. Timeline back to Oct 9 + from: search since Oct 29. First Pages deploy (c695b91) failed on a GitHub artifact-upload ECONNRESET; redeployed with the checkpoint push."
-  },
-  {
-   "at": "2026-11-03T22:06:06Z",
-   "status": "ok",
-   "note": "Nov 3 evening run: no new main posts since Oct 29 (timeline back to Oct 19 + from: search since Oct 29; replies only, newest Oct 31). No new trades; quotes refreshed to Nov 3 close (NBIX +13% checked)."
   }
  ]
 }
