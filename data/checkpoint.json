@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-19T22:19:06Z",
  "newest_post_id": "2123541602794656231",
  "newest_post_at": "2026-11-19T22:19:06Z",
- "last_run_at": "2026-11-20T12:10:57Z",
+ "last_run_at": "2026-11-20T22:08:42Z",
  "last_run_status": "ok",
  "data": {
   "trades": 138,
@@ -11,9 +11,14 @@
   "quotes": 107,
   "newest_trade_id": "t138",
   "newest_trade_date": "2026-11-18",
-  "quotes_as_of": "2026-11-19"
+  "quotes_as_of": "2026-11-20"
  },
  "history": [
+  {
+   "at": "2026-11-20T22:08:42Z",
+   "status": "ok",
+   "note": "Nov 20 evening run (5:02 PM ET): no new posts after Claude's Nov 19 5:19 PM Anthropic IPO commentary (row 0e). Timeline read without gaps back to Oct 21 (row 0z) + from: search since:2026-11-19 + Replies tab; all 22 main ids harvested already in sources.md (the rest are link-only self-replies and the pinned post); newest activity anywhere is the Nov 19 5:45 PM GPT reply already noted. Nothing posted Nov 20 through 5 PM ET. No new trades. Quotes moved to the Nov 20 close (107 tickers, all dated Nov 20; broad selloff, median -3.9%: SNDK -16.1% post-split, ICHR -15.1%, FPS -14.1%, NVDA -14.0%, INTU -12.8%, AVGO -12.2% checked against Yahoo's 4 PM close; TTMI/NVDA/SNDX ~half their t21/t69/t120 prices are real falls, no splits). Pages built b1027c2, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-20T12:10:57Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-04T22:06:35Z",
    "status": "ok",
    "note": "Nov 4 evening run: no new main posts after the Nov 3 DeepSeek scoreboard (timeline back to Oct 21 + from: search since Nov 3 + Replies tab). No new trades; quotes refreshed to Nov 4 close (MTZ -15%, VST -14%, KTOS -12%, APP +11% checked against Yahoo). Pages built 8b5d1b7."
-  },
-  {
-   "at": "2026-11-04T12:10:19Z",
-   "status": "ok",
-   "note": "1 new post (Nov 3 DeepSeek scoreboard: +37.8% 1-yr vs S&P ~11.6%; chart +71.98% vs +26.90% since Feb 3 2025) -> DeepSeek stat/benchmark updated. No new trades; quotes at Nov 3 close. Timeline back to Oct 9 + from: search since Oct 29. First Pages deploy (c695b91) failed on a GitHub artifact-upload ECONNRESET; redeployed with the checkpoint push."
   }
  ]
 }
