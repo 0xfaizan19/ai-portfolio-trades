@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-19T22:19:06Z",
  "newest_post_id": "2123541602794656231",
  "newest_post_at": "2026-11-19T22:19:06Z",
- "last_run_at": "2026-11-21T12:07:55Z",
+ "last_run_at": "2026-11-21T22:07:32Z",
  "last_run_status": "ok",
  "data": {
   "trades": 138,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-20"
  },
  "history": [
+  {
+   "at": "2026-11-21T22:07:32Z",
+   "status": "ok",
+   "note": "Nov 21 evening run (5:02 PM ET, Saturday): no new posts after Claude's Nov 19 5:19 PM Anthropic IPO commentary (row 0e). Timeline read without gaps back to Oct 20 (row 0a) + from: search since:2026-11-19 + Replies tab; all 23 main ids harvested already in sources.md (the other 22 are link-only self-replies and the pinned post); newest activity anywhere is the Nov 19 5:45 PM GPT reply already noted. Nothing posted Nov 20 or Nov 21 through 5 PM ET. No new trades. Quotes still at the Nov 20 close (107 tickers, identical to the morning file); Yahoo's Nov 20 SNDK daily bar still has a null close (script fell back to Nov 19 94.39), so SNDK restored to 79.24 from Yahoo's 4:00 PM regular-market price and last 5-min bar. Pages built 379daaf, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-21T12:07:55Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-05T22:06:34Z",
    "status": "ok",
    "note": "Nov 5 evening run: no new posts after the Nov 4 10:03 PM Muse reply (timeline back to Oct 23 + from: search since Nov 4 + Replies tab). No new trades; quotes refreshed to Nov 5 close (APP +31%, GIL -19%, UCTT -16%, TTMI -15%, FLEX -14%, AVGO -10% checked against Yahoo). Pages built a57c8ad."
-  },
-  {
-   "at": "2026-11-05T12:25:42Z",
-   "status": "ok",
-   "note": "2 new main posts (Nov 4 evening) -> 24 trades t50-t73: Claude KBR+EXE -> ALNY+NU; WW3 KBR -> BWXT; GPT sold BSX/CXM/PINS/PHVS + trimmed INTU 10.30->4.02%, bought UBER/CRGY/KGC/GTX/BILI; Muse sold AMTM/PINS/OCUL/NVDA, bought LFTO/FLEX/DOX/MLYS. Stats: WW3 +220% vs +81%, GPT +111% vs +83%, Muse -8.1% vs -2%. 20 company rows; quotes at Nov 4 close (62). Timeline back to Oct 23 + from: search since Nov 3. Pages built fbbd537."
   }
  ]
 }
