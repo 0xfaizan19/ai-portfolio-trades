@@ -22,7 +22,7 @@ The owner wants to track **what each AI bought or sold, how much (as a share of 
 
 The current version covers the **last 10 posts as of Oct 19, 2026**, with trades dated Sep 30 to Oct 8, 2026.
 
-Since Nov 23, 2026 the same page also has a **Jim Cramer on X** section: every stock or crypto that Jim Cramer (@jimcramer) names in a post, whether he sounded bullish, bearish or neutral, a screenshot of the post, a link to it, the price when he posted, and how the stock has moved since. It started with the 15 days before his newest post (Nov 8 to Nov 23, 2026) and is updated by the same daily routine. See sections 3, 4 and 7.
+Since Nov 23, 2026 the same page also has a **Jim Cramer on X** section: every stock or crypto that Jim Cramer (@jimcramer) names in a post, whether he sounded bullish, bearish or neutral, a screenshot of the post, a link to it, the price when he posted, and how the stock has moved since. It started with the 15 days before his newest post (Nov 8 to Nov 23, 2026). Section 7 says how to add new posts; sections 3 and 4 describe the data and the page. The prices in it refresh with every `refresh_quotes.py` run.
 
 ## 2. Files
 
@@ -277,7 +277,7 @@ Rules:
 - The posts say outright that they share reasoning and aren't advice. The dashboard is for tracking, not recommendations.
 - Notion was the owner's first choice of home for this, but no Notion connection was available, so it became a dashboard instead. A Figma version was made and then dropped.
 
-## 7. Jim Cramer on X (part of the daily routine)
+## 7. Jim Cramer on X: how to update it
 
 ### What gets recorded
 
