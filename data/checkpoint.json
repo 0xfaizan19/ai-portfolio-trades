@@ -2,18 +2,23 @@
  "confirmed_through": "2026-11-19T22:19:06Z",
  "newest_post_id": "2123541602794656231",
  "newest_post_at": "2026-11-19T22:19:06Z",
- "last_run_at": "2026-11-21T22:07:32Z",
+ "last_run_at": "2026-11-23T21:49:19Z",
  "last_run_status": "ok",
  "data": {
   "trades": 138,
   "portfolios": 7,
-  "companies": 108,
-  "quotes": 107,
+  "companies": 127,
+  "quotes": 126,
   "newest_trade_id": "t138",
   "newest_trade_date": "2026-11-18",
   "quotes_as_of": "2026-11-20"
  },
  "history": [
+  {
+   "at": "2026-11-23T21:49:19Z",
+   "status": "ok",
+   "note": "Nov 23 manual run (~1 PM ET, with the first Jim Cramer run): no scheduled run had fired since Nov 21 5 PM. No new posts after Claude's Nov 19 5:19 PM Anthropic IPO commentary (row 0e): timeline read back to Nov 9 (row 0n), from: search since:2026-11-19 shows only rows 0e/0f, their link replies and the three Nov 19 replies, Replies tab nothing newer than the Nov 19 5:45 PM GPT reply. No new trades. Quotes pulled mid-session (1:24 PM ET): today's unfinished bars skipped, all 107 existing tickers at the Nov 20 close (SNDK's empty Yahoo close filled from the stored 79.24), plus 19 Cramer tickers. Published 43098c9 (Pages built, live page byte-identical)."
+  },
   {
    "at": "2026-11-21T22:07:32Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-06T12:07:24Z",
    "status": "ok",
    "note": "Nov 6 morning run: no new posts after the Nov 4 10:03 PM Muse reply, nothing at all on Nov 5 (timeline back to Oct 23 + from: search since Nov 4 + Replies tab). No new trades; quotes unchanged at Nov 5 close (market not yet open). Pages built b4d2282."
-  },
-  {
-   "at": "2026-11-05T22:06:34Z",
-   "status": "ok",
-   "note": "Nov 5 evening run: no new posts after the Nov 4 10:03 PM Muse reply (timeline back to Oct 23 + from: search since Nov 4 + Replies tab). No new trades; quotes refreshed to Nov 5 close (APP +31%, GIL -19%, UCTT -16%, TTMI -15%, FLEX -14%, AVGO -10% checked against Yahoo). Pages built a57c8ad."
   }
  ]
 }

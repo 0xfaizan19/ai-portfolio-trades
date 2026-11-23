@@ -1,0 +1,19 @@
+{
+ "confirmed_through": "2026-11-23T17:15:40Z",
+ "newest_post_id": "2124914793651884445",
+ "newest_post_at": "2026-11-23T17:15:40Z",
+ "last_run_at": "2026-11-23T21:49:19Z",
+ "last_run_status": "ok",
+ "history": [
+  {
+   "at": "2026-11-23T21:49:19Z",
+   "status": "ok",
+   "note": "First run (Nov 23, ~1 PM ET): the 15 days before his newest post (Nov 8 12:15 PM ET to Nov 23 12:15 PM ET). 111 posts read from the Posts tab, cross-checked with from:jimcramer -filter:replies search (identical for Nov 16-23); 79 named a stock -> 89 rows c001-c089 (45 bullish, 5 bearish, 39 neutral) across 24 tickers, all screenshotted to cramer/*.webp; replies, reposts, market-wide, commodity, private-company and sports posts skipped. price_then from Yahoo 5-min bars / closes; Anthropic's pre-IPO posts use its Nov 19 first trade (111.50). Published 43098c9."
+  }
+ ],
+ "data": {
+  "rows": 89,
+  "posts": 79,
+  "newest_row_id": "c089"
+ }
+}
