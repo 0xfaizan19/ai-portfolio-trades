@@ -1,632 +1,632 @@
 [
  {
   "ticker": "VST",
-  "price": 115.25,
-  "as_of": "2026-11-20"
+  "price": 123.87,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "APP",
-  "price": 348.29,
-  "as_of": "2026-11-20"
+  "price": 373.92,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SARO",
-  "price": 26.57,
-  "as_of": "2026-11-20"
+  "price": 27.24,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AVGO",
-  "price": 304.41,
-  "as_of": "2026-11-20"
+  "price": 313.55,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CHWY",
-  "price": 19.5,
-  "as_of": "2026-11-20"
+  "price": 19.71,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "RTO",
-  "price": 23.95,
-  "as_of": "2026-11-20"
+  "price": 24.36,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "RTX",
-  "price": 190.17,
-  "as_of": "2026-11-20"
+  "price": 194.77,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "BA",
-  "price": 155.89,
-  "as_of": "2026-11-20"
+  "price": 162.39,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CACI",
-  "price": 587.81,
-  "as_of": "2026-11-20"
+  "price": 590.34,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "MP",
-  "price": 33.95,
-  "as_of": "2026-11-20"
+  "price": 35.54,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "HII",
-  "price": 280.34,
-  "as_of": "2026-11-20"
+  "price": 286.57,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "KTOS",
-  "price": 26.89,
-  "as_of": "2026-11-20"
+  "price": 28.5,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "PANW",
-  "price": 343.32,
-  "as_of": "2026-11-20"
+  "price": 353.43,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "GEN",
-  "price": 29.19,
-  "as_of": "2026-11-20"
+  "price": 30.04,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ICE",
-  "price": 170.0,
-  "as_of": "2026-11-20"
+  "price": 172.19,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "QSR",
-  "price": 72.91,
-  "as_of": "2026-11-20"
+  "price": 73.74,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "DY",
-  "price": 205.55,
-  "as_of": "2026-11-20"
+  "price": 218.37,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "DKNG",
-  "price": 15.8,
-  "as_of": "2026-11-20"
+  "price": 15.76,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "TDG",
-  "price": 1121.22,
-  "as_of": "2026-11-20"
+  "price": 1140.33,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "TTMI",
-  "price": 58.85,
-  "as_of": "2026-11-20"
+  "price": 68.57,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SYK",
-  "price": 310.0,
-  "as_of": "2026-11-20"
+  "price": 316.15,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NBIX",
-  "price": 150.57,
-  "as_of": "2026-11-20"
+  "price": 158.08,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "BSX",
-  "price": 41.98,
-  "as_of": "2026-11-20"
+  "price": 42.33,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "KKR",
-  "price": 88.54,
-  "as_of": "2026-11-20"
+  "price": 92.62,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "FTAI",
-  "price": 150.02,
-  "as_of": "2026-11-20"
+  "price": 163.56,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "MTZ",
-  "price": 144.71,
-  "as_of": "2026-11-20"
+  "price": 159.44,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "WAY",
-  "price": 26.52,
-  "as_of": "2026-11-20"
+  "price": 26.17,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "HAPN",
-  "price": 14.11,
-  "as_of": "2026-11-20"
+  "price": 14.97,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "GIL",
-  "price": 32.98,
-  "as_of": "2026-11-20"
+  "price": 34.54,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CDE",
-  "price": 10.68,
-  "as_of": "2026-11-20"
+  "price": 11.45,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "KGS",
-  "price": 39.67,
-  "as_of": "2026-11-20"
+  "price": 40.98,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NU",
-  "price": 11.27,
-  "as_of": "2026-11-20"
+  "price": 11.8,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SKWD",
-  "price": 64.43,
-  "as_of": "2026-11-20"
+  "price": 65.04,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SE",
-  "price": 62.63,
-  "as_of": "2026-11-20"
+  "price": 65.53,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "TMUS",
-  "price": 165.6,
-  "as_of": "2026-11-20"
+  "price": 166.36,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SCHW",
-  "price": 90.16,
-  "as_of": "2026-11-20"
+  "price": 92.37,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "WSE",
-  "price": 10.85,
-  "as_of": "2026-11-20"
+  "price": 11.22,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ITRI",
-  "price": 97.14,
-  "as_of": "2026-11-20"
+  "price": 99.11,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NOC",
-  "price": 534.31,
-  "as_of": "2026-11-20"
+  "price": 542.14,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AKAM",
-  "price": 85.11,
-  "as_of": "2026-11-20"
+  "price": 89.22,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "DVN",
-  "price": 41.54,
-  "as_of": "2026-11-20"
+  "price": 40.95,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "UCTT",
-  "price": 37.0,
-  "as_of": "2026-11-20"
+  "price": 41.17,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "KBR",
-  "price": 31.44,
-  "as_of": "2026-11-20"
+  "price": 32.63,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "EXE",
-  "price": 81.27,
-  "as_of": "2026-11-20"
+  "price": 80.79,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ALNY",
-  "price": 143.82,
-  "as_of": "2026-11-20"
+  "price": 155.98,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "BWXT",
-  "price": 108.54,
-  "as_of": "2026-11-20"
+  "price": 115.83,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CXM",
-  "price": 6.55,
-  "as_of": "2026-11-20"
+  "price": 6.67,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "PINS",
-  "price": 16.33,
-  "as_of": "2026-11-20"
+  "price": 16.9,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "PHVS",
-  "price": 31.28,
-  "as_of": "2026-11-20"
+  "price": 32.3,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "INTU",
-  "price": 270.44,
-  "as_of": "2026-11-20"
+  "price": 275.46,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "UBER",
-  "price": 63.47,
-  "as_of": "2026-11-20"
+  "price": 64.07,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CRGY",
-  "price": 10.57,
-  "as_of": "2026-11-20"
+  "price": 10.43,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "KGC",
-  "price": 17.32,
-  "as_of": "2026-11-20"
+  "price": 18.27,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "GTX",
-  "price": 20.72,
-  "as_of": "2026-11-20"
+  "price": 21.86,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "BILI",
-  "price": 10.6,
-  "as_of": "2026-11-20"
+  "price": 10.89,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AMTM",
-  "price": 20.34,
-  "as_of": "2026-11-20"
+  "price": 20.65,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "OCUL",
-  "price": 5.57,
-  "as_of": "2026-11-20"
+  "price": 5.79,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NVDA",
-  "price": 125.53,
-  "as_of": "2026-11-20"
+  "price": 165.05,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "LFTO",
-  "price": 22.86,
-  "as_of": "2026-11-20"
+  "price": 22.77,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "FLEX",
-  "price": 66.24,
-  "as_of": "2026-11-20"
+  "price": 73.94,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "DOX",
-  "price": 41.18,
-  "as_of": "2026-11-20"
+  "price": 41.5,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "MLYS",
-  "price": 13.66,
-  "as_of": "2026-11-20"
+  "price": 14.16,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "BHF",
-  "price": 40.84,
-  "as_of": "2026-11-20"
+  "price": 41.26,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "DAN",
-  "price": 22.07,
-  "as_of": "2026-11-20"
+  "price": 23.68,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "FLY",
-  "price": 17.69,
-  "as_of": "2026-11-20"
+  "price": 19.14,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "VVX",
-  "price": 75.18,
-  "as_of": "2026-11-20"
+  "price": 71.63,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "VG",
-  "price": 11.95,
-  "as_of": "2026-11-20"
+  "price": 11.88,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "RDW",
-  "price": 5.65,
-  "as_of": "2026-11-20"
+  "price": 6.42,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SNDK",
-  "price": 79.24,
-  "as_of": "2026-11-20"
+  "price": 87.71,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "MOD",
-  "price": 124.67,
-  "as_of": "2026-11-20"
+  "price": 137.39,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "IONS",
-  "price": 26.58,
-  "as_of": "2026-11-20"
+  "price": 28.32,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "BCRX",
-  "price": 7.22,
-  "as_of": "2026-11-20"
+  "price": 7.43,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "PAM",
-  "price": 60.63,
-  "as_of": "2026-11-20"
+  "price": 62.16,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NRG",
-  "price": 87.8,
-  "as_of": "2026-11-20"
+  "price": 97.72,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NESR",
-  "price": 17.78,
-  "as_of": "2026-11-20"
+  "price": 18.73,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ICHR",
-  "price": 27.28,
-  "as_of": "2026-11-20"
+  "price": 31.6,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "INTR",
-  "price": 3.6,
-  "as_of": "2026-11-20"
+  "price": 3.69,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "XE",
-  "price": 8.79,
-  "as_of": "2026-11-20"
+  "price": 9.9,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "GPCR",
-  "price": 16.13,
-  "as_of": "2026-11-20"
+  "price": 16.6,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "URGN",
-  "price": 27.65,
-  "as_of": "2026-11-20"
+  "price": 27.84,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AIR",
-  "price": 101.84,
-  "as_of": "2026-11-20"
+  "price": 106.51,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ACM",
-  "price": 78.65,
-  "as_of": "2026-11-20"
+  "price": 80.75,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "FPS",
-  "price": 18.0,
-  "as_of": "2026-11-20"
+  "price": 20.3,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CLBT",
-  "price": 10.77,
-  "as_of": "2026-11-20"
+  "price": 11.23,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ADMA",
-  "price": 13.17,
-  "as_of": "2026-11-20"
+  "price": 13.5,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AXS",
-  "price": 106.4,
-  "as_of": "2026-11-20"
+  "price": 106.84,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ACAD",
-  "price": 17.11,
-  "as_of": "2026-11-20"
+  "price": 17.67,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NXT",
-  "price": 67.13,
-  "as_of": "2026-11-20"
+  "price": 70.57,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "TER",
-  "price": 204.78,
-  "as_of": "2026-11-20"
+  "price": 233.51,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "VKTX",
-  "price": 24.77,
-  "as_of": "2026-11-20"
+  "price": 27.69,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SNDX",
-  "price": 8.72,
-  "as_of": "2026-11-20"
+  "price": 9.09,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "LGN",
-  "price": 32.31,
-  "as_of": "2026-11-20"
+  "price": 36.45,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CAMT",
-  "price": 89.2,
-  "as_of": "2026-11-20"
+  "price": 100.1,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "PRAX",
-  "price": 300.43,
-  "as_of": "2026-11-20"
+  "price": 307.0,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "FIGR",
-  "price": 23.84,
-  "as_of": "2026-11-20"
+  "price": 26.17,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NVT",
-  "price": 101.84,
-  "as_of": "2026-11-20"
+  "price": 111.92,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SIMO",
-  "price": 130.01,
-  "as_of": "2026-11-20"
+  "price": 153.42,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CPRT",
-  "price": 31.09,
-  "as_of": "2026-11-20"
+  "price": 31.62,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "PRG",
-  "price": 39.35,
-  "as_of": "2026-11-20"
+  "price": 40.42,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "TBBK",
-  "price": 44.09,
-  "as_of": "2026-11-20"
+  "price": 45.74,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ENVA",
-  "price": 163.82,
-  "as_of": "2026-11-20"
+  "price": 165.65,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "HIMX",
-  "price": 6.86,
-  "as_of": "2026-11-20"
+  "price": 7.86,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SKHY",
-  "price": 103.57,
-  "as_of": "2026-11-20"
+  "price": 124.28,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AADX",
-  "price": 6.41,
-  "as_of": "2026-11-20"
+  "price": 6.61,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "STUB",
-  "price": 4.54,
-  "as_of": "2026-11-20"
+  "price": 4.77,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "UUUU",
-  "price": 4.96,
-  "as_of": "2026-11-20"
+  "price": 5.22,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "LUNR",
-  "price": 8.77,
-  "as_of": "2026-11-20"
+  "price": 9.75,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AMD",
-  "price": 424.39,
-  "as_of": "2026-11-20"
+  "price": 453.46,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "Q",
-  "price": 103.47,
-  "as_of": "2026-11-20"
+  "price": 114.68,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ANT",
-  "price": 88.91,
-  "as_of": "2026-11-20"
+  "price": 87.64,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "MSFT",
-  "price": 484.52,
-  "as_of": "2026-11-20"
+  "price": 492.5,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "COST",
-  "price": 1102.15,
-  "as_of": "2026-11-20"
+  "price": 1097.91,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CRWV",
-  "price": 39.51,
-  "as_of": "2026-11-20"
+  "price": 48.33,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "INTC",
-  "price": 51.28,
-  "as_of": "2026-11-20"
+  "price": 59.66,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CBRS",
-  "price": 82.67,
-  "as_of": "2026-11-20"
+  "price": 98.51,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CSCO",
-  "price": 90.64,
-  "as_of": "2026-11-20"
+  "price": 96.8,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "VRT",
-  "price": 166.24,
-  "as_of": "2026-11-20"
+  "price": 186.35,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "ETN",
-  "price": 311.33,
-  "as_of": "2026-11-20"
+  "price": 336.34,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "HD",
-  "price": 339.04,
-  "as_of": "2026-11-20"
+  "price": 346.06,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "TJX",
-  "price": 139.62,
-  "as_of": "2026-11-20"
+  "price": 139.25,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CRWD",
-  "price": 229.44,
-  "as_of": "2026-11-20"
+  "price": 208.97,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "CRM",
-  "price": 180.62,
-  "as_of": "2026-11-20"
+  "price": 185.46,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "NOW",
-  "price": 87.61,
-  "as_of": "2026-11-20"
+  "price": 91.72,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "SPCX",
-  "price": 127.79,
-  "as_of": "2026-11-20"
+  "price": 133.35,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "GOOGL",
-  "price": 265.29,
-  "as_of": "2026-11-20"
+  "price": 282.1,
+  "as_of": "2026-11-23"
  },
  {
   "ticker": "AAPL",
-  "price": 342.56,
-  "as_of": "2026-11-20"
+  "price": 349.08,
+  "as_of": "2026-11-23"
  }
 ]
