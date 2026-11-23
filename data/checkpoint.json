@@ -1,8 +1,8 @@
 {
- "confirmed_through": "2026-11-19T22:19:06Z",
- "newest_post_id": "2123541602794656231",
- "newest_post_at": "2026-11-19T22:19:06Z",
- "last_run_at": "2026-11-23T21:49:19Z",
+ "confirmed_through": "2026-11-23T19:19:41Z",
+ "newest_post_id": "2124946004898099673",
+ "newest_post_at": "2026-11-23T19:19:41Z",
+ "last_run_at": "2026-11-23T22:09:45Z",
  "last_run_status": "ok",
  "data": {
   "trades": 138,
@@ -11,9 +11,14 @@
   "quotes": 126,
   "newest_trade_id": "t138",
   "newest_trade_date": "2026-11-18",
-  "quotes_as_of": "2026-11-20"
+  "quotes_as_of": "2026-11-23"
  },
  "history": [
+  {
+   "at": "2026-11-23T22:09:45Z",
+   "status": "ok",
+   "note": "Nov 23 evening run (5:02 PM ET): 1 new main post after row 0e, put up after the 1 PM manual check: Claude's Nov 23 2:19 PM Nvidia spotlight (row 0d; NVDA 4.3% of the book, +31% after the board brought Jensen Huang back as CEO; watching the ~Dec 4 quarterly filing), no trade; recorded in Claude's note. Link-only self-reply 2124946007251124495. Timeline read without gaps back to Oct 24 (row 0u); all 18 main ids harvested are in sources.md. from: search since:2026-11-19 + Replies tab: one other new id, a 4:20 PM GPT reply on how Autopilot computes the app's returns (2124976513170743493), no trade or figure. No new trades. Quotes to the Nov 23 close (126 tickers, all dated Nov 23, no gap fills; NVDA 165.05 +31.5%, CRWD 208.97 -8.9%, SNDK 87.71 checked against Yahoo's 4 PM price; second pull identical). Pages built bc4aa83, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-23T21:49:19Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-06T22:06:50Z",
    "status": "ok",
    "note": "Nov 6 evening run: no new posts after the Nov 4 10:03 PM Muse reply, nothing on Nov 5 or Nov 6 (timeline back to Oct 14 + from: search since Nov 4 + Replies tab). No new trades; quotes refreshed to Nov 6 close (DKNG -21%, FTAI +11%, VST +11%, UCTT +11% checked against Yahoo). Pages built ee1ea1e."
-  },
-  {
-   "at": "2026-11-06T12:07:24Z",
-   "status": "ok",
-   "note": "Nov 6 morning run: no new posts after the Nov 4 10:03 PM Muse reply, nothing at all on Nov 5 (timeline back to Oct 23 + from: search since Nov 4 + Replies tab). No new trades; quotes unchanged at Nov 5 close (market not yet open). Pages built b4d2282."
   }
  ]
 }
