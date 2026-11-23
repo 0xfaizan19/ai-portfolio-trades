@@ -970,5 +970,176 @@
   "about": "A space company that builds and flies robotic lunar landers and runs data and navigation services for missions to the Moon, much of it for NASA.",
   "revenue": "Most revenue comes from NASA and other government contracts for lunar delivery missions, lunar rovers and deep-space communications. It is lumpy because it is booked as large missions progress.",
   "segments": "Lunar access (landers) · Data transmission and navigation · Infrastructure services"
+ },
+ {
+  "ticker": "ANT",
+  "company": "Anthropic",
+  "sector": "Technology · AI models",
+  "hq": "San Francisco, California",
+  "about": "An AI company that builds the Claude family of large language models and sells access to them. Its shares began trading on Nasdaq on Nov 19, 2026.",
+  "revenue": "Most revenue comes from businesses and developers paying to use Claude through its API, directly or through cloud partners such as Amazon Web Services and Google Cloud. Subscriptions to the Claude apps (individual, team and enterprise plans) and its coding tool, Claude Code, make up much of the rest.",
+  "segments": "API and cloud platforms · Claude app subscriptions · Claude Code · Enterprise"
+ },
+ {
+  "ticker": "AMD",
+  "company": "AMD (Advanced Micro Devices)",
+  "sector": "Technology · Semiconductors",
+  "hq": "Santa Clara, California",
+  "about": "Designs processors and graphics chips: EPYC server CPUs, Instinct AI accelerators, Ryzen PC processors and Radeon graphics. Manufacturing is outsourced, mostly to TSMC.",
+  "revenue": "Data-center chips (server CPUs and Instinct AI accelerators) are the largest and fastest-growing business, followed by PC processors. Gaming chips, including the ones inside PlayStation and Xbox consoles, and embedded chips from its Xilinx purchase make up the rest.",
+  "segments": "Data center · Client (PCs) · Gaming · Embedded"
+ },
+ {
+  "ticker": "CRWV",
+  "company": "CoreWeave",
+  "sector": "Technology · AI cloud computing",
+  "hq": "Livingston, New Jersey",
+  "about": "A 'neocloud': it rents out large clusters of Nvidia GPUs in its own data centers to AI labs and big tech companies.",
+  "revenue": "Customers sign multi-year contracts for GPU computing capacity. A handful of large customers, such as Microsoft and OpenAI, account for most revenue, and the build-out is funded heavily with debt.",
+  "segments": "GPU cloud for AI training and inference · Storage and networking · Managed software"
+ },
+ {
+  "ticker": "GOOGL",
+  "company": "Alphabet (Google)",
+  "sector": "Communication services · Internet",
+  "hq": "Mountain View, California",
+  "about": "Google's parent company: Search, YouTube, Android, Chrome and Google Cloud, plus the Gemini AI models and the Waymo self-driving business.",
+  "revenue": "Mostly advertising on Google Search and YouTube. Google Cloud (computing, data and AI services for businesses) is the second engine; subscriptions, Play store fees and devices add the rest.",
+  "segments": "Search ads · YouTube · Google Cloud · Subscriptions and devices · Other Bets (Waymo)"
+ },
+ {
+  "ticker": "SPCX",
+  "company": "SpaceX (Space Exploration Technologies)",
+  "sector": "Industrials · Space and satellite internet",
+  "hq": "Starbase, Texas",
+  "about": "Builds and launches rockets and spacecraft (Falcon 9, Dragon, Starship) and runs Starlink, the largest satellite-internet network. Cramer's Nov 19 posts say it also rents out AI computing capacity to Anthropic and Google.",
+  "revenue": "Starlink subscriptions and dishes are the biggest business. Launches for NASA, the US military and commercial customers, and other government contracts, make up most of the rest.",
+  "segments": "Starlink · Launch services · Human spaceflight · Government contracts"
+ },
+ {
+  "ticker": "AAPL",
+  "company": "Apple",
+  "sector": "Technology · Consumer electronics",
+  "hq": "Cupertino, California",
+  "about": "Makes the iPhone, Mac, iPad, Apple Watch and AirPods, and runs services such as the App Store, iCloud, Apple Music and Apple Pay.",
+  "revenue": "The iPhone brings in about half of sales. Services (App Store fees, subscriptions, iCloud, and Google's payments to be the default search engine) are the second-biggest and most profitable line; Macs, iPads and wearables make up the rest.",
+  "segments": "iPhone · Services · Mac · iPad · Wearables and accessories"
+ },
+ {
+  "ticker": "MSFT",
+  "company": "Microsoft",
+  "sector": "Technology · Software and cloud",
+  "hq": "Redmond, Washington",
+  "about": "The maker of Windows, Microsoft 365 (Office) and the Azure cloud, and a major partner of and investor in OpenAI.",
+  "revenue": "Azure cloud and server software are the biggest driver, then Microsoft 365 subscriptions for businesses and consumers. LinkedIn, Dynamics business software, Windows licenses, Xbox gaming and search ads make up the rest.",
+  "segments": "Azure and server software · Microsoft 365 · LinkedIn · Dynamics · Windows and devices · Gaming"
+ },
+ {
+  "ticker": "CRM",
+  "company": "Salesforce",
+  "sector": "Technology · Software",
+  "hq": "San Francisco, California",
+  "about": "The biggest seller of customer-relationship-management (CRM) software for sales, service and marketing teams. It also owns Slack, Tableau and MuleSoft, and sells AI agents through Agentforce.",
+  "revenue": "Almost all revenue is cloud subscriptions sold per user per year: Sales Cloud, Service Cloud, marketing and commerce tools, Slack, and data and analytics products. Professional services are a small remainder.",
+  "segments": "Sales Cloud · Service Cloud · Platform and Slack · Marketing and Commerce · Integration and Analytics"
+ },
+ {
+  "ticker": "NOW",
+  "company": "ServiceNow",
+  "sector": "Technology · Software",
+  "hq": "Santa Clara, California",
+  "about": "Sells cloud software that runs IT help desks and automates company workflows, from IT and HR requests to customer service.",
+  "revenue": "Nearly all revenue is subscriptions to its Now Platform, priced by users and modules and sold mainly to large companies and governments. AI add-ons are a growing piece.",
+  "segments": "IT service management · IT operations · Employee workflows · Customer workflows · AI and app-building tools"
+ },
+ {
+  "ticker": "CRWD",
+  "company": "CrowdStrike",
+  "sector": "Technology · Cybersecurity",
+  "hq": "Austin, Texas",
+  "about": "A cybersecurity company whose Falcon platform protects laptops, servers and cloud systems from hackers, using a small software agent and cloud-based threat detection.",
+  "revenue": "Annual subscriptions to Falcon modules: endpoint protection, cloud security, identity protection, threat intelligence and managed detection. A small share comes from services such as incident response.",
+  "segments": "Endpoint security · Cloud security · Identity protection · Security logging (SIEM) · Services"
+ },
+ {
+  "ticker": "TJX",
+  "company": "TJX Companies",
+  "sector": "Consumer discretionary · Off-price retail",
+  "hq": "Framingham, Massachusetts",
+  "about": "Runs off-price stores that sell brand-name clothing and home goods below department-store prices: T.J. Maxx, Marshalls, HomeGoods and Sierra in the US, Winners in Canada and TK Maxx in Europe and Australia.",
+  "revenue": "It buys brands' excess and closeout stock at a discount and sells it in about 5,000 stores. Marmaxx (T.J. Maxx and Marshalls) is by far the largest division.",
+  "segments": "Marmaxx · HomeGoods · TJX Canada · TJX International"
+ },
+ {
+  "ticker": "HD",
+  "company": "Home Depot",
+  "sector": "Consumer discretionary · Home-improvement retail",
+  "hq": "Atlanta, Georgia",
+  "about": "The largest home-improvement retailer, with about 2,300 stores in the US, Canada and Mexico, selling to do-it-yourself shoppers and to professional contractors.",
+  "revenue": "Sales of building materials, lumber, tools, appliances and garden supplies in stores and online. It is growing its contractor business through acquired distributors such as SRS.",
+  "segments": "Retail stores · Pro contractors · SRS Distribution · Online"
+ },
+ {
+  "ticker": "CSCO",
+  "company": "Cisco",
+  "sector": "Technology · Networking",
+  "hq": "San Jose, California",
+  "about": "The biggest maker of networking equipment (switches and routers) for companies, telecom carriers and data centers, plus security, observability (Splunk) and collaboration (Webex) software.",
+  "revenue": "Hardware sales of switches, routers and wireless gear are the largest share, increasingly including AI data-center networking for cloud companies. Security and Splunk software, Webex and support services add recurring revenue.",
+  "segments": "Networking · Security · Observability (Splunk) · Collaboration · Services"
+ },
+ {
+  "ticker": "CBRS",
+  "company": "Cerebras",
+  "sector": "Technology · AI chips",
+  "hq": "Sunnyvale, California",
+  "about": "Makes wafer-scale AI chips (a single processor the size of a dinner plate) and the systems built around them, competing with Nvidia's GPUs, especially for running AI models (inference).",
+  "revenue": "Sells its CS-series AI systems and, increasingly, rents out inference computing through its own cloud. A few large customers, historically Abu Dhabi's G42, have accounted for much of revenue.",
+  "segments": "AI systems · Inference cloud · Support services"
+ },
+ {
+  "ticker": "VRT",
+  "company": "Vertiv",
+  "sector": "Industrials · Data-center infrastructure",
+  "hq": "Westerville, Ohio",
+  "about": "Makes the power and cooling equipment that keeps data centers running: backup power (UPS), power distribution, thermal management and liquid cooling.",
+  "revenue": "Sells equipment and service contracts to cloud companies, colocation operators and telecom carriers. AI data centers, which need far more power and liquid cooling, are its fastest-growing market.",
+  "segments": "Power management · Thermal management and liquid cooling · Integrated racks and modules · Services"
+ },
+ {
+  "ticker": "ETN",
+  "company": "Eaton",
+  "sector": "Industrials · Electrical equipment",
+  "hq": "Dublin, Ireland (main US offices near Cleveland, Ohio)",
+  "about": "An industrial company focused on electrical equipment (switchgear, transformers, breakers and power-distribution gear for data centers, utilities and buildings), plus aerospace and vehicle parts.",
+  "revenue": "Electrical products and systems for data centers, utilities, commercial buildings and homes make up most sales. Aircraft fuel and hydraulic systems and truck and car components make up the rest.",
+  "segments": "Electrical Americas · Electrical Global · Aerospace · Vehicle · eMobility"
+ },
+ {
+  "ticker": "INTC",
+  "company": "Intel",
+  "sector": "Technology · Semiconductors",
+  "hq": "Santa Clara, California",
+  "about": "The largest maker of PC and server processors and one of the few chip companies that also manufactures its own chips. It is building a contract-manufacturing business, Intel Foundry, to make chips for others; the US government and Nvidia are large shareholders.",
+  "revenue": "Core PC processors and Xeon server chips account for most revenue. Intel Foundry so far earns little from outside customers, and Intel also owns most of Mobileye (driver-assistance chips).",
+  "segments": "Client computing (PCs) · Data center and AI · Intel Foundry · Mobileye"
+ },
+ {
+  "ticker": "COST",
+  "company": "Costco",
+  "sector": "Consumer staples · Warehouse clubs",
+  "hq": "Issaquah, Washington",
+  "about": "Runs about 900 membership warehouse clubs worldwide that sell groceries, household goods, electronics, gasoline and more in bulk at low markups.",
+  "revenue": "Merchandise sales bring in almost all revenue at thin margins, but most of the profit comes from annual membership fees paid by tens of millions of households.",
+  "segments": "Warehouse merchandise · Membership fees · Gasoline and services · E-commerce"
+ },
+ {
+  "ticker": "Q",
+  "company": "Qnity Electronics",
+  "sector": "Technology · Semiconductor materials",
+  "hq": "Wilmington, Delaware",
+  "about": "DuPont's former electronics business, spun off as its own company in November 2025. It makes materials used to manufacture chips and circuit boards, such as polishing slurries and pads, photoresists and plating chemicals.",
+  "revenue": "Sells consumable materials to chipmakers and to circuit-board and electronics makers, so sales track how many chips and boards are produced.",
+  "segments": "Semiconductor materials (CMP, lithography) · Interconnect and packaging materials"
  }
 ]

@@ -10,7 +10,7 @@ Run this after any change to data/*.json. publish.sh calls it for you.
 import json, re, shutil, sys, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent
-KEYS = ["trades", "portfolios", "companies", "quotes", "meta"]
+KEYS = ["trades", "portfolios", "companies", "quotes", "meta", "cramer", "cramer_stocks"]
 
 def main():
     stamp = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()

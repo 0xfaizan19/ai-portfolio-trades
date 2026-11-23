@@ -533,5 +533,100 @@
   "ticker": "LUNR",
   "price": 8.77,
   "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "AMD",
+  "price": 424.39,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "Q",
+  "price": 103.47,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "ANT",
+  "price": 88.91,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "MSFT",
+  "price": 484.52,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "COST",
+  "price": 1102.15,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "CRWV",
+  "price": 39.51,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "INTC",
+  "price": 51.28,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "CBRS",
+  "price": 82.67,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "CSCO",
+  "price": 90.64,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "VRT",
+  "price": 166.24,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "ETN",
+  "price": 311.33,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "HD",
+  "price": 339.04,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "TJX",
+  "price": 139.62,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "CRWD",
+  "price": 229.44,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "CRM",
+  "price": 180.62,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "NOW",
+  "price": 87.61,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "SPCX",
+  "price": 127.79,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "GOOGL",
+  "price": 265.29,
+  "as_of": "2026-11-20"
+ },
+ {
+  "ticker": "AAPL",
+  "price": 342.56,
+  "as_of": "2026-11-20"
  }
 ]
