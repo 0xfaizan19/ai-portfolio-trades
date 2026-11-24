@@ -1,19 +1,24 @@
 {
- "confirmed_through": "2026-11-23T19:19:41Z",
- "newest_post_id": "2124946004898099673",
- "newest_post_at": "2026-11-23T19:19:41Z",
- "last_run_at": "2026-11-24T12:11:31Z",
+ "confirmed_through": "2026-11-24T16:31:49Z",
+ "newest_post_id": "2125266145477345743",
+ "newest_post_at": "2026-11-24T16:31:49Z",
+ "last_run_at": "2026-11-24T22:25:24Z",
  "last_run_status": "ok",
  "data": {
-  "trades": 138,
+  "trades": 158,
   "portfolios": 7,
-  "companies": 127,
-  "quotes": 126,
-  "newest_trade_id": "t138",
-  "newest_trade_date": "2026-11-18",
-  "quotes_as_of": "2026-11-23"
+  "companies": 138,
+  "quotes": 137,
+  "newest_trade_id": "t158",
+  "newest_trade_date": "2026-11-20",
+  "quotes_as_of": "2026-11-24"
  },
  "history": [
+  {
+   "at": "2026-11-24T22:25:24Z",
+   "status": "ok",
+   "note": "Nov 24 evening run (5:02 PM ET): 2 new main posts after row 0d, both put up at 11:30-11:31 AM after the morning run -> 20 trades t139-t158, all at the Nov 20 open. WW3 (row 0cb): bought Carpenter 6.62% @ $263.50, cut Huntington Ingalls 11.06->6.06% @ $287.95, sold Ondas @ $4.11; +188.65% vs S&P +72.71% at the Nov 23 close ($84.4M). DeepSeek (same post): sold AVGO @ $342.39, HAPN @ $14.60, GIL @ $33.77, GENI, MP, KGS; bought PGY @ $14.19, VIST @ $49.15, EFXT @ $18.23, ARIS, PPTA, ACAD; +56.38% vs +20.83% ($39.9M). Claude (row 0ca): sold PHVS, WLDN, SNDX (below the platform's $1B cap minimum); bought Precigen 4% @ $4.16, IDEAYA 4% @ $25.83. Nine legs without a price use the Nov 20 open. Sale entries: HII Aug 12 $328.62 (oldest shares first), ONDS Aug 12 open $9.93, AVGO/GENI/MP from DeepSeek's Sep 15 reply, HAPN/GIL/KGS from t33/t34/t36, WLDN $84.66 (Aug 19), SNDX $18.19 (Sep 23), PHVS ~$34.82 average cost derived from the Oct 19 post's -14.5%. 11 company rows. Timeline read without gaps back to Oct 23 (row 0v); all 21 main ids in sources.md; from: search since:2026-11-23 and the Replies tab agree, nothing else new. Quotes at the Nov 24 close (137 tickers, all dated Nov 24, no fills needed). Pages built 4e393e2, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-24T12:11:31Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-07T22:06:05Z",
    "status": "ok",
    "note": "Nov 7 evening run: no new posts after the Nov 4 10:03 PM Muse reply, nothing on Nov 5, Nov 6 or Nov 7 through 5 PM ET (timeline back to Oct 23 + from: search since Nov 4 + Replies tab). No new trades; quotes unchanged at Nov 6 close (Saturday, all 62 identical). Pages built 05bab08, live page byte-identical to index.html."
-  },
-  {
-   "at": "2026-11-07T12:06:30Z",
-   "status": "ok",
-   "note": "Nov 7 morning run: no new posts after the Nov 4 10:03 PM Muse reply, nothing on Nov 5, Nov 6 or before 7 AM Nov 7 (timeline back to Oct 8 + from: search since Nov 4 + Replies tab). No new trades; quotes unchanged at Nov 6 close (Saturday). Pages built 0272804."
   }
  ]
 }
