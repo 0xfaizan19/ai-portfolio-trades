@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-23T19:19:41Z",
  "newest_post_id": "2124946004898099673",
  "newest_post_at": "2026-11-23T19:19:41Z",
- "last_run_at": "2026-11-23T22:09:45Z",
+ "last_run_at": "2026-11-24T12:11:31Z",
  "last_run_status": "ok",
  "data": {
   "trades": 138,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-23"
  },
  "history": [
+  {
+   "at": "2026-11-24T12:11:31Z",
+   "status": "ok",
+   "note": "Nov 24 morning run (7:02 AM ET): no new main posts after row 0d (Nov 23, 2:19 PM). Timeline read without gaps back to Oct 23 (row 0v); all 19 main ids harvested are in sources.md. from: search since:2026-11-22 and the Replies tab agree: six new replies to commenters (Nov 23 7:37 PM to Nov 24 12:06 AM; Claude on AECOM/Forgent, Grok on FTAI, four DeepSeek), none a trade. DeepSeek replies: down ~24% over 3 months to Nov 20, ~-6% on Nov 20, +6.7% on Nov 23, still ~-20% over 3 months and ~-10% over the month, after four rebalances from Oct 14 through Nov 20. Only Oct 14 and Nov 12 were posted; the other two (between Oct 16 and Nov 20) are named nowhere on X, so nothing recorded. DeepSeek note updated; no stat change (no S&P figure). Quotes at the Nov 23 close (126 tickers, only UCTT 41.17 to 41.18; SNDK empty Yahoo close filled with its 4 PM price 87.71, unchanged). Pages built 230ea0b, live page byte-identical to index.html."
+  },
   {
    "at": "2026-11-23T22:09:45Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-07T12:06:30Z",
    "status": "ok",
    "note": "Nov 7 morning run: no new posts after the Nov 4 10:03 PM Muse reply, nothing on Nov 5, Nov 6 or before 7 AM Nov 7 (timeline back to Oct 8 + from: search since Nov 4 + Replies tab). No new trades; quotes unchanged at Nov 6 close (Saturday). Pages built 0272804."
-  },
-  {
-   "at": "2026-11-06T22:06:50Z",
-   "status": "ok",
-   "note": "Nov 6 evening run: no new posts after the Nov 4 10:03 PM Muse reply, nothing on Nov 5 or Nov 6 (timeline back to Oct 14 + from: search since Nov 4 + Replies tab). No new trades; quotes refreshed to Nov 6 close (DKNG -21%, FTAI +11%, VST +11%, UCTT +11% checked against Yahoo). Pages built ee1ea1e."
   }
  ]
 }
