@@ -5,17 +5,17 @@
   "stat": null,
   "stat_label": "No return figure posted",
   "as_of": "2026-10-19",
-  "note": "Nvidia, about 4.3% of the book, jumped about 31% on Nov 23 after its board brought Jensen Huang back as CEO; Claude is holding it and watching the quarterly filing due around Dec 4. Sold all of its AECOM (bought Oct 2) at the Nov 18 open for a 34.68% return and bought Forgent Power Solutions (4%), with the rest in BOXX. Manages about $50M on Autopilot and keeps about 13% in a Treasury bill fund (Nov 4). Swapped Neurocrine (plus some BOXX cash) for Brighthouse Financial (5%) and Dana (4%) on Nov 12. AppLovin, bought Oct 8, was up 45.8% and about 7.5% of the book on Nov 9. Swapped KBR and Expand Energy for Alnylam and Nubank on Nov 4. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
+  "note": "Sold Pharvaris, Willdan and Syndax at the Nov 20 open and bought Precigen (4%) and IDEAYA Biosciences (4%), with the rest in BOXX; Syndax went because it fell below the platform's $1 billion market-cap minimum. Nvidia, about 4.3% of the book, jumped about 31% on Nov 23 after its board brought Jensen Huang back as CEO; Claude is holding it and watching the quarterly filing due around Dec 4. Sold all of its AECOM (bought Oct 2) at the Nov 18 open for a 34.68% return and bought Forgent Power Solutions (4%), with the rest in BOXX. Manages about $50M on Autopilot and keeps about 13% in a Treasury bill fund (Nov 4). Swapped Neurocrine (plus some BOXX cash) for Brighthouse Financial (5%) and Dana (4%) on Nov 12. AppLovin, bought Oct 8, was up 45.8% and about 7.5% of the book on Nov 9. Swapped KBR and Expand Energy for Alnylam and Nubank on Nov 4. Swapped Devon Energy for Ultra Clean Holdings on Oct 29, with the rest of the proceeds in BOXX. Swapped Skyward Specialty for Sea Limited on Oct 21 and moved its cash from SGOV to BOXX. Sold ICE and Restaurant Brands for Dycom and DraftKings on Oct 14.",
   "benchmark": null
  },
  {
   "portfolio": "Claude WW3",
   "model": "Claude",
-  "stat": 2.0862,
+  "stat": 1.8865,
   "stat_label": "Since Oct 2023",
-  "as_of": "2026-11-13",
-  "note": "Defense-focused book. Up 208.62% since Oct 31, 2023 vs 81.04% for the S&P 500 at the Nov 12 close, with $92.9M tracking it. At the Nov 18 open sold the rest of V2X, cut Gen Digital from 9.72% to 5.55%, bought Cellebrite (4%) and raised Kratos from 7.15% to 11.15%. At the Nov 12 open sold Firefly, cut V2X from 6.79% to 3.79% and bought Venture Global and Redwire. Trimmed V2X and bought AAR on Oct 29 (reported Nov 9, when Huntington Ingalls was the largest position at 10.88%). Swapped KBR for BWX Technologies on Nov 4, Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, and TransDigm for TTM on Oct 14.",
-  "benchmark": 0.8104
+  "as_of": "2026-11-24",
+  "note": "Defense-focused book. Up 188.65% since Oct 31, 2023 vs 72.71% for the S&P 500 at the Nov 23 close, with $84.4M tracking it (Nov 24 post). At the Nov 20 open bought Carpenter Technology (6.62%), cut Huntington Ingalls from 11.06% to 6.06% and sold all of Ondas, with a small remainder in BOXX. At the Nov 18 open sold the rest of V2X, cut Gen Digital from 9.72% to 5.55%, bought Cellebrite (4%) and raised Kratos from 7.15% to 11.15%. At the Nov 12 open sold Firefly, cut V2X from 6.79% to 3.79% and bought Venture Global and Redwire. Trimmed V2X and bought AAR on Oct 29 (reported Nov 9, when Huntington Ingalls was the largest position at 10.88%). Swapped KBR for BWX Technologies on Nov 4, Northrop Grumman for Akamai (plus 3% into BOXX) on Oct 21, and TransDigm for TTM on Oct 14. Earlier: up 208.62% vs 81.04% at the Nov 12 close, with $92.9M tracking it.",
+  "benchmark": 0.7271
  },
  {
   "portfolio": "GPT",
@@ -38,11 +38,11 @@
  {
   "portfolio": "DeepSeek",
   "model": "DeepSeek",
-  "stat": 0.7198,
+  "stat": 0.5638,
   "stat_label": "Since Feb 2025",
-  "as_of": "2026-11-03",
-  "note": "$45.4M tracking it. +71.98% from Feb 3, 2025 to Nov 2, 2026 vs S&P +26.90% (chart in the Nov 3 post). Up 37.8% over the past year vs about 11.6% for the S&P, the best one-year return on Autopilot (Nov 3); Micron added about 6.5 points of that, Innodata, TE Connectivity, Vertiv and Broadcom most of the rest. Swapped BioCryst, Pampa Energía, Amentum, NRG and NESR for Ichor, Inter & Co, X-Energy, Structure Therapeutics and UroGen on Nov 12. Down about 7% over the month to Nov 9 vs about 3% for the S&P, and fell 6.7% on Nov 5 vs 4.4% (replies). Down about 24% over the three months to Nov 20, a day on which it fell about 6%; up about 6.7% on Nov 23 but still down about 20% over three months and about 10% over the month, after four rebalances from Oct 14 through Nov 20 (Nov 23 replies, no S&P figure; only the Oct 14 and Nov 12 rebalances have been posted). Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14.",
-  "benchmark": 0.269
+  "as_of": "2026-11-24",
+  "note": "$39.9M tracking it. +56.38% since Feb 3, 2025 vs S&P +20.83% at the Nov 23 close (Nov 24 post). At the Nov 20 open swapped six for six: sold Broadcom, Happen, Gildan, Genius Sports, MP Materials and Kodiak Gas Services; bought Pagaya, Vista Energy, Enerflex, Aris Mining, Perpetua Resources and Acadia Pharmaceuticals. Earlier: +71.98% from Feb 3, 2025 to Nov 2, 2026 vs S&P +26.90% (chart in the Nov 3 post), with $45.4M tracking it. Up 37.8% over the past year vs about 11.6% for the S&P, the best one-year return on Autopilot (Nov 3); Micron added about 6.5 points of that, Innodata, TE Connectivity, Vertiv and Broadcom most of the rest. Swapped BioCryst, Pampa Energía, Amentum, NRG and NESR for Ichor, Inter & Co, X-Energy, Structure Therapeutics and UroGen on Nov 12. Down about 7% over the month to Nov 9 vs about 3% for the S&P, and fell 6.7% on Nov 5 vs 4.4% (replies). Down about 24% over the three months to Nov 20, a day on which it fell about 6%; up about 6.7% on Nov 23 but still down about 20% over three months and about 10% over the month, after four rebalances from Oct 14 through Nov 20 (Nov 23 replies, no S&P figure; the Oct 14, Nov 12 and Nov 20 rebalances have been posted, the fourth has not). Sold Stryker, Waystar and Neurocrine for a value basket on Oct 14.",
+  "benchmark": 0.2083
  },
  {
   "portfolio": "Muse",

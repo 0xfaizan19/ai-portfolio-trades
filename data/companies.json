@@ -1141,5 +1141,104 @@
   "about": "DuPont's former electronics business, spun off as its own company in November 2025. It makes materials used to manufacture chips and circuit boards, such as polishing slurries and pads, photoresists and plating chemicals.",
   "revenue": "Sells consumable materials to chipmakers and to circuit-board and electronics makers, so sales track how many chips and boards are produced.",
   "segments": "Semiconductor materials (CMP, lithography) · Interconnect and packaging materials"
+ },
+ {
+  "ticker": "CRS",
+  "company": "Carpenter Technology",
+  "sector": "Industrials · Specialty alloys",
+  "hq": "Philadelphia, Pennsylvania",
+  "about": "Makes high-performance specialty alloys, such as nickel- and cobalt-based superalloys, titanium and stainless steels, for parts that face extreme heat, stress or corrosion.",
+  "revenue": "It sells alloy bar, wire, strip and powder mainly to aerospace and defense manufacturers, especially jet-engine and airframe makers, often under long-term supply agreements. Medical, energy and industrial customers buy the rest.",
+  "segments": "Specialty Alloys Operations · Performance Engineered Products"
+ },
+ {
+  "ticker": "ONDS",
+  "company": "Ondas",
+  "sector": "Technology · Drones and wireless networks",
+  "hq": "West Palm Beach, Florida",
+  "about": "Sells autonomous drone systems, including drone-in-a-box security and inspection drones and counter-drone interceptors, plus private wireless networks for railroads and other critical infrastructure.",
+  "revenue": "Most revenue comes from selling and deploying drone and counter-drone systems to defense, security and industrial customers, with smaller sales of private radio network equipment and services.",
+  "segments": "Ondas Autonomous Systems · Ondas Networks"
+ },
+ {
+  "ticker": "WLDN",
+  "company": "Willdan Group",
+  "sector": "Industrials · Engineering and energy services",
+  "hq": "Anaheim, California",
+  "about": "Designs and runs energy-efficiency and electrification programs for utilities, and provides engineering, planning and consulting services to cities, public agencies and businesses.",
+  "revenue": "Most revenue comes from utility and government contracts to design, manage and install energy-saving and grid projects; the rest is fees for engineering, planning and financial consulting work.",
+  "segments": "Energy · Engineering and Consulting"
+ },
+ {
+  "ticker": "PGEN",
+  "company": "Precigen",
+  "sector": "Health care · Biotechnology",
+  "hq": "Germantown, Maryland",
+  "about": "A biotech whose lead product, PAPZIMEOS, is a gene-based therapy approved in the US for recurrent respiratory papillomatosis, a rare disease that causes benign growths in the airway.",
+  "revenue": "Revenue comes mainly from US sales of PAPZIMEOS, which launched after its 2025 approval. It is also developing other gene and cell therapies, which earn nothing yet.",
+  "segments": "PAPZIMEOS · Gene and cell therapy pipeline"
+ },
+ {
+  "ticker": "IDYA",
+  "company": "IDEAYA Biosciences",
+  "sector": "Health care · Biotechnology",
+  "hq": "South San Francisco, California",
+  "about": "A precision-oncology biotech developing targeted cancer drugs. Its lead drug, darovasertib, is being developed with crizotinib for metastatic uveal melanoma, a rare cancer that starts in the eye.",
+  "revenue": "It has no approved products yet, so it earns only collaboration and licensing payments from partners and funds its research mainly with cash raised from investors.",
+  "segments": "Darovasertib (uveal melanoma) · Synthetic-lethality drugs · Antibody-drug conjugates"
+ },
+ {
+  "ticker": "GENI",
+  "company": "Genius Sports",
+  "sector": "Communication services · Sports data",
+  "hq": "London, UK",
+  "about": "A sports data and technology company that holds official data rights for leagues such as the NFL and the English Premier League and turns live game data into feeds, odds and advertising products.",
+  "revenue": "Most revenue comes from sportsbooks that pay for its official live data, odds and trading services. It also sells advertising and fan-engagement technology to leagues, media companies and brands, and it pays the leagues for the rights.",
+  "segments": "Betting technology · Media technology · Sports technology"
+ },
+ {
+  "ticker": "PGY",
+  "company": "Pagaya Technologies",
+  "sector": "Financials · Lending technology",
+  "hq": "New York, New York",
+  "about": "Runs an AI-driven lending network: banks, fintech lenders and auto lenders pass it loan applicants they would otherwise turn down, and Pagaya's models approve some of them.",
+  "revenue": "Lending partners pay it network fees for each loan its models approve. Pagaya then sells the loans to institutional investors, often packaged as asset-backed securities, and keeps a small required stake, which also earns interest.",
+  "segments": "Personal loans · Auto loans · Point-of-sale financing"
+ },
+ {
+  "ticker": "VIST",
+  "company": "Vista Energy",
+  "sector": "Energy · Oil and gas production",
+  "hq": "Mexico City, Mexico",
+  "about": "An oil producer that operates in Argentina and focuses on the Vaca Muerta shale, one of the largest shale formations outside North America.",
+  "revenue": "It sells crude oil, much of it exported, and some natural gas from its Argentine wells, so its profits move with oil prices and with Argentina's export and currency rules.",
+  "segments": "Vaca Muerta shale oil · Conventional oil and gas"
+ },
+ {
+  "ticker": "EFXT",
+  "company": "Enerflex",
+  "sector": "Energy · Gas compression and processing",
+  "hq": "Calgary, Alberta, Canada",
+  "about": "Builds, rents out and services equipment that compresses and processes natural gas, and owns and operates energy infrastructure, such as compression and processing plants, for customers around the world.",
+  "revenue": "Steady contract income from infrastructure it owns and operates for customers under multi-year agreements, plus sales of custom-built compression and processing systems and parts-and-service work.",
+  "segments": "Energy Infrastructure · Engineered Systems · After-Market Services"
+ },
+ {
+  "ticker": "ARIS",
+  "company": "Aris Mining",
+  "sector": "Materials · Gold mining",
+  "hq": "Vancouver, British Columbia, Canada",
+  "about": "A gold miner with producing mines in Colombia, Segovia and Marmato, and development projects in Colombia and Guyana.",
+  "revenue": "It sells the gold, plus some silver, produced at its Colombian mines, so its profits move with the gold price and its mining costs.",
+  "segments": "Segovia · Marmato · Soto Norte and Toroparu projects"
+ },
+ {
+  "ticker": "PPTA",
+  "company": "Perpetua Resources",
+  "sector": "Materials · Gold and antimony mining",
+  "hq": "Boise, Idaho",
+  "about": "A development-stage miner working on the Stibnite Gold Project in central Idaho, a former mining district that would produce gold and antimony, a metal used in munitions, flame retardants and batteries.",
+  "revenue": "It has no mining revenue yet. It funds permitting and construction with share sales, government awards (including Defense Department money for US antimony supply) and project financing; future revenue would come from selling gold and antimony.",
+  "segments": "Stibnite Gold Project"
  }
 ]
