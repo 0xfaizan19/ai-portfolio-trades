@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-24T16:31:49Z",
  "newest_post_id": "2125266145477345743",
  "newest_post_at": "2026-11-24T16:31:49Z",
- "last_run_at": "2026-11-24T22:54:11Z",
+ "last_run_at": "2026-11-25T12:13:00Z",
  "last_run_status": "ok",
  "data": {
   "trades": 158,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-24"
  },
  "history": [
+  {
+   "at": "2026-11-25T12:13:00Z",
+   "status": "ok",
+   "note": "no new posts since Nov 24 11:31 AM ET (timeline + from: search agree); no new trades"
+  },
   {
    "at": "2026-11-24T22:54:11Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-08T22:06:43Z",
    "status": "ok",
    "note": "Nov 8 evening run: no new posts after the Nov 4 10:03 PM Muse reply, nothing posted Nov 5 through 5 PM ET Nov 8 (timeline read without gaps back to Oct 29 and spot-checked to Oct 6, plus from: search since:2026-11-04 and the Replies tab). No new trades; quotes unchanged at Nov 6 close (Sunday, all 62 identical). Pages built c9400b6; live page byte-identical to index.html."
-  },
-  {
-   "at": "2026-11-08T12:07:51Z",
-   "status": "ok",
-   "note": "Nov 8 morning run: no new posts after the Nov 4 10:03 PM Muse reply, nothing Nov 5 through 7 AM Nov 8 (timeline back to Oct 6 + from: search with and without since:2026-11-04 + Replies tab). No new trades; quotes unchanged at Nov 6 close (Sunday, all 62 identical). Pages built 3168e0a, live page byte-identical to index.html."
   }
  ]
 }
