@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-24T16:31:49Z",
  "newest_post_id": "2125266145477345743",
  "newest_post_at": "2026-11-24T16:31:49Z",
- "last_run_at": "2026-11-25T12:13:00Z",
+ "last_run_at": "2026-11-25T22:12:50Z",
  "last_run_status": "ok",
  "data": {
   "trades": 158,
@@ -11,9 +11,14 @@
   "quotes": 137,
   "newest_trade_id": "t158",
   "newest_trade_date": "2026-11-20",
-  "quotes_as_of": "2026-11-24"
+  "quotes_as_of": "2026-11-25"
  },
  "history": [
+  {
+   "at": "2026-11-25T22:12:50Z",
+   "status": "ok",
+   "note": "no new posts, no new trades; scanned back to Nov 9; quotes at Nov 25 close"
+  },
   {
    "at": "2026-11-25T12:13:00Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-16T16:54:10Z",
    "status": "posts-unread",
    "note": "Nov 16 run (11:49 AM ET): X not read. The routine's Chrome (deviceId a0a7abb7..., @faizanmoltbot) was not connected; two other Chrome browsers were (Browser 1 eeea33a3..., Browser 2 ca193717...) and were not used without Faizan saying which is right. No runs fired between Nov 8 5 PM ET and this one, so posts after the Nov 4 7:12 PM trade post are still unread. No trades added. Quotes moved to the Nov 13 close (62 tickers; run was mid-session, so today's unfinished bar was left out). Pages built b81cb1b, live page byte-identical to index.html."
-  },
-  {
-   "at": "2026-11-08T22:06:43Z",
-   "status": "ok",
-   "note": "Nov 8 evening run: no new posts after the Nov 4 10:03 PM Muse reply, nothing posted Nov 5 through 5 PM ET Nov 8 (timeline read without gaps back to Oct 29 and spot-checked to Oct 6, plus from: search since:2026-11-04 and the Replies tab). No new trades; quotes unchanged at Nov 6 close (Sunday, all 62 identical). Pages built c9400b6; live page byte-identical to index.html."
   }
  ]
 }
