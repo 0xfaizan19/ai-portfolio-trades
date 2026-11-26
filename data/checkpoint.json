@@ -1,19 +1,24 @@
 {
- "confirmed_through": "2026-11-24T16:31:49Z",
- "newest_post_id": "2125266145477345743",
- "newest_post_at": "2026-11-24T16:31:49Z",
- "last_run_at": "2026-11-25T22:12:50Z",
+ "confirmed_through": "2026-11-26T04:44:51Z",
+ "newest_post_id": "2125813007951286393",
+ "newest_post_at": "2026-11-26T04:44:51Z",
+ "last_run_at": "2026-11-26T12:16:44Z",
  "last_run_status": "ok",
  "data": {
-  "trades": 158,
+  "trades": 179,
   "portfolios": 7,
-  "companies": 138,
-  "quotes": 137,
-  "newest_trade_id": "t158",
-  "newest_trade_date": "2026-11-20",
+  "companies": 151,
+  "quotes": 150,
+  "newest_trade_id": "t179",
+  "newest_trade_date": "2026-11-25",
   "quotes_as_of": "2026-11-25"
  },
  "history": [
+  {
+   "at": "2026-11-26T12:16:44Z",
+   "status": "ok",
+   "note": "2 new posts, 21 trades t159-t179 at the Nov 25 open (Claude, WW3, Grok, Gemini); quotes at Nov 25 close"
+  },
   {
    "at": "2026-11-25T22:12:50Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-16T17:21:28Z",
    "status": "ok",
    "note": "Nov 16 catch-up (noon ET; the 11:49 AM run found the routine's Chrome disconnected, and it came back under the same ID): 6 new main posts (3 on Nov 9, 3 on Nov 13) -> 27 trades t74-t100. Nov 12 open: Claude NBIX -> BHF 5% + DAN 4%; WW3 sold FLY, cut VVX 6.79->3.79%, bought VG 4.35% + RDW 4.00%; Grok ALNY/BSX/RTO/PINS -> SNDK/MOD/TTMI/IONS; DeepSeek BCRX/PAM/AMTM/NRG/NESR -> ICHR/INTR/XE/GPCR/URGN. WW3 Oct 29 V2X trim @ $79.26 + AAR buy (first reported in the Nov 9 post). Corrected t02 fill ($277.50), t12 price source, t27 size (5%). WW3 +208.62% vs +81.04%. 19 company rows. Timeline read without gaps back to Oct 16 + from: search since:2026-11-04 + Replies tab; nothing after Nov 13 9:18 AM. Quotes at Nov 13 close (81 tickers; market open, today's bar left out). Pages built 8daf83a, live page byte-identical."
-  },
-  {
-   "at": "2026-11-16T16:54:10Z",
-   "status": "posts-unread",
-   "note": "Nov 16 run (11:49 AM ET): X not read. The routine's Chrome (deviceId a0a7abb7..., @faizanmoltbot) was not connected; two other Chrome browsers were (Browser 1 eeea33a3..., Browser 2 ca193717...) and were not used without Faizan saying which is right. No runs fired between Nov 8 5 PM ET and this one, so posts after the Nov 4 7:12 PM trade post are still unread. No trades added. Quotes moved to the Nov 13 close (62 tickers; run was mid-session, so today's unfinished bar was left out). Pages built b81cb1b, live page byte-identical to index.html."
   }
  ]
 }
