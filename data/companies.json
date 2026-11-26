@@ -1240,5 +1240,122 @@
   "about": "A development-stage miner working on the Stibnite Gold Project in central Idaho, a former mining district that would produce gold and antimony, a metal used in munitions, flame retardants and batteries.",
   "revenue": "It has no mining revenue yet. It funds permitting and construction with share sales, government awards (including Defense Department money for US antimony supply) and project financing; future revenue would come from selling gold and antimony.",
   "segments": "Stibnite Gold Project"
+ },
+ {
+  "ticker": "SMTC",
+  "company": "Semtech",
+  "sector": "Technology · Semiconductors",
+  "hq": "Camarillo, California",
+  "about": "Designs analog and mixed-signal chips, including high-speed connectivity chips used to link servers and switches inside AI data centers, plus LoRa wireless chips and IoT modules.",
+  "revenue": "It sells chips and modules to equipment makers and network operators; data-center connectivity is its fastest-growing line (up 158% in the quarter Claude cited).",
+  "segments": "Signal integrity (data center and networking) · Analog mixed-signal and wireless · IoT systems and connectivity"
+ },
+ {
+  "ticker": "ENS",
+  "company": "EnerSys",
+  "sector": "Industrials · Batteries and stored energy",
+  "hq": "Reading, Pennsylvania",
+  "about": "A large maker of industrial batteries and stored-energy systems: backup power for data centers and telecom networks, batteries for forklifts, and specialty batteries for defense and aerospace.",
+  "revenue": "It sells batteries, chargers and power systems to industrial, telecom, data-center and defense customers.",
+  "segments": "Energy systems · Motive power · Specialty (including defense and aerospace)"
+ },
+ {
+  "ticker": "ALM",
+  "company": "Almonty Industries",
+  "sector": "Materials · Tungsten mining",
+  "hq": "Toronto, Ontario (listed on Nasdaq as ALM)",
+  "about": "Mines tungsten, a metal used in defense, cutting tools and electronics, outside China, with its main development project, Sangdong, in South Korea and an operating mine in Portugal.",
+  "revenue": "It sells tungsten concentrate from its mines; the Sangdong mine is meant to make it a large non-Chinese supplier.",
+  "segments": "Sangdong (South Korea) · Panasqueira (Portugal)"
+ },
+ {
+  "ticker": "INSM",
+  "company": "Insmed",
+  "sector": "Health care · Biotechnology",
+  "hq": "Bridgewater, New Jersey",
+  "about": "Develops and sells drugs for serious lung diseases, including an inhaled antibiotic for a rare lung infection and brensocatib for bronchiectasis. Sanofi agreed on Nov 24, 2026 to buy it for $175 a share in cash (per the Nov 25 post).",
+  "revenue": "It earns revenue from sales of its approved lung-disease drugs.",
+  "segments": "Respiratory medicines"
+ },
+ {
+  "ticker": "CDRE",
+  "company": "Cadre Holdings",
+  "sector": "Industrials · Safety and survivability equipment",
+  "hq": "Jacksonville, Florida",
+  "about": "Makes body armor, bomb-disposal suits and other protective gear for police, first responders and the military, plus nuclear-safety products.",
+  "revenue": "It sells safety and survivability products to police agencies, militaries and government buyers.",
+  "segments": "Products · Distribution"
+ },
+ {
+  "ticker": "AS",
+  "company": "Amer Sports",
+  "sector": "Consumer · Sporting goods",
+  "hq": "Helsinki, Finland",
+  "about": "Owns sporting-goods brands including Arc'teryx, Salomon and Wilson, with a large business in China.",
+  "revenue": "It sells apparel, footwear and equipment through its own stores, online and through wholesale partners.",
+  "segments": "Technical apparel · Outdoor performance · Ball and racquet sports"
+ },
+ {
+  "ticker": "BMA",
+  "company": "Banco Macro",
+  "sector": "Financials · Banking",
+  "hq": "Buenos Aires, Argentina",
+  "about": "One of Argentina's largest private banks, listed in New York through ADRs.",
+  "revenue": "It earns interest on loans and securities and fees from banking services to Argentine individuals and companies.",
+  "segments": "Retail and corporate banking in Argentina"
+ },
+ {
+  "ticker": "SSRM",
+  "company": "SSR Mining",
+  "sector": "Materials · Gold mining",
+  "hq": "Denver, Colorado",
+  "about": "A gold and silver miner with mines in the US, Canada, Argentina and Turkey.",
+  "revenue": "It sells gold and silver from its mines, so its earnings move with metal prices and production.",
+  "segments": "Gold and silver mining"
+ },
+ {
+  "ticker": "IESC",
+  "company": "IES Holdings",
+  "sector": "Industrials · Electrical contracting",
+  "hq": "Houston, Texas",
+  "about": "Designs and installs electrical and technology systems, including for data centers, commercial buildings and housing, and makes some electrical equipment.",
+  "revenue": "It earns contract revenue from electrical and infrastructure work; data centers are a large and growing share of its backlog.",
+  "segments": "Communications · Residential · Infrastructure solutions · Commercial and industrial"
+ },
+ {
+  "ticker": "YPF",
+  "company": "YPF",
+  "sector": "Energy · Integrated oil and gas",
+  "hq": "Buenos Aires, Argentina",
+  "about": "Argentina's largest energy company, majority owned by the Argentine state, with large positions in the Vaca Muerta shale field and in fuel refining and retail. Listed in New York through ADRs.",
+  "revenue": "It sells oil, gas and refined fuels, mostly in Argentina, with growing exports from Vaca Muerta.",
+  "segments": "Upstream · Midstream and downstream · Gas and power"
+ },
+ {
+  "ticker": "ERO",
+  "company": "Ero Copper",
+  "sector": "Materials · Copper mining",
+  "hq": "Vancouver, British Columbia",
+  "about": "A copper miner with operations in Brazil, also producing gold.",
+  "revenue": "It sells copper concentrate and gold from its Brazilian mines, so earnings move with copper prices and output.",
+  "segments": "Copper mining (Brazil) · Gold"
+ },
+ {
+  "ticker": "ANDE",
+  "company": "The Andersons",
+  "sector": "Consumer staples · Agriculture",
+  "hq": "Maumee, Ohio",
+  "about": "An agriculture company that stores, trades and merchandises grain, produces ethanol, and makes plant-nutrient products.",
+  "revenue": "It earns margins on grain handling and trading, ethanol sales and fertilizer products.",
+  "segments": "Trade · Renewables · Plant nutrient"
+ },
+ {
+  "ticker": "NRIX",
+  "company": "Nurix Therapeutics",
+  "sector": "Health care · Biotechnology",
+  "hq": "San Francisco, California",
+  "about": "A clinical-stage biotech developing drugs that break down disease-causing proteins; its lead drug, bexobrutideg, targets the BTK protein in blood cancers.",
+  "revenue": "It has no approved products; it funds itself with share sales and partnership payments from larger drug companies.",
+  "segments": "Targeted protein degradation"
  }
 ]

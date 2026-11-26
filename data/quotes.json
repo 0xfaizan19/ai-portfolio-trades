@@ -590,6 +590,71 @@
   "as_of": "2026-11-25"
  },
  {
+  "ticker": "SMTC",
+  "price": 92.93,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "ENS",
+  "price": 127.77,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "ALM",
+  "price": 6.78,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "INSM",
+  "price": 170.31,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "CDRE",
+  "price": 30.75,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "AS",
+  "price": 30.91,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "BMA",
+  "price": 50.35,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "SSRM",
+  "price": 23.39,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "IESC",
+  "price": 171.98,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "YPF",
+  "price": 31.45,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "ERO",
+  "price": 22.37,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "ANDE",
+  "price": 42.62,
+  "as_of": "2026-11-25"
+ },
+ {
+  "ticker": "NRIX",
+  "price": 14.76,
+  "as_of": "2026-11-25"
+ },
+ {
   "ticker": "AMD",
   "price": 406.03,
   "as_of": "2026-11-25"
