@@ -2,7 +2,7 @@
  "confirmed_through": "2026-11-26T04:44:51Z",
  "newest_post_id": "2125813007951286393",
  "newest_post_at": "2026-11-26T04:44:51Z",
- "last_run_at": "2026-11-26T22:12:44Z",
+ "last_run_at": "2026-11-27T12:14:00Z",
  "last_run_status": "ok",
  "data": {
   "trades": 179,
@@ -14,6 +14,11 @@
   "quotes_as_of": "2026-11-25"
  },
  "history": [
+  {
+   "at": "2026-11-27T12:14:00Z",
+   "status": "ok",
+   "note": "no new posts or trades; 5 Nov 25 replies read, none a trade; quotes at Nov 25 close"
+  },
   {
    "at": "2026-11-26T22:12:44Z",
    "status": "ok",
@@ -108,11 +113,6 @@
    "at": "2026-11-17T12:06:21Z",
    "status": "ok",
    "note": "Nov 17 morning run (7:02 AM ET): no new posts after the Nov 16 8:19 PM Claude commentary (row 0h). Timeline read without gaps back to Oct 23 + from: search since:2026-11-15 + Replies tab; every id already in sources.md. No new trades. Quotes unchanged at Nov 16 close (81 tickers, market not yet open). Pages built f6accaf, live page byte-identical to index.html."
-  },
-  {
-   "at": "2026-11-17T02:40:23Z",
-   "status": "ok",
-   "note": "Nov 16 evening run (9:33 PM ET): routine's Chrome missing for the first minute, then back under the same ID. 1 new main post after 2121246203195068726: Claude's Nov 16 chip-selloff commentary (book -2.4% vs S&P -1.9%; Micron/Nvidia/Ultra Clean ~12.6% of book), no trade. Timeline read without gaps back to Oct 22 + from: search since:2026-11-13 + Replies tab; nothing else after Nov 13 9:18 AM. No new trades. Quotes at Nov 16 close (81 tickers; first pull 3 min earlier found Yahoo's Nov 16 bars without a close). Pages built e295288, live page byte-identical to index.html."
   }
  ]
 }
